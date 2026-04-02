@@ -246,8 +246,7 @@ section{padding:5rem 0}
 .hf7{ color:rgba(255,255,255,.09); width:clamp(240px,34vw,480px); top:35%; left:22%;
       filter:drop-shadow(0 0 2px rgba(255,255,255,.06)) }
 @media(max-width:768px){
-  .hf6,.hf7{ display:none }
-  .hf3{ display:none }
+  .hbg{ display:none }
 }
 
 /* ── Gold keyword highlight — animado por GSAP al cargar ── */
