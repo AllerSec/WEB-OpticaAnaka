@@ -1,65 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="../logos/OPTICA-ANACA-LOGO-1.webp" type="image/webp"/>
-  <title>Personalizar Cookies — Óptica Anaka</title>
-  <link rel="stylesheet" href="../css/styles.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personalizar Cookies — Óptica Anaka Irún</title>
+  <meta name="description" content="Configura tus preferencias de cookies en Óptica Anaka. Controla qué cookies aceptas en nuestro sitio web."/>
+  <link rel="canonical" href="https://anakaoptica.com/personalizar-cookies/"/>
+  <link rel="icon" type="image/png" href="../logos/OPTICA-ANACA-LOGO-1.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/main.css"/>
+  <style>
+    .cookie-prefs-card{background:var(--white,#fff);border:1px solid var(--border,#e5e7eb);border-radius:12px;padding:2rem;max-width:680px;margin:0 auto}
+    .pref-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--border,#e5e7eb)}
+    .pref-row:last-of-type{border-bottom:none}
+    .pref-info{flex:1}
+    .pref-info h3{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:600;margin:0 0 .25rem}
+    .pref-info p{font-size:.875rem;color:var(--text-muted,#6b7280);margin:0}
+    .toggle-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.25rem}
+    .toggle{position:relative;display:inline-block;width:44px;height:24px}
+    .toggle input{opacity:0;width:0;height:0}
+    .slider{position:absolute;inset:0;background:#d1d5db;border-radius:24px;cursor:pointer;transition:.25s}
+    .slider::before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.25s}
+    input:checked+.slider{background:var(--primary,#1a1a1a)}
+    input:checked+.slider::before{transform:translateX(20px)}
+    input:disabled+.slider{opacity:.5;cursor:not-allowed}
+    .toggle-label{font-size:.7rem;color:var(--text-muted,#6b7280);text-transform:uppercase;letter-spacing:.05em}
+    .prefs-msg{margin-top:1rem;padding:.75rem 1rem;border-radius:8px;font-size:.9rem;display:none}
+    .prefs-msg.success{display:block;background:#d1fae5;color:#065f46;border:1px solid #6ee7b7}
+  </style>
 </head>
 <body>
-<header><nav class="nav-inner">
-  <a class="nav-logo" href="../index.html"><img src="../logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka"/></a>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="../servicios/index.html">Servicios</a></li>
-    <li><a href="../colecciones/index.html">Colecciones</a></li>
-    <li><a href="../contacto/index.html">Contacto</a></li>
-  </ul>
-  <a class="nav-phone nav-links" href="tel:943248490"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5H7.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02L6.6 10.8z"/></svg> 943 24 84 90</a>
-</nav></header>
-<div class="breadcrumb"><a href="../index.html">Inicio</a> <span>›</span> Personalizar Cookies</div>
-<div class="page-header"><h1>Personalizar Cookies</h1></div>
-<section>
-  <div class="container" style="max-width:700px;">
-    <p style="margin-bottom:1.5rem;">El sitio Web <strong>anakaoptica.com</strong> utiliza cookies propias para su correcto funcionamiento. Puedes cambiar tus preferencias en cualquier momento.</p>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-    <div class="info-block" style="margin-bottom:1.5rem;">
-      <h3>Cookies técnicas</h3>
-      <p>Son aquellas que permiten a los usuarios navegar a través del sitio Web y utilizar sus diferentes funciones. <strong>No pueden ser desactivadas.</strong></p>
-      <div style="display:flex;align-items:center;gap:0.8rem;margin-top:0.8rem;">
-        <span style="font-weight:700;color:var(--primary-dark);">Siempre activas</span>
-        <div style="width:48px;height:26px;background:var(--primary);border-radius:50px;position:relative;cursor:not-allowed;opacity:0.8;">
-          <div style="position:absolute;right:3px;top:3px;width:20px;height:20px;background:white;border-radius:50%;"></div>
+<header class="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Navegación principal">
+    <a class="nav-logo" href="../index.html" aria-label="Óptica Anaka — Inicio">
+      <img src="../logos/OPTICA-ANACA-LOGO-1.png" alt="Logo Óptica Anaka" width="120" height="44"/>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../servicios/index.html">Servicios</a></li>
+      <li><a href="../colecciones/index.html">Colecciones</a></li>
+      <li><a href="../contacto/index.html">Contacto</a></li>
+    </ul>
+    <div class="nav-lang" aria-label="Idioma">
+      <a href="index.html" class="active" lang="es">ES</a>
+      <span aria-hidden="true">|</span>
+      <a href="../eu/index.html" lang="eu">EU</a>
+    </div>
+    <a class="nav-phone" href="tel:+34943248490" aria-label="Llamar al 943 24 84 90">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5H7.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02L6.6 10.8z"/></svg>
+      943 24 84 90
+    </a>
+  </nav>
+</header>
+
+<main id="main">
+
+<nav class="breadcrumb" aria-label="Ruta de navegación">
+  <a href="../index.html">Inicio</a>
+  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+  <span>Personalizar Cookies</span>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="label-tag">Privacidad</span>
+    <h1 class="reveal">Personalizar <span class="hl">Cookies</span></h1>
+    <p class="reveal">Controla qué cookies deseas activar. Las cookies necesarias siempre están activas para garantizar el funcionamiento del sitio.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container" style="padding-bottom:4rem">
+    <div class="cookie-prefs-card reveal">
+
+      <div class="pref-row">
+        <div class="pref-info">
+          <h3>Cookies necesarias</h3>
+          <p>Imprescindibles para que el sitio web funcione correctamente. No pueden desactivarse.</p>
+        </div>
+        <div class="toggle-wrap" aria-label="Cookies necesarias siempre activas">
+          <label class="toggle">
+            <input type="checkbox" id="cookieNecesarias" checked disabled aria-label="Cookies necesarias (siempre activas)"/>
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">Siempre activas</span>
         </div>
       </div>
+
+      <div class="pref-row">
+        <div class="pref-info">
+          <h3>Cookies analíticas</h3>
+          <p>Nos permiten analizar el uso del sitio de forma anónima para mejorar su rendimiento y contenidos.</p>
+        </div>
+        <div class="toggle-wrap">
+          <label class="toggle" aria-label="Activar cookies analíticas">
+            <input type="checkbox" id="cookieAnaliticas" aria-label="Cookies analíticas"/>
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label" id="analiticasLabel">Desactivadas</span>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <button class="btn btn-primary" id="savePrefs">Guardar preferencias</button>
+        <a class="btn btn-ghost" href="../politica-cookies/index.html">Ver Política de Cookies</a>
+      </div>
+
+      <div id="prefsMsg" class="prefs-msg" role="status" aria-live="polite"></div>
     </div>
-
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <button onclick="acceptAll()" style="background:var(--primary);color:var(--white);padding:0.75rem 2rem;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;">
-        Aceptar todas
-      </button>
-      <button onclick="rejectOptional()" style="background:transparent;color:var(--primary-dark);padding:0.75rem 2rem;border:2px solid var(--primary);border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;">
-        Solo técnicas
-      </button>
-    </div>
-
-    <div id="cookieMsg" style="display:none;margin-top:1.5rem;padding:0.8rem 1rem;border-radius:var(--radius);background:#e8f5e9;color:#2e7d32;font-weight:600;"></div>
-
-    <p style="margin-top:2rem;font-size:0.88rem;color:var(--text-muted);">
-      Para obtener más información sobre las cookies y cómo las usamos, consulta la <a href="../politica-cookies/index.html" style="color:var(--primary);">Política de Cookies</a>.
-    </p>
   </div>
 </section>
-<footer><div class="footer-inner">
-  <div class="footer-col"><img src="../logos/OPTICA-ANACA-LOGO-1-220x300.webp" alt="Logo"/><p>Tu óptica de referencia<br/>en Irún desde 2007.</p></div>
-  <div class="footer-col"><h4>Navegación</h4><a href="../index.html">Inicio</a><a href="../servicios/index.html">Servicios</a><a href="../colecciones/index.html">Colecciones</a><a href="../contacto/index.html">Contacto</a></div>
-  <div class="footer-col"><h4>Legal</h4><a href="../aviso-legal/index.html">Aviso Legal</a><a href="../politica-cookies/index.html">Política de Cookies</a><a href="index.html">Personalizar Cookies</a></div>
-</div><div class="footer-bottom"><p>Copyright © 2026 Óptica ANAKA</p></div></footer>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="../logos/OPTICA-ANACA-LOGO-1.png" alt="Logo Óptica Anaka" width="120" height="46"/>
+        <p>Tu óptica de referencia<br/>en Irún desde 2007.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="../servicios/index.html">Servicios</a>
+        <a href="../colecciones/index.html">Colecciones</a>
+        <a href="../contacto/index.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Colecciones</h4>
+        <a href="../colecciones/carolina-herrera/index.html">Carolina Herrera</a>
+        <a href="../colecciones/agata-ruiz-de-la-prada/index.html">Ágata Ruiz de la Prada</a>
+        <a href="../colecciones/longchamp/index.html">Longchamp</a>
+        <a href="../colecciones/etnia/index.html">Etnia Barcelona</a>
+        <a href="../colecciones/lacoste/index.html">Lacoste</a>
+        <a href="../colecciones/oakley/index.html">Oakley</a>
+        <a href="../colecciones/zeus-dione/index.html">Zeus + Dione</a>
+        <a href="../colecciones/silhouette/index.html">Silhouette</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="../aviso-legal/index.html">Aviso Legal</a>
+        <a href="../politica-cookies/index.html">Política de Cookies</a>
+        <a href="index.html">Personalizar Cookies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Óptica Anaka · C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa</p>
+      <p>Diseñado por <strong style="color:rgba(255,255,255,.55)">Unax Aller</strong></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" role="dialog" aria-label="Cookies" aria-live="polite">
+  <p>Usamos cookies para mejorar tu experiencia. <a href="../politica-cookies/index.html">Más información</a>.</p>
+  <div class="cookie-btns"><button class="cookie-btn cookie-accept">Aceptar</button><button class="cookie-btn cookie-decline">Rechazar</button></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="../assets/js/main.js"></script>
 <script>
-  document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-  function showMsg(txt){ const m=document.getElementById('cookieMsg'); m.style.display='block'; m.textContent=txt; }
-  function acceptAll(){ showMsg('Preferencias guardadas. Has aceptado todas las cookies. Gracias.'); }
-  function rejectOptional(){ showMsg('Preferencias guardadas. Solo se usarán cookies técnicas necesarias.'); }
+(function(){
+  var analiticasToggle = document.getElementById('cookieAnaliticas');
+  var analiticasLabel = document.getElementById('analiticasLabel');
+  var saveBtn = document.getElementById('savePrefs');
+  var prefsMsg = document.getElementById('prefsMsg');
+
+  // Load saved preference
+  var saved = localStorage.getItem('anaka_cookies_analytics');
+  if(saved === 'true'){
+    analiticasToggle.checked = true;
+    analiticasLabel.textContent = 'Activadas';
+  }
+
+  analiticasToggle.addEventListener('change', function(){
+    analiticasLabel.textContent = this.checked ? 'Activadas' : 'Desactivadas';
+  });
+
+  saveBtn.addEventListener('click', function(){
+    var analytics = analiticasToggle.checked;
+    localStorage.setItem('anaka_cookies_analytics', analytics ? 'true' : 'false');
+    localStorage.setItem('anaka_cookies_consent', 'custom');
+    prefsMsg.textContent = 'Preferencias guardadas correctamente.';
+    prefsMsg.className = 'prefs-msg success';
+    setTimeout(function(){ prefsMsg.className = 'prefs-msg'; prefsMsg.textContent = ''; }, 4000);
+  });
+})();
 </script>
-</body></html>
+</body>
+</html>
