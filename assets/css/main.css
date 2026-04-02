@@ -401,7 +401,9 @@ section{padding:5rem 0}
 .brand-tile:hover img{filter:grayscale(0) opacity(1)}
 
 /* ── Collections Grid ── */
-.collections-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+.collections-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.collections-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.collections-grid{grid-template-columns:repeat(1,1fr)}}
 .collection-card{
   position:relative;border-radius:var(--radius-lg);overflow:hidden;
   aspect-ratio:4/3;background:#111;display:block;
