@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Unax Aller - allerunax@gmail.com
+Site: Optica Anaka - Irun (Gipuzkoa)
+URL: https://www.anakaoptica.com
+
+/* SITE */
+Last update: 2026-04-22
+Languages: es, eu, fr
+Standards: HTML5, CSS3, JavaScript
+Components: GSAP 3, ScrollTrigger

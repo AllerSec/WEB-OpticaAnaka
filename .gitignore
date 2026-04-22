@@ -1,3 +1,11 @@
 # Archivos de descarga de la web original (no forman parte del proyecto)
 AnakaOptica*
 LOGO-BLANCO-ANAKA.webp
+
+# Dependencias de desarrollo (sólo para probes locales)
+node_modules/
+package-lock.json
+package.json
+
+# Ficheros temporales de probes
+.tmp-*

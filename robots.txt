@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /personalizar-cookies/
+Disallow: /404.html
+Disallow: /assets/videos/
 
-Sitemap: https://anakaoptica.com/sitemap.xml
+Sitemap: https://www.anakaoptica.com/sitemap.xml
