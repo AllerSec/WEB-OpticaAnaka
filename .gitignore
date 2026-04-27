@@ -9,3 +9,6 @@ package.json
 
 # Ficheros temporales de probes
 .tmp-*
+
+# Claude Code local state
+.claude/
