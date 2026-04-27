@@ -224,7 +224,9 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:linear-gradient(135deg,#0D0B07 0%,#1C1408 55%,#080603 100%)
+  background:
+    linear-gradient(135deg,rgba(13,11,7,.78) 0%,rgba(28,20,8,.72) 55%,rgba(8,6,3,.85) 100%),
+    url('../images/foto-interior.webp') center/cover no-repeat #0D0B07
 }
 .hero-orb{position:absolute;border-radius:50%;pointer-events:none}
 .hero-orb-1{

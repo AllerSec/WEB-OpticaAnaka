@@ -140,15 +140,6 @@
 
   <!-- ========== PAGINAS DE MARCA (solo ES) ========== -->
   <url>
-    <loc>https://www.anakaoptica.com/colecciones/agata-ruiz-de-la-prada/</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/agata-ruiz-de-la-prada/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/agata-ruiz-de-la-prada/"/>
-  </url>
-
-  <url>
     <loc>https://www.anakaoptica.com/colecciones/carolina-herrera/</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,15 +191,6 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
-  </url>
-
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/zeus-dione/</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/zeus-dione/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/zeus-dione/"/>
   </url>
 
   <!-- ========== PAGINAS LEGALES (solo ES) ========== -->
