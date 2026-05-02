@@ -122,6 +122,45 @@ function doPost(e) {
       replyTo: data.email
     });
 
+    // Confirmation email to the client. We use the customer's language so
+    // they receive a friendly, professional acknowledgment in ES/EU/FR.
+    try {
+      const clientSubject = clientSubjectFor(lang, fechaHumana, horaHumana);
+      const clientPlain = buildClientPlainEmail({
+        lang: lang,
+        firstName: data.nombre,
+        motivoLabel: motivoLabel,
+        fechaHumana: fechaHumana,
+        horaHumana: horaHumana,
+        observaciones: data.observaciones
+      });
+      const clientHtml = buildClientHtmlEmail({
+        lang: lang,
+        firstName: data.nombre,
+        fullName: fullName,
+        motivoLabel: motivoLabel,
+        fechaHumana: fechaHumana,
+        horaHumana: horaHumana,
+        observaciones: data.observaciones,
+        icsWebcal: icsLinks.webcal,
+        icsHttps: icsLinks.https,
+        icsName: icsBlob.getName()
+      });
+      MailApp.sendEmail({
+        to: data.email,
+        subject: clientSubject,
+        body: clientPlain,
+        htmlBody: clientHtml,
+        name: ORG_NAME,
+        attachments: [icsBlob],
+        replyTo: RECIPIENT_EMAIL
+      });
+    } catch (clientErr) {
+      // Failing to email the client must not fail the whole request —
+      // the optician already has the request and will call regardless.
+      Logger.log('Client email failed: ' + clientErr);
+    }
+
     return jsonOk();
   } catch (err) {
     return jsonErr(String(err && err.message || err));
@@ -356,6 +395,185 @@ function buildHtmlEmail(p) {
     '</table>',
     '</body></html>'
   ].join('');
+}
+
+function clientSubjectFor(lang, fechaHumana, horaHumana) {
+  if (lang === 'eu') return 'Eskaera jaso dugu — Optika Anaka';
+  if (lang === 'fr') return 'Demande reçue — Optique Anaka';
+  return 'Hemos recibido tu solicitud — Óptica Anaka';
+}
+
+function buildClientPlainEmail(p) {
+  const lang = p.lang || 'es';
+  const T = clientStrings(lang);
+  const lines = [
+    T.hi + ' ' + p.firstName + ',',
+    '',
+    T.intro,
+    '',
+    '─────────────────────────',
+    T.motivo + ': ' + p.motivoLabel,
+    T.fecha + ': ' + p.fechaHumana,
+    T.hora + ': ' + p.horaHumana,
+    '─────────────────────────',
+    '',
+    T.next,
+    '',
+    T.contact,
+    'Óptica Anaka — C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa',
+    '☎ 943 24 84 90',
+    '✉ info@anakaoptica.com',
+    '',
+    T.signoff
+  ];
+  return lines.join('\n');
+}
+
+function buildClientHtmlEmail(p) {
+  const lang = p.lang || 'es';
+  const T = clientStrings(lang);
+
+  const orange = '#D4620E';
+  const orangeDark = '#A04A0A';
+  const cream = '#FEF8F3';
+  const text = '#1A0E05';
+  const muted = '#5A3E25';
+  const border = '#EDD5BE';
+
+  const escape = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+  const obsBlock = p.observaciones
+    ? '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">' + T.observaciones + '</td>' +
+      '<td style="padding:8px 16px;color:' + text + ';font-size:14px;font-style:italic">"' + escape(p.observaciones) + '"</td></tr>'
+    : '';
+
+  return [
+    '<!DOCTYPE html>',
+    '<html lang="' + lang + '"><head><meta charset="UTF-8"><meta name="color-scheme" content="light"></head>',
+    '<body style="margin:0;padding:24px 12px;background:#f5f1ec;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;color:' + text + '">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid ' + border + '">',
+    // Header
+    '<tr><td style="background:' + orange + ';padding:24px 28px;color:#fff">',
+    '<div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.85">Óptica Anaka</div>',
+    '<div style="font-size:24px;font-weight:600;margin-top:4px;font-family:Georgia,serif">' + T.heroTitle + '</div>',
+    '</td></tr>',
+    // Greeting
+    '<tr><td style="padding:26px 28px 6px">',
+    '<p style="margin:0 0 12px;font-size:16px;color:' + text + '">' + T.hi + ' <strong>' + escape(p.firstName) + '</strong>,</p>',
+    '<p style="margin:0 0 4px;font-size:15px;color:' + text + ';line-height:1.55">' + T.intro + '</p>',
+    '</td></tr>',
+    // Detalles tabla
+    '<tr><td style="padding:14px 28px 4px">',
+    '<div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:' + muted + ';margin-bottom:8px">' + T.summaryTitle + '</div>',
+    '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:' + cream + ';border:1px solid ' + border + ';border-radius:10px;border-collapse:separate">',
+    '<tr><td style="padding:14px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">' + T.motivo + '</td>',
+    '<td style="padding:14px 16px;color:' + text + ';font-size:15px;font-weight:600">' + escape(p.motivoLabel) + '</td></tr>',
+    '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">' + T.fecha + '</td>',
+    '<td style="padding:8px 16px;color:' + text + ';font-size:15px">' + escape(p.fechaHumana) + '</td></tr>',
+    '<tr><td style="padding:8px 16px 14px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">' + T.hora + '</td>',
+    '<td style="padding:8px 16px 14px;color:' + text + ';font-size:18px;font-weight:700;font-variant-numeric:tabular-nums">' + escape(p.horaHumana) + '</td></tr>',
+    obsBlock,
+    '</table>',
+    '</td></tr>',
+    // Next steps
+    '<tr><td style="padding:18px 28px 8px">',
+    '<div style="background:#fffaf3;border-left:3px solid ' + orange + ';padding:12px 16px;border-radius:6px">',
+    '<p style="margin:0;font-size:14px;color:' + text + ';line-height:1.55"><strong style="color:' + orangeDark + '">' + T.nextTitle + '</strong><br>' + T.next + '</p>',
+    '</div>',
+    '</td></tr>',
+    // Apple Calendar CTA
+    '<tr><td style="padding:18px 28px 8px">',
+    '<div style="font-size:13px;color:' + muted + ';margin-bottom:10px">' + T.calCta + '</div>',
+    '<a href="' + p.icsWebcal + '" target="_blank" style="display:inline-block;background:' + orange + ';color:#fff;padding:13px 26px;border-radius:50px;font-weight:600;text-decoration:none;font-size:15px">📅 ' + T.calBtn + '</a>',
+    '<div style="font-size:12px;color:' + muted + ';margin-top:12px;line-height:1.55">' + T.calNote + ' <a href="' + p.icsHttps + '" style="color:' + orange + ';font-weight:600">' + escape(p.icsName) + '</a></div>',
+    '</td></tr>',
+    // Contact block
+    '<tr><td style="padding:24px 28px 8px">',
+    '<div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:' + muted + ';margin-bottom:6px">' + T.contactTitle + '</div>',
+    '<div style="font-size:14px;color:' + text + ';line-height:1.6">',
+    'Óptica Anaka<br>',
+    'C. de Fuenterrabía, 14 · 20301 Irún, Gipuzkoa<br>',
+    '<a href="tel:+34943248490" style="color:' + orange + ';text-decoration:none;font-weight:600">943 24 84 90</a> · ',
+    '<a href="mailto:info@anakaoptica.com" style="color:' + orangeDark + ';text-decoration:none">info@anakaoptica.com</a>',
+    '</div>',
+    '</td></tr>',
+    // Signoff + footer
+    '<tr><td style="padding:18px 28px 26px">',
+    '<p style="margin:0 0 4px;font-size:14px;color:' + text + '">' + T.signoff + '</p>',
+    '<p style="margin:0;font-size:13px;color:' + muted + ';font-style:italic">' + T.team + '</p>',
+    '</td></tr>',
+    '<tr><td style="padding:14px 28px 22px;border-top:1px solid ' + border + ';font-size:11px;color:' + muted + ';line-height:1.6">',
+    T.footer,
+    '</td></tr>',
+    '</table>',
+    '</body></html>'
+  ].join('');
+}
+
+function clientStrings(lang) {
+  if (lang === 'eu') {
+    return {
+      hi: 'Kaixo',
+      heroTitle: 'Eskaera jaso dugu',
+      intro: 'Eskerrik asko zure hitzordu-eskaeragatik. Datuak ondo jaso ditugu eta laster jarriko gara zurekin harremanetan.',
+      summaryTitle: 'Zure eskaeraren laburpena',
+      motivo: 'Arrazoia',
+      fecha: 'Data',
+      hora: 'Ordua',
+      observaciones: 'Oharrak',
+      nextTitle: 'Hurrengo urratsak',
+      next: 'Telefonoz deituko dizugu lan-orduetan zure hitzordua baieztatzeko. Premia baduzu, deitu zuzenean 943 24 84 90 zenbakira.',
+      calCta: 'Bitartean, gehitu hitzordua zure egutegira:',
+      calBtn: 'Apple Egutegira gehitu',
+      calNote: 'Botoiak ez du funtzionatzen? Deskargatu fitxategia:',
+      contactTitle: 'Kontaktua',
+      signoff: 'Eskerrik asko zure konfiantzagatik.',
+      team: 'Optika Anakako taldea',
+      footer: 'Email hau Optika Anakako webguneko inprimakia bete duzulako jaso duzu. Ez baduzu hitzordua eskatu, mesedez, jakinarazi.'
+    };
+  }
+  if (lang === 'fr') {
+    return {
+      hi: 'Bonjour',
+      heroTitle: 'Demande bien reçue',
+      intro: 'Merci pour votre demande de rendez-vous. Nous l’avons bien reçue et vous contacterons sous peu.',
+      summaryTitle: 'Récapitulatif de votre demande',
+      motivo: 'Motif',
+      fecha: 'Date',
+      hora: 'Heure',
+      observaciones: 'Remarques',
+      nextTitle: 'Prochaines étapes',
+      next: 'Nous vous appellerons aux heures d’ouverture pour confirmer votre rendez-vous. En cas d’urgence, appelez directement le 943 24 84 90.',
+      calCta: 'En attendant, ajoutez le rendez-vous à votre calendrier :',
+      calBtn: 'Ajouter à Apple Calendar',
+      calNote: 'Le bouton ne fonctionne pas ? Téléchargez le fichier :',
+      contactTitle: 'Contact',
+      signoff: 'Merci pour votre confiance.',
+      team: 'L’équipe d’Optique Anaka',
+      footer: 'Vous recevez cet email parce que vous avez rempli le formulaire de réservation sur le site d’Optique Anaka. Si vous n’êtes pas à l’origine de cette demande, merci de nous prévenir.'
+    };
+  }
+  return {
+    hi: 'Hola',
+    heroTitle: 'Hemos recibido tu solicitud',
+    intro: 'Gracias por solicitar cita en Óptica Anaka. Hemos recibido correctamente tus datos y nos pondremos en contacto contigo en breve.',
+    summaryTitle: 'Resumen de tu solicitud',
+    motivo: 'Motivo',
+    fecha: 'Fecha',
+    hora: 'Hora',
+    observaciones: 'Observaciones',
+    nextTitle: 'Próximos pasos',
+    next: 'Te llamaremos por teléfono en horario comercial para confirmar tu cita. Si necesitas algo antes, llámanos directamente al 943 24 84 90.',
+    calCta: 'Mientras tanto, añade la cita a tu calendario:',
+    calBtn: 'Añadir a Apple Calendar',
+    calNote: '¿No funciona el botón? Descarga el archivo:',
+    contactTitle: 'Contacto',
+    signoff: 'Gracias por tu confianza.',
+    team: 'El equipo de Óptica Anaka',
+    footer: 'Recibes este email porque has rellenado el formulario de cita en la web de Óptica Anaka. Si no has sido tú, ignóralo o avísanos.'
+  };
 }
 
 function jsonOk() {
