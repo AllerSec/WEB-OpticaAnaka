@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursor();
   initPageAnimations();
   initCookieBanner();
+  initFloatingCitaCTA();
   initSpaRouter();
 });
 
@@ -142,12 +143,15 @@ function initCursor() {
   initCursor.__tickerBound = true;
 
   let mx = 0, my = 0, rx = 0, ry = 0;
+  const setDotX  = gsap.quickSetter(dot,  'x', 'px');
+  const setDotY  = gsap.quickSetter(dot,  'y', 'px');
+  const setRingX = gsap.quickSetter(ring, 'x', 'px');
+  const setRingY = gsap.quickSetter(ring, 'y', 'px');
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   gsap.ticker.add(() => {
-    gsap.set(dot, { x: mx, y: my });
-    rx += (mx - rx) * 0.13;
-    ry += (my - ry) * 0.13;
-    gsap.set(ring, { x: rx, y: ry });
+    setDotX(mx); setDotY(my);
+    rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
+    setRingX(rx); setRingY(ry);
   });
 
   document.querySelectorAll('a, button, .gallery-item, .collection-card, .btn, .service-card').forEach(el => {
@@ -229,11 +233,12 @@ function initHero() {
   if (!window.matchMedia('(pointer: coarse)').matches) {
     const orbs = hero.querySelectorAll('.hero-orb');
     let hx = 0, hy = 0;
+    let heroRect = hero.getBoundingClientRect();
+    window.addEventListener('resize', () => { heroRect = hero.getBoundingClientRect(); }, { passive: true });
     hero.addEventListener('mousemove', e => {
-      const r = hero.getBoundingClientRect();
-      hx = (e.clientX - r.left) / r.width  - 0.5;
-      hy = (e.clientY - r.top)  / r.height - 0.5;
-    });
+      hx = (e.clientX - heroRect.left) / heroRect.width  - 0.5;
+      hy = (e.clientY - heroRect.top)  / heroRect.height - 0.5;
+    }, { passive: true });
     addPageTicker(() => {
       if (orbs[0]) gsap.to(orbs[0], { x: hx * 45, y: hy * 28, duration: 1.4, ease: 'power1.out', overwrite: 'auto' });
       if (orbs[1]) gsap.to(orbs[1], { x: hx * -28, y: hy * -18, duration: 1.6, ease: 'power1.out', overwrite: 'auto' });
@@ -274,7 +279,11 @@ function initBrandsCarousel() {
     origTiles.forEach(t => track.appendChild(t.cloneNode(true)));
   };
   fill();
-  window.addEventListener('resize', () => { fill(); });
+  let _carouselResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(_carouselResizeTimer);
+    _carouselResizeTimer = setTimeout(() => fill(), 150);
+  });
 
   // 3. Ancho de un set original (px) — usado como unidad de loop
   const setW = origTiles.reduce((sum, t) => {
@@ -284,15 +293,28 @@ function initBrandsCarousel() {
 
   // 4. GSAP scroll continuo: mueve X de 0 a -setW en bucle
   //    modifiers wrappea el valor para que nunca baje de -setW
+  track.style.willChange = 'transform';
+
   let xCurrent = 0;
   const speed = 40;   // px/s — dt viene en ms, se convierte a s dividiendo /1000
+  let _carouselPaused = false;
 
   addPageTicker((_, dt) => {
+    if (_carouselPaused) return;
     xCurrent -= speed * (dt / 1000);
     // wrap: cuando hemos avanzado un set entero, volvemos 0 sin salto visual
     if (xCurrent <= -setW) xCurrent += setW;
     gsap.set(track, { x: xCurrent });
   });
+
+  // Pause on hover/focus (WCAG 2.1 AA 2.2.2 — Pause, Stop, Hide)
+  const carousel = track.closest('.brands-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', () => { _carouselPaused = true; });
+    carousel.addEventListener('mouseleave', () => { _carouselPaused = false; });
+    carousel.addEventListener('focusin',    () => { _carouselPaused = true; });
+    carousel.addEventListener('focusout',   () => { _carouselPaused = false; });
+  }
 }
 
 /* ── Keyword highlight on load ── */
@@ -429,7 +451,7 @@ function moveLB(dir) {
 function initCookieBanner() {
   const banner = document.querySelector('.cookie-banner');
   if (!banner || localStorage.getItem('anaka-cookies')) return;
-  banner.setAttribute('aria-modal','false'); // No bloquea
+  banner.setAttribute('aria-modal','true');
   setTimeout(() => {
     banner.classList.add('show');
     banner.querySelector('.cookie-accept')?.focus({ preventScroll: true });
@@ -641,12 +663,14 @@ function prefetchAllPages() {
   // Remove already-cached URLs
   urls.delete(normalizeUrl(location.href));
 
-  // Fetch all pages in the background with low priority
-  urls.forEach(url => {
-    if (_pageCache.has(url)) return;
-    // Use a small delay stagger so we don't flood the network
-    fetchAndCache(url);
-  });
+  // Fetch all pages in the background with low priority, batched sequentially
+  const urlArr = [...urls].filter(url => !_pageCache.has(url));
+  let i = 0;
+  const next = () => {
+    if (i >= urlArr.length) return;
+    fetchAndCache(urlArr[i++]).then(() => setTimeout(next, 200));
+  };
+  next();
 }
 
 function resolveRelativeUrls(doc, baseUrl) {
@@ -854,4 +878,52 @@ function rebindCursorTargets() {
     el.addEventListener('mouseenter', enter);
     el.addEventListener('mouseleave', leave);
   });
+}
+
+/* ── Floating "Pedir cita" CTA ── */
+function initFloatingCitaCTA() {
+  // Suppress on the cita pages themselves
+  const path = window.location.pathname;
+  if (/\/cita-previa\//.test(path) || /\/eu\/hitzordua\//.test(path) || /\/fr\/rendez-vous\//.test(path)) return;
+  if (document.querySelector('.cita-fab')) return; // idempotent
+
+  const lang = (document.documentElement.lang || 'es').slice(0, 2);
+  const labels = { es: 'Pedir cita', eu: 'Hitzordua', fr: 'Réserver' };
+  const aria = {
+    es: 'Pedir cita en Óptica Anaka',
+    eu: 'Hitzordua eskatu Optika Anakan',
+    fr: 'Réserver un rendez-vous à l’Optique Anaka'
+  };
+  const hrefBase = { es: '/cita-previa/', eu: '/eu/hitzordua/', fr: '/fr/rendez-vous/' };
+
+  // Resolve a relative href so the FAB works on file:// during local preview too.
+  // Detect language by URL prefix.
+  let prefix;
+  if (/^\/eu(\/|$)/.test(path)) prefix = 'eu';
+  else if (/^\/fr(\/|$)/.test(path)) prefix = 'fr';
+  else prefix = 'es';
+
+  // Compute relative depth from current path back to site root
+  // Strip trailing filename if any
+  const segments = path.split('/').filter(Boolean).filter(s => !s.endsWith('.html'));
+  const depth = segments.length;
+  const up = depth > 0 ? '../'.repeat(depth) : './';
+  const targetMap = { es: 'cita-previa/', eu: 'eu/hitzordua/', fr: 'fr/rendez-vous/' };
+  const href = up + targetMap[prefix];
+
+  const a = document.createElement('a');
+  a.className = 'cita-fab';
+  a.href = href;
+  a.setAttribute('aria-label', aria[prefix] || aria.es);
+  a.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="18" rx="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+      <path d="M9 16l2 2 4-4"/>
+    </svg>
+    <span class="cita-fab-label">${labels[prefix] || labels.es}</span>
+  `;
+  document.body.appendChild(a);
 }
