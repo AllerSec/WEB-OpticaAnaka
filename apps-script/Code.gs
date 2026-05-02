@@ -67,7 +67,10 @@ function doPost(e) {
     const subject = 'Nueva solicitud de cita — ' + fullName + ' — ' +
       Utilities.formatDate(start, TIMEZONE, 'EEE d MMM, HH:mm');
 
-    const body = [
+    const fechaHumana = Utilities.formatDate(start, TIMEZONE, 'EEEE, d \'de\' MMMM \'de\' yyyy');
+    const horaHumana = Utilities.formatDate(start, TIMEZONE, 'HH:mm');
+
+    const plain = [
       'NUEVA SOLICITUD DE CITA',
       '─────────────────────────',
       'Cliente:    ' + fullName,
@@ -75,8 +78,8 @@ function doPost(e) {
       'Email:      ' + data.email,
       '',
       'Motivo:     ' + motivoLabel,
-      'Fecha:      ' + Utilities.formatDate(start, TIMEZONE, 'EEEE, d \'de\' MMMM \'de\' yyyy'),
-      'Hora:       ' + Utilities.formatDate(start, TIMEZONE, 'HH:mm'),
+      'Fecha:      ' + fechaHumana,
+      'Hora:       ' + horaHumana,
       'Idioma web: ' + lang.toUpperCase(),
       '',
       'Observaciones:',
@@ -84,13 +87,41 @@ function doPost(e) {
       '',
       '─────────────────────────',
       'Adjunto: ' + icsBlob.getName(),
-      '(Toca el archivo desde tu iPhone para añadirlo al Apple Calendar)'
+      '(Toca el archivo desde tu iPhone para añadirlo al Apple Calendar.',
+      ' Si usas Google Calendar, abre el email en el ordenador y pulsa "Añadir a Google Calendar".)'
     ].join('\n');
+
+    const gcalUrl = buildGCalUrl({
+      title: 'Cita: ' + motivoLabel + ' — ' + fullName,
+      start: start,
+      end: end,
+      location: ORG_ADDRESS,
+      details: [
+        'Cliente: ' + fullName,
+        'Tel: ' + data.telefono,
+        'Email: ' + data.email,
+        'Observaciones: ' + (data.observaciones || '(sin observaciones)')
+      ].join('\n')
+    });
+
+    const html = buildHtmlEmail({
+      fullName: fullName,
+      telefono: data.telefono,
+      email: data.email,
+      motivoLabel: motivoLabel,
+      fechaHumana: fechaHumana,
+      horaHumana: horaHumana,
+      lang: lang,
+      observaciones: data.observaciones,
+      icsName: icsBlob.getName(),
+      gcalUrl: gcalUrl
+    });
 
     MailApp.sendEmail({
       to: RECIPIENT_EMAIL,
       subject: subject,
-      body: body,
+      body: plain,
+      htmlBody: html,
       name: FROM_NAME,
       attachments: [icsBlob],
       replyTo: data.email
@@ -201,6 +232,91 @@ function icsFilename(fullName) {
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return 'cita-' + (slug || 'cliente') + '.ics';
+}
+
+function buildGCalUrl(ev) {
+  // https://calendar.google.com/calendar/render?action=TEMPLATE&text=&dates=...&details=&location=
+  const fmt = d => Utilities.formatDate(d, 'UTC', "yyyyMMdd'T'HHmmss'Z'");
+  const params = [
+    'action=TEMPLATE',
+    'text=' + encodeURIComponent(ev.title),
+    'dates=' + fmt(ev.start) + '/' + fmt(ev.end),
+    'details=' + encodeURIComponent(ev.details),
+    'location=' + encodeURIComponent(ev.location)
+  ].join('&');
+  return 'https://calendar.google.com/calendar/render?' + params;
+}
+
+function buildHtmlEmail(p) {
+  const orange = '#D4620E';
+  const orangeDark = '#A04A0A';
+  const cream = '#FEF8F3';
+  const text = '#1A0E05';
+  const muted = '#5A3E25';
+  const border = '#EDD5BE';
+
+  const escape = (s) => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+  const obsBlock = p.observaciones
+    ? '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">Observaciones</td>' +
+      '<td style="padding:8px 16px;color:' + text + ';font-size:14px;font-style:italic">"' + escape(p.observaciones) + '"</td></tr>'
+    : '';
+
+  return [
+    '<!DOCTYPE html>',
+    '<html lang="es"><head><meta charset="UTF-8"><meta name="color-scheme" content="light"></head>',
+    '<body style="margin:0;padding:24px 12px;background:#f5f1ec;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;color:' + text + '">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid ' + border + '">',
+    // Header
+    '<tr><td style="background:' + orange + ';padding:22px 28px;color:#fff">',
+    '<div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.85">Óptica Anaka — Web</div>',
+    '<div style="font-size:22px;font-weight:600;margin-top:4px;font-family:Georgia,serif">Nueva solicitud de cita</div>',
+    '</td></tr>',
+    // Cliente
+    '<tr><td style="padding:24px 28px 8px">',
+    '<div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:' + muted + ';margin-bottom:6px">Cliente</div>',
+    '<div style="font-size:18px;font-weight:600;color:' + text + '">' + escape(p.fullName) + '</div>',
+    '<div style="margin-top:8px;font-size:14px;color:' + text + '">',
+    '<a href="tel:' + escape(p.telefono) + '" style="color:' + orange + ';text-decoration:none;font-weight:600">' + escape(p.telefono) + '</a>',
+    ' &nbsp;·&nbsp; ',
+    '<a href="mailto:' + escape(p.email) + '" style="color:' + orangeDark + ';text-decoration:none">' + escape(p.email) + '</a>',
+    '</div>',
+    '</td></tr>',
+    // Detalles tabla
+    '<tr><td style="padding:8px 28px 4px">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:' + cream + ';border:1px solid ' + border + ';border-radius:10px;border-collapse:separate">',
+    '<tr><td style="padding:14px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">Motivo</td>',
+    '<td style="padding:14px 16px;color:' + text + ';font-size:15px;font-weight:600">' + escape(p.motivoLabel) + '</td></tr>',
+    '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">Fecha</td>',
+    '<td style="padding:8px 16px;color:' + text + ';font-size:15px">' + escape(p.fechaHumana) + '</td></tr>',
+    '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">Hora</td>',
+    '<td style="padding:8px 16px;color:' + text + ';font-size:18px;font-weight:700;font-variant-numeric:tabular-nums">' + escape(p.horaHumana) + '</td></tr>',
+    '<tr><td style="padding:8px 16px;color:' + muted + ';font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;width:120px;vertical-align:top">Idioma web</td>',
+    '<td style="padding:8px 16px 14px;color:' + text + ';font-size:14px">' + escape(String(p.lang).toUpperCase()) + '</td></tr>',
+    obsBlock,
+    '</table>',
+    '</td></tr>',
+    // CTA buttons
+    '<tr><td style="padding:18px 28px 8px">',
+    '<div style="font-size:13px;color:' + muted + ';margin-bottom:10px">Añade la cita a tu calendario:</div>',
+    '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 0 0">',
+    '<tr>',
+    '<td style="padding-right:8px"><a href="' + p.gcalUrl + '" target="_blank" style="display:inline-block;background:' + orange + ';color:#fff;padding:12px 22px;border-radius:50px;font-weight:600;text-decoration:none;font-size:14px">Añadir a Google Calendar</a></td>',
+    '</tr></table>',
+    '<div style="font-size:12px;color:' + muted + ';margin-top:12px;line-height:1.5">',
+    '<strong style="color:' + text + '">¿Apple Calendar (iPhone/Mac) o Outlook?</strong><br>',
+    'Toca el archivo adjunto <code style="background:' + cream + ';padding:2px 6px;border-radius:4px;font-family:Menlo,monospace;font-size:12px">' + escape(p.icsName) + '</code> desde tu móvil o portátil y pulsa "Añadir al calendario". El recordatorio queda fijado 24 h antes.',
+    '</div>',
+    '</td></tr>',
+    // Footer
+    '<tr><td style="padding:20px 28px 26px;border-top:1px solid ' + border + ';margin-top:16px;font-size:11px;color:' + muted + ';line-height:1.6">',
+    'Esta solicitud llega desde el formulario web de Óptica Anaka. Responde directamente a este correo para contactar con el cliente — la dirección de respuesta es la suya.',
+    '</td></tr>',
+    '</table>',
+    '</body></html>'
+  ].join('');
 }
 
 function jsonOk() {

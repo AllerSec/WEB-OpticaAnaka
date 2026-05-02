@@ -1101,3 +1101,110 @@ body.cookie-open .cita-fab{bottom:calc(max(1rem, env(safe-area-inset-bottom)) + 
   }
   .site-header.scrolled .nav-links li a.nav-cta{color:var(--primary) !important}
 }
+
+/* ── Cita success modal ── */
+.cita-success-modal{
+  position:fixed;inset:0;z-index:1100;
+  display:flex;align-items:center;justify-content:center;
+  padding:1.25rem;
+  background:rgba(26,14,5,0); /* animated to .55 */
+  backdrop-filter:blur(0px);
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .25s var(--ease)
+}
+.cita-success-modal.is-open{
+  pointer-events:auto;
+  opacity:1
+}
+.cita-success-modal[aria-hidden="false"]{ /* progressive enhancement; gsap drives it */
+  opacity:1
+}
+
+.cita-success-card{
+  position:relative;
+  width:min(540px, 100%);
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:2.75rem 2rem 2rem;
+  text-align:center;
+  box-shadow:0 24px 80px rgba(26,14,5,.35), 0 0 0 1px rgba(212,98,14,.08);
+  transform:scale(.92);
+  opacity:0
+}
+@media(min-width:640px){
+  .cita-success-card{padding:3rem 2.5rem 2.25rem}
+}
+
+.cita-success-close{
+  position:absolute;top:.85rem;right:.85rem;
+  width:36px;height:36px;border-radius:50%;
+  background:transparent;border:none;cursor:pointer;
+  color:var(--text-muted);
+  display:grid;place-items:center;
+  transition:background var(--t),color var(--t)
+}
+.cita-success-close:hover{background:var(--primary-bg);color:var(--text)}
+.cita-success-close svg{width:18px;height:18px}
+
+.cita-success-check{
+  width:84px;height:84px;border-radius:50%;
+  background:#e7f6ec;
+  display:grid;place-items:center;
+  margin:0 auto 1.4rem;
+  position:relative
+}
+.cita-success-check::before{
+  content:"";position:absolute;inset:-6px;border-radius:50%;
+  background:radial-gradient(closest-side, rgba(29,140,74,.18), transparent 70%);
+  z-index:-1
+}
+.cita-success-check svg{width:42px;height:42px;color:#1d8c4a}
+.cita-success-check svg .check-path{
+  stroke-dasharray:36;stroke-dashoffset:36;
+  fill:none;stroke:currentColor;stroke-width:3;
+  stroke-linecap:round;stroke-linejoin:round
+}
+
+.cita-success-title{
+  font-family:var(--ff-display);font-size:clamp(1.6rem,3vw,2.1rem);
+  font-weight:600;color:var(--text);margin-bottom:.5rem;line-height:1.15
+}
+.cita-success-subtitle{
+  color:var(--text-muted);font-size:1rem;line-height:1.55;
+  margin-bottom:1.5rem;max-width:42ch;margin-left:auto;margin-right:auto
+}
+
+.cita-success-summary{
+  background:var(--primary-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.1rem 1.25rem;
+  margin:0 auto 1.5rem;
+  text-align:left;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.55rem 1rem;
+  font-size:.92rem
+}
+.cita-success-summary dt{
+  font-family:var(--ff-body);font-weight:600;color:var(--text-muted);
+  font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;
+  align-self:center
+}
+.cita-success-summary dd{color:var(--text);font-weight:500;align-self:center}
+
+.cita-success-foot{
+  font-size:.85rem;color:var(--text-muted);margin-top:.35rem
+}
+.cita-success-foot strong{color:var(--text);font-weight:600}
+
+.cita-success-actions{
+  display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem
+}
+.cita-success-actions .btn{min-width:140px}
+
+@media(prefers-reduced-motion:reduce){
+  .cita-success-modal{transition:none}
+  .cita-success-card{transform:none}
+}

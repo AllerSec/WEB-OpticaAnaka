@@ -956,7 +956,26 @@ function initCitaForm() {
       mustAcceptRgpd: 'Debes aceptar la política de privacidad.',
       rateLimited: 'Acabas de enviar una solicitud. Espera un minuto antes de enviar otra.',
       success: 'Solicitud enviada. Te contactaremos pronto para confirmar tu cita.',
-      errorNetwork: 'No hemos podido enviar tu solicitud. Llámanos al 943 24 84 90.'
+      errorNetwork: 'No hemos podido enviar tu solicitud. Llámanos al 943 24 84 90.',
+      modalTitle: '¡Tu cita ha sido solicitada!',
+      modalSubtitle: 'Te enviaremos una confirmación al correo y te llamaremos para validar tu cita.',
+      modalMotivo: 'Motivo',
+      modalFecha: 'Fecha',
+      modalHora: 'Hora',
+      modalCliente: 'Cliente',
+      modalFoot: 'Recibirás un correo en breves momentos.',
+      modalClose: 'Cerrar',
+      motivoLabels: {
+        revision: 'Revisión de la vista',
+        comprar: 'Comprar gafas / monturas',
+        lentillas: 'Lentes de contacto',
+        retinografia: 'Retinografía',
+        reparacion: 'Reparación o ajuste',
+        otro: 'Otro'
+      },
+      weekdays: ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],
+      months: ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+      formatDate: (wd, d, mo, y) => `${wd}, ${d} de ${mo} de ${y}`
     },
     eu: {
       requiredMotivo: 'Aukeratu arrazoi bat.',
@@ -972,7 +991,26 @@ function initCitaForm() {
       mustAcceptRgpd: 'Pribatutasun-politika onartu behar duzu.',
       rateLimited: 'Eskaera bat bidali berri duzu. Itxaron minutu bat beste bat bidali aurretik.',
       success: 'Eskaera bidalia. Laster jarriko gara zurekin harremanetan zure hitzordua baieztatzeko.',
-      errorNetwork: 'Ezin izan dugu zure eskaera bidali. Deitu 943 24 84 90 zenbakira.'
+      errorNetwork: 'Ezin izan dugu zure eskaera bidali. Deitu 943 24 84 90 zenbakira.',
+      modalTitle: '¡Zure hitzordua eskatuta dago!',
+      modalSubtitle: 'Berrespen bat bidaliko dizugu emailez eta deituko dizugu hitzordua baieztatzeko.',
+      modalMotivo: 'Arrazoia',
+      modalFecha: 'Data',
+      modalHora: 'Ordua',
+      modalCliente: 'Bezeroa',
+      modalFoot: 'Email bat jasoko duzu une batzuetan.',
+      modalClose: 'Itxi',
+      motivoLabels: {
+        revision: 'Ikusmen-azterketa',
+        comprar: 'Betaurrekoak / armazoiak erostea',
+        lentillas: 'Kontaktuko lenteak',
+        retinografia: 'Erretinografia',
+        reparacion: 'Konponketa edo doikuntza',
+        otro: 'Bestelakoa'
+      },
+      weekdays: ['igandea','astelehena','asteartea','asteazkena','osteguna','ostirala','larunbata'],
+      months: ['urtarrila','otsaila','martxoa','apirila','maiatza','ekaina','uztaila','abuztua','iraila','urria','azaroa','abendua'],
+      formatDate: (wd, d, mo, y) => `${y}ko ${mo}ren ${d}a, ${wd}`
     },
     fr: {
       requiredMotivo: 'Sélectionnez un motif.',
@@ -988,7 +1026,26 @@ function initCitaForm() {
       mustAcceptRgpd: 'Vous devez accepter la politique de confidentialité.',
       rateLimited: 'Vous venez d’envoyer une demande. Patientez une minute avant d’en envoyer une autre.',
       success: 'Demande envoyée. Nous vous contacterons bientôt pour confirmer votre rendez-vous.',
-      errorNetwork: 'Nous n’avons pas pu envoyer votre demande. Appelez-nous au 943 24 84 90.'
+      errorNetwork: 'Nous n’avons pas pu envoyer votre demande. Appelez-nous au 943 24 84 90.',
+      modalTitle: 'Votre rendez-vous est demandé !',
+      modalSubtitle: 'Nous vous enverrons une confirmation par email et nous vous appellerons pour valider.',
+      modalMotivo: 'Motif',
+      modalFecha: 'Date',
+      modalHora: 'Heure',
+      modalCliente: 'Client',
+      modalFoot: 'Vous recevrez un email d’ici quelques instants.',
+      modalClose: 'Fermer',
+      motivoLabels: {
+        revision: 'Examen de vue',
+        comprar: 'Acheter des lunettes',
+        lentillas: 'Lentilles de contact',
+        retinografia: 'Rétinographie',
+        reparacion: 'Réparation ou ajustement',
+        otro: 'Autre'
+      },
+      weekdays: ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'],
+      months: ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],
+      formatDate: (wd, d, mo, y) => `${wd} ${d} ${mo} ${y}`
     }
   };
 
@@ -1189,9 +1246,10 @@ function initCitaForm() {
       if (!res.ok || !body.ok) throw new Error(body.error || 'send failed');
 
       submitBtn.dataset.state = 'success';
-      showFormMsg('success', t.success);
       markSubmitted();
+      openSuccessModal(data, t);
       f.reset();
+      submitBtn.dataset.state = '';
       document.querySelectorAll('.cita-slot.is-selected').forEach(el => {
         el.classList.remove('is-selected');
         el.setAttribute('aria-checked', 'false');
@@ -1201,6 +1259,100 @@ function initCitaForm() {
       submitBtn.dataset.state = '';
       showFormMsg('error', t.errorNetwork);
     }
+  }
+
+  function formatHumanDate(dateStr, t) {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    const dt = new Date(y, m - 1, d);
+    return t.formatDate(t.weekdays[dt.getDay()], d, t.months[m - 1], y);
+  }
+
+  function openSuccessModal(data, t) {
+    closeSuccessModal();
+
+    const fullName = (data.nombre + ' ' + data.apellidos).trim();
+    const motivoLabel = (t.motivoLabels && t.motivoLabels[data.motivo]) || data.motivo;
+    const fechaLabel = formatHumanDate(data.fecha, t);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'cita-success-modal';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'citaSuccessTitle');
+    overlay.innerHTML = `
+      <div class="cita-success-card" role="document">
+        <button type="button" class="cita-success-close" aria-label="${t.modalClose}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="cita-success-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path class="check-path" d="M5 12.5l4.5 4.5L19 7.5"/>
+          </svg>
+        </div>
+        <h2 class="cita-success-title" id="citaSuccessTitle">${t.modalTitle}</h2>
+        <p class="cita-success-subtitle">${t.modalSubtitle}</p>
+        <dl class="cita-success-summary">
+          <dt>${t.modalCliente}</dt><dd>${escapeHtml(fullName)}</dd>
+          <dt>${t.modalMotivo}</dt><dd>${escapeHtml(motivoLabel)}</dd>
+          <dt>${t.modalFecha}</dt><dd>${escapeHtml(fechaLabel)}</dd>
+          <dt>${t.modalHora}</dt><dd>${escapeHtml(data.hora)}</dd>
+        </dl>
+        <p class="cita-success-foot">${t.modalFoot}</p>
+        <div class="cita-success-actions">
+          <button type="button" class="btn btn-primary cita-success-ok">${t.modalClose}</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+
+    const card = overlay.querySelector('.cita-success-card');
+    const checkPath = overlay.querySelector('.check-path');
+    const closeBtn = overlay.querySelector('.cita-success-close');
+    const okBtn = overlay.querySelector('.cita-success-ok');
+
+    closeBtn.addEventListener('click', closeSuccessModal);
+    okBtn.addEventListener('click', closeSuccessModal);
+    overlay.addEventListener('click', (ev) => { if (ev.target === overlay) closeSuccessModal(); });
+    document.addEventListener('keydown', escClose);
+
+    document.body.style.overflow = 'hidden';
+    overlay.classList.add('is-open');
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (window.gsap && !reduce) {
+      gsap.fromTo(overlay, { backgroundColor: 'rgba(26,14,5,0)' }, { backgroundColor: 'rgba(26,14,5,0.55)', duration: 0.35, ease: 'power2.out' });
+      gsap.fromTo(card, { opacity: 0, scale: 0.88, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.55, ease: 'back.out(1.6)', delay: 0.05 });
+      gsap.to(checkPath, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out', delay: 0.35 });
+    } else {
+      overlay.style.backgroundColor = 'rgba(26,14,5,0.55)';
+      card.style.opacity = '1';
+      card.style.transform = 'none';
+      if (checkPath) checkPath.style.strokeDashoffset = '0';
+    }
+
+    setTimeout(() => okBtn.focus(), 60);
+  }
+
+  function closeSuccessModal() {
+    const overlay = document.querySelector('.cita-success-modal');
+    if (!overlay) return;
+    document.removeEventListener('keydown', escClose);
+    document.body.style.overflow = '';
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const remove = () => overlay.remove();
+    if (window.gsap && !reduce) {
+      gsap.to(overlay, { opacity: 0, duration: 0.25, ease: 'power2.in', onComplete: remove });
+    } else {
+      remove();
+    }
+  }
+
+  function escClose(ev) { if (ev.key === 'Escape') closeSuccessModal(); }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   const dateEl = document.getElementById('cita-fecha');
