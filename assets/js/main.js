@@ -936,7 +936,7 @@ function initCitaForm() {
   if (form.dataset.citaInited === '1') return;
   form.dataset.citaInited = '1';
 
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxUM95Wuedd_XKPtLMcYPbmeA38q_I-y_CcT1FEDUxVpHYZzNV0Yk6FY7ArRQCxxR6e/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbynDAhoQm41_Tx1Fh58SbCNs1q4Wsq0qQUqkrLtelbjiAb84BXOVG-580LuXYtFf08/exec';
   const RATE_LIMIT_KEY = 'cita_last_submit_ts';
   const RATE_LIMIT_MS = 60000;
   const MAX_DAYS_AHEAD = 60;
