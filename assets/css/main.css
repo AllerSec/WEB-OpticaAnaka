@@ -6,13 +6,14 @@
 
 /* ── Variables ── */
 :root {
-  --primary:       #D4620E;
+  --primary:            #D4620E;
+  --primary-accessible: #B05210;
   --primary-dark:  #A04A0A;
   --primary-light: #F08432;
   --primary-bg:    #FEF8F3;
   --primary-bg2:   #FCF0E6;
   --text:          #1A0E05;
-  --text-muted:    #7A5E45;
+  --text-muted:    #5A3E25;
   --white:         #FFFFFF;
   --border:        #EDD5BE;
   --radius:        12px;
@@ -83,7 +84,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 }
 .skip-link:focus{top:0}
 
-:focus{outline:none}
+:focus:not(:focus-visible){outline:none}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
 .site-header.scrolled .nav-links li a:focus-visible,.site-header.scrolled .nav-lang a:focus-visible,.site-header.scrolled .nav-phone:focus-visible{outline-color:var(--primary)}
 .hero .btn:focus-visible,.hero-btns .btn:focus-visible,.btn-outline-white:focus-visible,.nav-links li a:focus-visible{outline-color:var(--primary-light);outline-offset:4px}
@@ -160,7 +161,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 .site-header.scrolled .nav-lang span{color:var(--border)}
 .nav-toggle{
   display:none;flex-direction:column;gap:5px;cursor:pointer;
-  padding:.5rem;margin-left:auto;background:none;border:none
+  padding:.75rem;margin-left:auto;background:none;border:none
 }
 .nav-toggle span{
   width:23px;height:1.5px;background:rgba(255,255,255,.85);border-radius:1px;
@@ -183,7 +184,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
     transition:transform var(--t) var(--ease),opacity var(--t);
     box-shadow:0 8px 32px rgba(0,0,0,.08)
   }
-  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;max-height:calc(100svh - var(--nav-h));overflow-y:auto}
   .nav-links li a{display:block;padding:.8rem 0;border-bottom:1px solid var(--border);border-radius:0;font-size:.95rem;color:var(--text)}
   .nav-links li a:hover,.nav-links li a.active{color:var(--primary)}
   .nav-links li:last-child a{border-bottom:none}
@@ -224,11 +225,18 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:
-    linear-gradient(135deg,rgba(13,11,7,.78) 0%,rgba(28,20,8,.72) 55%,rgba(8,6,3,.85) 100%),
-    url('../images/foto-interior.webp') center/cover no-repeat #0D0B07
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  z-index:0;
 }
-.hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(13,11,7,.78) 0%,rgba(28,20,8,.72) 55%,rgba(8,6,3,.85) 100%);
+  z-index:1;
+  pointer-events:none;
+}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:2}
 .hero-orb-1{
   width:min(700px,70vw);height:min(700px,70vw);
   top:-20%;right:-10%;
@@ -284,8 +292,8 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   animation:logoPulse 4s ease-in-out infinite;
 }
 @keyframes logoPulse{
-  0%,100%{ filter:drop-shadow(0 0 40px rgba(212,98,14,.55)) drop-shadow(0 0 12px rgba(255,255,255,.18)) brightness(1.08) }
-  50%    { filter:drop-shadow(0 0 65px rgba(212,98,14,.85)) drop-shadow(0 0 22px rgba(255,255,255,.28)) brightness(1.14) }
+  0%,100%{ opacity:0.85 }
+  50%    { opacity:1 }
 }
 /* Tablet intermedio: aflojamos el minmax del logo para evitar empujes */
 @media(max-width:1024px){
@@ -317,9 +325,10 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 .hero h1{
   color:var(--white);font-weight:700;
   font-size:clamp(2.4rem, 6.2vw, 5.25rem);
-  margin-bottom:1.2rem;line-height:1.05;
+  margin-bottom:1.2rem;line-height:1.1;
   text-wrap:balance;
 }
+h2{text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--primary-light)}
 .hero-desc{
   color:rgba(255,255,255,.7);
@@ -330,9 +339,10 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 }
 .hero-btns{display:flex;gap:.9rem;flex-wrap:wrap}
 .hero-scroll-indicator{
-  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  position:absolute;bottom:max(2.5rem, calc(2.5rem + env(safe-area-inset-bottom)));left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:.45rem;
-  color:rgba(255,255,255,.35);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase
+  color:rgba(255,255,255,.35);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  z-index:2;
 }
 .hero-scroll-line{
   width:1px;height:36px;
@@ -346,11 +356,11 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   display:inline-flex;align-items:center;gap:.45rem;
   padding:.8rem 1.9rem;border-radius:50px;
   font-size:.88rem;font-weight:600;letter-spacing:.02em;
-  cursor:pointer;border:none;transition:all var(--t) var(--ease);
+  cursor:pointer;border:none;transition:background var(--t) var(--ease),box-shadow var(--t) var(--ease),transform var(--t) var(--ease),border-color var(--t) var(--ease),color var(--t) var(--ease);
   position:relative;overflow:hidden;text-decoration:none
 }
-.btn-primary{background:var(--primary);color:var(--white);box-shadow:0 4px 20px rgba(212,98,14,.35)}
-.btn-primary:hover{background:var(--primary-dark);box-shadow:0 6px 28px rgba(212,98,14,.45);transform:translateY(-1px)}
+.btn-primary{background:var(--primary-accessible);color:var(--white);box-shadow:0 4px 20px rgba(176,82,16,.35)}
+.btn-primary:hover{background:#8C4010;box-shadow:0 6px 28px rgba(176,82,16,.45);transform:translateY(-1px)}
 .btn-outline-white{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}
 .btn-outline-white:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55)}
 .btn-dark{background:var(--text);color:var(--white);box-shadow:0 4px 20px rgba(0,0,0,.2)}
@@ -396,6 +406,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 .compromiso-photo{
   position:absolute;inset:-18% 0;
   width:100%;height:136%;
+  aspect-ratio:16 / 9;
   object-fit:cover;object-position:center 40%;
   will-change:transform;pointer-events:none;user-select:none;
 }
@@ -466,7 +477,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 }
 .brands-carousel::before{left:0;background:linear-gradient(to right,var(--white),transparent)}
 .brands-carousel::after{right:0;background:linear-gradient(to left,var(--white),transparent)}
-.brands-track{display:flex;width:max-content;will-change:transform}
+.brands-track{display:flex;width:max-content}
 .brand-tile{
   margin-right:1.5rem;
   display:flex;align-items:center;justify-content:center;
@@ -480,6 +491,10 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   filter:grayscale(1) opacity(.55);transition:filter var(--t),opacity var(--t)
 }
 .brand-tile:hover img{filter:grayscale(0) opacity(1)}
+
+/* Pause CSS-driven carousel on hover/focus (WCAG 2.1 AA 2.2.2) */
+.brands-carousel:hover .brands-track,
+.brands-carousel:focus-within .brands-track{animation-play-state:paused}
 
 /* ── Collections Grid ── */
 .collections-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
@@ -816,4 +831,273 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   .hero-logo-wrap img{animation:none}
   .hero-scroll-line{animation:none}
   .compromiso-photo{transform:none!important}
+}
+
+/* ══════════════════════════════════════════════════
+   RESERVA DE CITAS
+══════════════════════════════════════════════════ */
+
+/* ── Page layout ── */
+.cita-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+  margin-top:2rem;
+}
+@media(min-width:768px){
+  .cita-grid{grid-template-columns:1fr 1.4fr;gap:2.5rem}
+}
+@media(min-width:1024px){
+  .cita-grid{grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+  .cita-info-card{position:sticky;top:calc(var(--nav-h) + 1.5rem)}
+}
+
+/* ── Info card (left column) ── */
+.cita-info-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:1.75rem;
+  box-shadow:var(--shadow);
+}
+.cita-info-card h2{font-size:1.4rem;margin-bottom:1.25rem}
+.cita-steps{list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:1rem}
+.cita-step{display:flex;gap:.85rem;align-items:flex-start}
+.cita-step-num{
+  flex-shrink:0;width:30px;height:30px;border-radius:50%;
+  background:var(--primary);color:var(--white);
+  display:grid;place-items:center;font-weight:700;font-size:.9rem;
+  font-family:var(--ff-body)
+}
+.cita-step-text{font-size:.95rem;color:var(--text-muted);line-height:1.5}
+.cita-step-text strong{color:var(--text);font-weight:600;display:block;margin-bottom:.15rem;font-family:var(--ff-body)}
+
+/* ── Form card (right column) ── */
+.cita-form-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  padding:1.75rem;
+  box-shadow:var(--shadow);
+}
+@media(min-width:768px){
+  .cita-form-card{padding:2.25rem}
+}
+.cita-fieldset{border:none;padding:0;margin:0 0 2rem}
+.cita-fieldset:last-of-type{margin-bottom:1rem}
+.cita-legend{
+  display:flex;align-items:center;gap:.6rem;
+  font-family:var(--ff-body);font-size:.78rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--primary);
+  margin-bottom:1rem;padding:0
+}
+.cita-legend-num{
+  display:grid;place-items:center;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--primary);color:var(--white);
+  font-size:.75rem;font-weight:700
+}
+
+/* ── Step 1: motivo cards ── */
+.cita-motivos{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.75rem;
+}
+@media(min-width:768px){
+  .cita-motivos{grid-template-columns:repeat(3,1fr)}
+}
+.cita-motivo{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+  padding:1rem .75rem;
+  background:var(--primary-bg);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  cursor:pointer;
+  text-align:center;
+  min-height:96px;
+  transition:transform var(--t) var(--ease),border-color var(--t),background var(--t),box-shadow var(--t)
+}
+.cita-motivo input{position:absolute;opacity:0;pointer-events:none}
+.cita-motivo:hover{border-color:var(--primary-light);background:var(--white)}
+.cita-motivo:has(input:checked){
+  border-color:var(--primary);
+  background:var(--white);
+  box-shadow:var(--shadow-gold);
+  transform:translateY(-2px)
+}
+.cita-motivo-icon{
+  width:36px;height:36px;
+  display:grid;place-items:center;
+  color:var(--primary);
+  flex-shrink:0
+}
+.cita-motivo-label{
+  font-family:var(--ff-body);font-size:.82rem;font-weight:600;
+  color:var(--text);line-height:1.25
+}
+
+/* ── Step 2: date + time ── */
+.cita-date-row{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+.cita-date-row label{font-size:.85rem;font-weight:600;color:var(--text)}
+.cita-date-row input[type="date"]{
+  font-family:var(--ff-body);font-size:1rem;
+  padding:.75rem .9rem;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--white);color:var(--text);
+  min-height:48px;
+  transition:border-color var(--t)
+}
+.cita-date-row input[type="date"]:focus{outline:none;border-color:var(--primary)}
+
+.cita-slots-wrap{display:none}
+.cita-slots-wrap.is-visible{display:block}
+.cita-slots-group{margin-bottom:1rem}
+.cita-slots-title{
+  font-family:var(--ff-body);font-size:.78rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:.5rem
+}
+.cita-slots{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:.5rem;
+}
+@media(min-width:768px){
+  .cita-slots{grid-template-columns:repeat(4,1fr)}
+}
+.cita-slot{
+  background:var(--primary-bg);
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  padding:.65rem .25rem;
+  font-family:var(--ff-body);font-size:.9rem;font-weight:600;
+  color:var(--text);cursor:pointer;
+  min-height:44px;
+  transition:background var(--t),border-color var(--t),color var(--t),transform var(--t)
+}
+.cita-slot:hover{border-color:var(--primary-light);background:var(--white)}
+.cita-slot.is-selected{
+  background:var(--primary);border-color:var(--primary);color:var(--white)
+}
+.cita-slot:focus-visible{outline-offset:3px}
+
+.cita-no-slots{color:var(--text-muted);font-size:.9rem;font-style:italic;padding:.5rem 0}
+
+/* ── Step 3: personal data (reuses .form-row, .form-group from contact) ── */
+.cita-form-card .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+@media(max-width:600px){.cita-form-card .form-row{grid-template-columns:1fr}}
+.cita-form-card .form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.cita-form-card .form-group label{font-size:.85rem;font-weight:600;color:var(--text)}
+.cita-form-card .form-group input,
+.cita-form-card .form-group textarea{
+  font-family:var(--ff-body);font-size:16px; /* 16px prevents iOS zoom */
+  padding:.75rem .9rem;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  background:var(--white);color:var(--text);
+  min-height:48px;
+  transition:border-color var(--t)
+}
+.cita-form-card .form-group textarea{min-height:96px;resize:vertical;line-height:1.5}
+.cita-form-card .form-group input:focus,
+.cita-form-card .form-group textarea:focus{outline:none;border-color:var(--primary)}
+.cita-form-card .form-group input[aria-invalid="true"],
+.cita-form-card .form-group textarea[aria-invalid="true"]{border-color:#c0392b}
+.cita-field-error{font-size:.78rem;color:#c0392b;min-height:1em}
+
+/* Honeypot — visually hidden but still a "real" field for bots */
+.cita-hp{
+  position:absolute !important;
+  left:-9999px !important;
+  width:1px !important;height:1px !important;
+  opacity:0 !important;pointer-events:none !important
+}
+
+/* Submit button states */
+.cita-submit{
+  width:100%;justify-content:center;
+  min-height:52px;
+  position:relative
+}
+.cita-submit[data-state="loading"]{pointer-events:none;opacity:.85}
+.cita-submit[data-state="loading"] .cita-submit-label{visibility:hidden}
+.cita-submit[data-state="loading"]::after{
+  content:"";position:absolute;
+  width:20px;height:20px;border-radius:50%;
+  border:2.5px solid rgba(255,255,255,.35);
+  border-top-color:var(--white);
+  animation:cita-spin .7s linear infinite
+}
+.cita-submit[data-state="success"]{background:#1d8c4a;border-color:#1d8c4a;pointer-events:none}
+@keyframes cita-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){
+  .cita-submit[data-state="loading"]::after{animation:none}
+}
+
+.cita-form-msg{
+  margin-top:1rem;padding:.85rem 1rem;border-radius:var(--radius);
+  font-size:.9rem;line-height:1.5;display:none
+}
+.cita-form-msg.is-success{display:block;background:#e7f6ec;color:#155724;border:1px solid #b6e0c2}
+.cita-form-msg.is-error{display:block;background:#fdecec;color:#7a1f1f;border:1px solid #f1c0c0}
+
+/* ── Floating CTA (FAB) — appears on every page except the cita pages themselves ── */
+.cita-fab{
+  position:fixed;
+  right:1rem;
+  bottom:max(1rem, env(safe-area-inset-bottom));
+  z-index:900;
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.85rem 1.25rem;
+  background:var(--primary);color:var(--white);
+  border-radius:50px;
+  font-family:var(--ff-body);font-size:.9rem;font-weight:600;
+  letter-spacing:.02em;
+  box-shadow:0 8px 24px rgba(212,98,14,.35);
+  text-decoration:none;
+  transition:transform var(--t) var(--ease),box-shadow var(--t),background var(--t);
+  min-height:48px
+}
+.cita-fab:hover{
+  background:var(--primary-dark);
+  transform:translateY(-2px);
+  box-shadow:0 12px 32px rgba(212,98,14,.45)
+}
+.cita-fab svg{width:18px;height:18px;flex-shrink:0}
+.cita-fab-label{white-space:nowrap}
+
+/* On desktop, the CTA inside the navbar is enough — hide the FAB */
+@media(min-width:1024px){
+  .cita-fab{display:none}
+}
+
+/* If the cookie banner is open at the bottom, push the FAB up */
+body.cookie-open .cita-fab{bottom:calc(max(1rem, env(safe-area-inset-bottom)) + 80px)}
+
+/* ── Navbar CTA (replaces the regular link styling for the cita item) ── */
+.nav-links li a.nav-cta{
+  background:var(--primary);
+  color:var(--white) !important;
+  padding:.45rem 1rem;
+  border-radius:50px;
+  font-weight:600;
+  margin-left:.4rem;
+  transition:background var(--t),box-shadow var(--t),transform var(--t)
+}
+.nav-links li a.nav-cta:hover{
+  background:var(--primary-dark);
+  box-shadow:0 4px 14px rgba(212,98,14,.3)
+}
+.nav-links li a.nav-cta::after{display:none}
+.site-header.scrolled .nav-links li a.nav-cta{color:var(--white) !important}
+@media(max-width:900px){
+  .nav-links li a.nav-cta{
+    background:var(--primary-bg);color:var(--primary) !important;
+    border-radius:0;padding:.8rem 0;margin-left:0;
+    text-align:left
+  }
+  .site-header.scrolled .nav-links li a.nav-cta{color:var(--primary) !important}
 }
