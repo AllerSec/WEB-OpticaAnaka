@@ -8,9 +8,9 @@
 
   // === CONFIG ===
   // Replace this constant with the deployed Apps Script Web App URL after deployment.
-  const APPS_SCRIPT_URL = 'REPLACE_WITH_DEPLOYED_APPS_SCRIPT_URL';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwoCyvf63VaqDutpcmAzjgvWPV34HJ94wWTQK-kSfin4pIPHa2AlbRNsij6HgSDY_MN/exec';
   const RATE_LIMIT_KEY = 'cita_last_submit_ts';
-  const RATE_LIMIT_MS = 60_000;
+  const RATE_LIMIT_MS = 60000;
   const MAX_DAYS_AHEAD = 60;
 
   // i18n strings

@@ -46,7 +46,7 @@ function doPost(e) {
     const motivoLabel = (MOTIVOS[data.motivo] && MOTIVOS[data.motivo][lang]) || data.motivo;
 
     const start = parseLocalDate(data.fecha, data.hora);
-    const end = new Date(start.getTime() + SLOT_MINUTES * 60_000);
+    const end = new Date(start.getTime() + SLOT_MINUTES * 60000);
 
     const fullName = (data.nombre + ' ' + data.apellidos).trim();
     const ics = buildIcs({
