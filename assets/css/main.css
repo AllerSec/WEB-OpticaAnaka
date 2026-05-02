@@ -1102,6 +1102,20 @@ body.cookie-open .cita-fab{bottom:calc(max(1rem, env(safe-area-inset-bottom)) + 
   .site-header.scrolled .nav-links li a.nav-cta{color:var(--primary) !important}
 }
 
+/* ── Footer credit link (Unax Aller) ── */
+.footer-credit-link{
+  color:rgba(255,255,255,.55);
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.2);
+  transition:color .25s var(--ease),border-color .25s var(--ease)
+}
+.footer-credit-link:hover,
+.footer-credit-link:focus-visible{
+  color:#fff;
+  border-bottom-color:rgba(255,255,255,.6)
+}
+
 /* ── Cita success modal ── */
 .cita-success-modal{
   position:fixed;inset:0;z-index:1100;
