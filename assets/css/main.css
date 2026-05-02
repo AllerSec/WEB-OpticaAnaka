@@ -784,8 +784,9 @@ h2{text-wrap:balance}
 }
 .cookie-accept{background:var(--primary);color:var(--white)}
 .cookie-accept:hover{background:var(--primary-light)}
-.cookie-decline{background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.18)}
-.cookie-decline:hover{background:rgba(255,255,255,.14)}
+.cookie-decline,.cookie-config{background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.18)}
+.cookie-decline:hover,.cookie-config:hover{background:rgba(255,255,255,.14)}
+.cookie-config{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 
 /* ── 404 ── */
 .page-404{

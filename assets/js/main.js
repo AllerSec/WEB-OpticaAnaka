@@ -461,8 +461,25 @@ function initCookieBanner() {
     localStorage.setItem('anaka-cookies', v);
     gsap.to(banner, { y: '130%', duration: 0.4, ease: 'power2.in', onComplete: () => banner.remove() });
   };
-  banner.querySelector('.cookie-accept')?.addEventListener('click', () => dismiss('1'));
-  banner.querySelector('.cookie-decline')?.addEventListener('click', () => dismiss('0'));
+  banner.querySelectorAll('.cookie-accept').forEach(el => {
+    el.addEventListener('click', (ev) => {
+      // If it's an anchor (e.g., "Configurar"), let the navigation happen,
+      // but still record the user's choice. For real <button>s, just dismiss.
+      if (el.tagName !== 'A') ev.preventDefault();
+      dismiss('1');
+    });
+  });
+  banner.querySelectorAll('.cookie-decline').forEach(el => {
+    el.addEventListener('click', (ev) => {
+      // Only the explicit "Rechazar" button should dismiss. Anchors with
+      // href (like "Configurar" linking to a settings page) navigate
+      // normally and we just record the choice without intercepting.
+      if (el.tagName !== 'A') {
+        ev.preventDefault();
+        dismiss('0');
+      }
+    });
+  });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && banner.isConnected && banner.classList.contains('show')) dismiss('0');
   });
