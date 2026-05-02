@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="eu">
 <head>
   <meta charset="UTF-8"/>
@@ -32,7 +32,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
   <link rel="preload" as="image" href="../logos/OPTICA-ANACA-LOGO-1.webp" fetchpriority="high"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="../assets/css/main.css"/>
   <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -67,6 +68,7 @@
       <li><a href="zerbitzuak/index.html">Zerbitzuak</a></li>
       <li><a href="bildumak/index.html">Bildumak</a></li>
       <li><a href="kontaktua/index.html">Kontaktua</a></li>
+      <li><a href="hitzordua/index.html" class="nav-cta">Hitzordua eskatu</a></li>
     </ul>
     <div class="nav-lang" aria-label="Hizkuntza">
       <a href="../index.html" lang="es" hreflang="es">ES</a>
@@ -86,7 +88,7 @@
 
 <!-- ── HERO ── -->
 <section class="hero" aria-label="Aurkezpena">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <img class="hero-bg" src="../assets/images/foto-interior.webp" alt="" aria-hidden="true" decoding="async" loading="eager" fetchpriority="high"/>
   <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
   <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
 
@@ -211,7 +213,7 @@
 
   <div class="container" style="margin-top:3rem">
     <div class="collections-grid" data-stagger>
-      <a class="collection-card" href="../colecciones/carolina-herrera/index.html" aria-label="Carolina Herrera bilduma ikusi">
+      <a class="collection-card" href="bildumak/carolina-herrera/index.html" aria-label="Carolina Herrera bilduma ikusi">
         <img class="cc-img" src="../colecciones/carolina-herrera/CAROLINA-HERRERA-061.webp" alt="Carolina Herrera betaurrekoak Optika Anakan" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -220,7 +222,7 @@
         </div>
         <span class="cc-name">Carolina Herrera</span>
       </a>
-      <a class="collection-card" href="../colecciones/longchamp/index.html" aria-label="Longchamp bilduma ikusi">
+      <a class="collection-card" href="bildumak/longchamp/index.html" aria-label="Longchamp bilduma ikusi">
         <img class="cc-img" src="../colecciones/longchamp/LONGCHAMP-091.webp" alt="Longchamp betaurrekoak Optika Anakan" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -229,7 +231,7 @@
         </div>
         <span class="cc-name">Longchamp</span>
       </a>
-      <a class="collection-card" href="../colecciones/etnia/index.html" aria-label="Etnia Barcelona bilduma ikusi">
+      <a class="collection-card" href="bildumak/etnia/index.html" aria-label="Etnia Barcelona bilduma ikusi">
         <img class="cc-img" src="../colecciones/etnia/ETNIA-001.webp" alt="Etnia Barcelona betaurrekoak" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -238,7 +240,7 @@
         </div>
         <span class="cc-name">Etnia Barcelona</span>
       </a>
-      <a class="collection-card" href="../colecciones/lacoste/index.html" aria-label="Lacoste bilduma ikusi">
+      <a class="collection-card" href="bildumak/lacoste/index.html" aria-label="Lacoste bilduma ikusi">
         <img class="cc-img" src="../colecciones/lacoste/LACOSTE-099.webp" alt="Lacoste betaurrekoak Optika Anakan" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -247,7 +249,7 @@
         </div>
         <span class="cc-name">Lacoste</span>
       </a>
-      <a class="collection-card" href="../colecciones/oakley/index.html" aria-label="Oakley bilduma ikusi">
+      <a class="collection-card" href="bildumak/oakley/index.html" aria-label="Oakley bilduma ikusi">
         <img class="cc-img" src="../colecciones/oakley/OAKLEY-105.webp" alt="Oakley betaurrekoak Gipuzkoan" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -256,7 +258,7 @@
         </div>
         <span class="cc-name">Oakley</span>
       </a>
-      <a class="collection-card" href="../colecciones/silhouette/index.html" aria-label="Silhouette bilduma ikusi">
+      <a class="collection-card" href="bildumak/silhouette/index.html" aria-label="Silhouette bilduma ikusi">
         <img class="cc-img" src="../colecciones/silhouette/SILHOUETTE-034.webp" alt="Silhouette betaurrekoak Optika Anakan" loading="lazy"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
@@ -386,18 +388,18 @@
       </div>
       <div class="footer-col">
         <h4>Bildumak</h4>
-        <a href="../colecciones/carolina-herrera/index.html">Carolina Herrera</a>
-        <a href="../colecciones/longchamp/index.html">Longchamp</a>
-        <a href="../colecciones/etnia/index.html">Etnia Barcelona</a>
-        <a href="../colecciones/lacoste/index.html">Lacoste</a>
-        <a href="../colecciones/oakley/index.html">Oakley</a>
-        <a href="../colecciones/silhouette/index.html">Silhouette</a>
+        <a href="bildumak/carolina-herrera/index.html">Carolina Herrera</a>
+        <a href="bildumak/longchamp/index.html">Longchamp</a>
+        <a href="bildumak/etnia/index.html">Etnia Barcelona</a>
+        <a href="bildumak/lacoste/index.html">Lacoste</a>
+        <a href="bildumak/oakley/index.html">Oakley</a>
+        <a href="bildumak/silhouette/index.html">Silhouette</a>
       </div>
       <div class="footer-col">
         <h4>Legala</h4>
-        <a href="../aviso-legal/index.html">Aviso Legal</a>
-        <a href="../politica-cookies/index.html">Política de Cookies</a>
-        <a href="../personalizar-cookies/index.html">Personalizar Cookies</a>
+        <a href="../aviso-legal/index.html">Lege-oharra</a>
+        <a href="../politica-cookies/index.html">Cookie-politika</a>
+        <a href="../personalizar-cookies/index.html">Cookieak pertsonalizatu</a>
         <br/>
         <h4 style="margin-top:1rem">Hizkuntza</h4>
         <a href="../index.html" lang="es">Español</a>
@@ -406,8 +408,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Óptica Anaka · C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa · <a href="tel:+34943248490">943 24 84 90</a></p>
-      <p>Diseñado por <strong style="color:rgba(255,255,255,.55)">Unax Aller</strong></p>
+      <p>© 2026 Optika Anaka · C. de Fuenterrabía, 14, 20301 Irun, Gipuzkoa · <a href="tel:+34943248490">943 24 84 90</a></p>
+      <p>Diseinatua <strong style="color:rgba(255,255,255,.55)">Unax Aller</strong>ek</p>
     </div>
   </div>
 </footer>
