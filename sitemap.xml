@@ -5,7 +5,7 @@
   <!-- ========== HOME ========== -->
   <url>
     <loc>https://www.anakaoptica.com/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -16,7 +16,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/eu/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -27,7 +27,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/fr/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -39,7 +39,7 @@
   <!-- ========== COLECCIONES (index) ========== -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -50,7 +50,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -61,7 +61,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -73,7 +73,7 @@
   <!-- ========== SERVICIOS ========== -->
   <url>
     <loc>https://www.anakaoptica.com/servicios/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -84,7 +84,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/eu/zerbitzuak/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -95,7 +95,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/fr/services/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -107,7 +107,7 @@
   <!-- ========== CONTACTO ========== -->
   <url>
     <loc>https://www.anakaoptica.com/contacto/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -118,7 +118,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/eu/kontaktua/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -129,7 +129,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/fr/contact/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -138,65 +138,250 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/contacto/"/>
   </url>
 
-  <!-- ========== PAGINAS DE MARCA (solo ES) ========== -->
+  <!-- ========== CITA PREVIA ========== -->
+  <url>
+    <loc>https://www.anakaoptica.com/cita-previa/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/hitzordua/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/rendez-vous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/cita-previa/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/eu/hitzordua/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/hitzordua/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/rendez-vous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/cita-previa/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/rendez-vous/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/hitzordua/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/rendez-vous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/cita-previa/"/>
+  </url>
+
+  <!-- ========== PAGINAS DE MARCA (ES + EU + FR) ========== -->
+
+  <!-- Carolina Herrera -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/carolina-herrera/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carolina-herrera/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
   </url>
 
   <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carolina-herrera/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carolina-herrera/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carolina-herrera/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
+  </url>
+
+  <!-- Etnia -->
+  <url>
     <loc>https://www.anakaoptica.com/colecciones/etnia/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/etnia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/etnia/"/>
   </url>
 
   <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/etnia/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/etnia/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/etnia/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/etnia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/etnia/"/>
+  </url>
+
+  <!-- Lacoste -->
+  <url>
     <loc>https://www.anakaoptica.com/colecciones/lacoste/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/lacoste/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
   </url>
 
   <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/lacoste/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/lacoste/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/lacoste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/lacoste/"/>
+  </url>
+
+  <!-- Longchamp -->
+  <url>
     <loc>https://www.anakaoptica.com/colecciones/longchamp/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/longchamp/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
   </url>
 
   <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/longchamp/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/longchamp/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/longchamp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/longchamp/"/>
+  </url>
+
+  <!-- Oakley -->
+  <url>
     <loc>https://www.anakaoptica.com/colecciones/oakley/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/oakley/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/oakley/"/>
   </url>
 
   <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/oakley/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/oakley/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/oakley/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/oakley/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/oakley/"/>
+  </url>
+
+  <!-- Silhouette -->
+  <url>
     <loc>https://www.anakaoptica.com/colecciones/silhouette/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/silhouette/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
+  </url>
+
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/silhouette/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/silhouette/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/silhouette/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/silhouette/"/>
   </url>
 
   <!-- ========== PAGINAS LEGALES (solo ES) ========== -->
   <url>
     <loc>https://www.anakaoptica.com/aviso-legal/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/aviso-legal/"/>
@@ -205,7 +390,7 @@
 
   <url>
     <loc>https://www.anakaoptica.com/politica-cookies/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/politica-cookies/"/>
