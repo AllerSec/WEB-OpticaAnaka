@@ -19,6 +19,7 @@ const ORG_NAME = 'Óptica Anaka';
 const ORG_ADDRESS = 'C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa';
 const TIMEZONE = 'Europe/Madrid';
 const SLOT_MINUTES = 30;
+const DRIVE_FOLDER_NAME = 'Citas Anaka (.ics)';
 
 const MOTIVOS = {
   revision:    { es: 'Revisión de la vista',     eu: 'Ikusmen-azterketa',          fr: 'Examen de vue' },
@@ -64,6 +65,11 @@ function doPost(e) {
 
     const icsBlob = Utilities.newBlob(ics, 'text/calendar;charset=utf-8', icsFilename(fullName));
 
+    // Save the .ics into Drive and make it publicly readable so we can build
+    // a https/webcal link the recipient can tap from Apple Mail to open
+    // Apple Calendar directly with the event preloaded.
+    const icsLinks = uploadIcsToDrive(icsBlob);
+
     const subject = 'Nueva solicitud de cita — ' + fullName + ' — ' +
       Utilities.formatDate(start, TIMEZONE, 'EEE d MMM, HH:mm');
 
@@ -86,23 +92,11 @@ function doPost(e) {
       data.observaciones ? ('"' + data.observaciones + '"') : '(sin observaciones)',
       '',
       '─────────────────────────',
-      'Adjunto: ' + icsBlob.getName(),
-      '(Toca el archivo desde tu iPhone para añadirlo al Apple Calendar.',
-      ' Si usas Google Calendar, abre el email en el ordenador y pulsa "Añadir a Google Calendar".)'
+      'Añadir a Apple Calendar:',
+      icsLinks.webcal,
+      '',
+      '(Pulsa el enlace desde tu iPhone o Mac para abrir Calendario.)'
     ].join('\n');
-
-    const gcalUrl = buildGCalUrl({
-      title: 'Cita: ' + motivoLabel + ' — ' + fullName,
-      start: start,
-      end: end,
-      location: ORG_ADDRESS,
-      details: [
-        'Cliente: ' + fullName,
-        'Tel: ' + data.telefono,
-        'Email: ' + data.email,
-        'Observaciones: ' + (data.observaciones || '(sin observaciones)')
-      ].join('\n')
-    });
 
     const html = buildHtmlEmail({
       fullName: fullName,
@@ -114,7 +108,8 @@ function doPost(e) {
       lang: lang,
       observaciones: data.observaciones,
       icsName: icsBlob.getName(),
-      gcalUrl: gcalUrl
+      icsWebcal: icsLinks.webcal,
+      icsHttps: icsLinks.https
     });
 
     MailApp.sendEmail({
@@ -234,17 +229,30 @@ function icsFilename(fullName) {
   return 'cita-' + (slug || 'cliente') + '.ics';
 }
 
-function buildGCalUrl(ev) {
-  // https://calendar.google.com/calendar/render?action=TEMPLATE&text=&dates=...&details=&location=
-  const fmt = d => Utilities.formatDate(d, 'UTC', "yyyyMMdd'T'HHmmss'Z'");
-  const params = [
-    'action=TEMPLATE',
-    'text=' + encodeURIComponent(ev.title),
-    'dates=' + fmt(ev.start) + '/' + fmt(ev.end),
-    'details=' + encodeURIComponent(ev.details),
-    'location=' + encodeURIComponent(ev.location)
-  ].join('&');
-  return 'https://calendar.google.com/calendar/render?' + params;
+function uploadIcsToDrive(icsBlob) {
+  // Find or create a folder dedicated to .ics files for cita requests.
+  let folder;
+  const it = DriveApp.getFoldersByName(DRIVE_FOLDER_NAME);
+  if (it.hasNext()) {
+    folder = it.next();
+  } else {
+    folder = DriveApp.createFolder(DRIVE_FOLDER_NAME);
+  }
+
+  const file = folder.createFile(icsBlob);
+  // Anyone with the link can read. The link is unguessable, but anyone
+  // who has it can download. Acceptable for short-lived appointment files.
+  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+
+  // The "uc?export=download&id=..." URL serves the file with its native
+  // MIME type, which is what we want (text/calendar). Both Apple Mail
+  // (Mac/iPhone) and Outlook will treat it as an importable calendar.
+  const httpsUrl = 'https://drive.google.com/uc?export=download&id=' + file.getId();
+  // webcal://...same path... triggers Apple Calendar's "subscribe / add"
+  // flow on iOS and macOS instead of opening a download.
+  const webcalUrl = 'webcal://drive.google.com/uc?export=download&id=' + file.getId();
+
+  return { https: httpsUrl, webcal: webcalUrl, fileId: file.getId() };
 }
 
 function buildHtmlEmail(p) {
@@ -300,14 +308,15 @@ function buildHtmlEmail(p) {
     '</td></tr>',
     // CTA buttons
     '<tr><td style="padding:18px 28px 8px">',
-    '<div style="font-size:13px;color:' + muted + ';margin-bottom:10px">Añade la cita a tu calendario:</div>',
+    '<div style="font-size:13px;color:' + muted + ';margin-bottom:10px">Añade la cita a tu calendario con un solo toque:</div>',
     '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 0 0">',
     '<tr>',
-    '<td style="padding-right:8px"><a href="' + p.gcalUrl + '" target="_blank" style="display:inline-block;background:' + orange + ';color:#fff;padding:12px 22px;border-radius:50px;font-weight:600;text-decoration:none;font-size:14px">Añadir a Google Calendar</a></td>',
+    '<td><a href="' + p.icsWebcal + '" target="_blank" style="display:inline-block;background:' + orange + ';color:#fff;padding:13px 26px;border-radius:50px;font-weight:600;text-decoration:none;font-size:15px">📅 Añadir a Apple Calendar</a></td>',
     '</tr></table>',
-    '<div style="font-size:12px;color:' + muted + ';margin-top:12px;line-height:1.5">',
-    '<strong style="color:' + text + '">¿Apple Calendar (iPhone/Mac) o Outlook?</strong><br>',
-    'Toca el archivo adjunto <code style="background:' + cream + ';padding:2px 6px;border-radius:4px;font-family:Menlo,monospace;font-size:12px">' + escape(p.icsName) + '</code> desde tu móvil o portátil y pulsa "Añadir al calendario". El recordatorio queda fijado 24 h antes.',
+    '<div style="font-size:12px;color:' + muted + ';margin-top:14px;line-height:1.55">',
+    'Pulsa el botón desde tu iPhone o Mac. Calendario se abrirá con la cita lista para guardar (recordatorio 24 h antes).',
+    '<br><br>',
+    '<strong style="color:' + text + '">¿No funciona el botón?</strong> Descarga el archivo: <a href="' + p.icsHttps + '" style="color:' + orange + ';font-weight:600">' + escape(p.icsName) + '</a>',
     '</div>',
     '</td></tr>',
     // Footer
