@@ -19,7 +19,6 @@ const ORG_NAME = 'Óptica Anaka';
 const ORG_ADDRESS = 'C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa';
 const TIMEZONE = 'Europe/Madrid';
 const SLOT_MINUTES = 30;
-const DRIVE_FOLDER_NAME = 'Citas Anaka (.ics)';
 
 const MOTIVOS = {
   revision:    { es: 'Revisión de la vista',     eu: 'Ikusmen-azterketa',          fr: 'Examen de vue' },
@@ -65,10 +64,11 @@ function doPost(e) {
 
     const icsBlob = Utilities.newBlob(ics, 'text/calendar;charset=utf-8', icsFilename(fullName));
 
-    // Save the .ics into Drive and make it publicly readable so we can build
-    // a https/webcal link the recipient can tap from Apple Mail to open
-    // Apple Calendar directly with the event preloaded.
-    const icsLinks = uploadIcsToDrive(icsBlob);
+    // Publish the .ics through this script's own doGet endpoint, which
+    // serves it with the correct text/calendar MIME type. Apple Calendar
+    // can then open the event picker directly (Drive's shared-file URL
+    // returns a Drive HTML page in 2026, breaking the webcal flow).
+    const icsLinks = publishIcs(ics);
 
     const subject = 'Nueva solicitud de cita — ' + fullName + ' — ' +
       Utilities.formatDate(start, TIMEZONE, 'EEE d MMM, HH:mm');
@@ -128,10 +128,31 @@ function doPost(e) {
   }
 }
 
-function doGet() {
+function doGet(e) {
+  // Serve a stored .ics file when called with ?id=<id>.
+  // Apple Calendar (iOS/macOS) requires text/calendar content directly,
+  // which Drive's UI no longer provides for shared files.
+  const id = e && e.parameter && e.parameter.id;
+  if (id) {
+    const ics = PropertiesService.getScriptProperties().getProperty('ics_' + id);
+    if (!ics) {
+      return ContentService.createTextOutput('Not found').setMimeType(ContentService.MimeType.TEXT);
+    }
+    return ContentService
+      .createTextOutput(ics)
+      .setMimeType(ContentService.MimeType.ICAL);
+  }
   return ContentService
     .createTextOutput(JSON.stringify({ ok: false, error: 'POST only' }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function getWebAppUrl() {
+  // Returns the deployed web-app URL of this script. The deployment URL is
+  // the only stable public URL we can use to serve the .ics back over https
+  // with text/calendar content type. ScriptApp.getService().getUrl() returns
+  // the /exec URL of the active deployment.
+  return ScriptApp.getService().getUrl();
 }
 
 function validate(d) {
@@ -229,30 +250,39 @@ function icsFilename(fullName) {
   return 'cita-' + (slug || 'cliente') + '.ics';
 }
 
-function uploadIcsToDrive(icsBlob) {
-  // Find or create a folder dedicated to .ics files for cita requests.
-  let folder;
-  const it = DriveApp.getFoldersByName(DRIVE_FOLDER_NAME);
-  if (it.hasNext()) {
-    folder = it.next();
-  } else {
-    folder = DriveApp.createFolder(DRIVE_FOLDER_NAME);
-  }
+function publishIcs(icsContent) {
+  // Store the .ics in script properties keyed by a random id, then return
+  // an https/webcal pair pointing at this script's doGet endpoint with that
+  // id. doGet serves the file with Content-Type: text/calendar, which is
+  // what Apple Calendar / iOS / macOS need to open the event picker.
+  // PropertiesService is enough for this use case (no Drive permission
+  // required, no extra files in the user's account).
+  const id = Utilities.getUuid().replace(/-/g, '');
+  PropertiesService.getScriptProperties().setProperty('ics_' + id, icsContent);
 
-  const file = folder.createFile(icsBlob);
-  // Anyone with the link can read. The link is unguessable, but anyone
-  // who has it can download. Acceptable for short-lived appointment files.
-  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  const base = getWebAppUrl();
+  const httpsUrl = base + '?id=' + id;
+  // Strip the protocol so we can prefix webcal:// — Apple devices recognize
+  // webcal as "subscribe to calendar" and offer a one-tap add flow.
+  const webcalUrl = 'webcal://' + base.replace(/^https?:\/\//, '') + '?id=' + id;
 
-  // The "uc?export=download&id=..." URL serves the file with its native
-  // MIME type, which is what we want (text/calendar). Both Apple Mail
-  // (Mac/iPhone) and Outlook will treat it as an importable calendar.
-  const httpsUrl = 'https://drive.google.com/uc?export=download&id=' + file.getId();
-  // webcal://...same path... triggers Apple Calendar's "subscribe / add"
-  // flow on iOS and macOS instead of opening a download.
-  const webcalUrl = 'webcal://drive.google.com/uc?export=download&id=' + file.getId();
+  // Best-effort cleanup: keep at most ~200 .ics entries in script storage.
+  pruneOldIcs(200);
 
-  return { https: httpsUrl, webcal: webcalUrl, fileId: file.getId() };
+  return { https: httpsUrl, webcal: webcalUrl, id: id };
+}
+
+function pruneOldIcs(maxEntries) {
+  try {
+    const props = PropertiesService.getScriptProperties();
+    const all = props.getKeys().filter(k => k.indexOf('ics_') === 0);
+    if (all.length <= maxEntries) return;
+    const excess = all.length - maxEntries;
+    // Properties keys aren't ordered, so we just delete the first N we
+    // find. Good enough — older citas have already been read by the
+    // optician within minutes of arrival.
+    for (let i = 0; i < excess; i++) props.deleteProperty(all[i]);
+  } catch (err) { /* ignore */ }
 }
 
 function buildHtmlEmail(p) {
