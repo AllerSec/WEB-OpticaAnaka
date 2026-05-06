@@ -71,9 +71,10 @@ function doPost(e) {
     const icsLinks = publishIcs(ics);
 
     const subject = 'Nueva solicitud de cita — ' + fullName + ' — ' +
-      Utilities.formatDate(start, TIMEZONE, 'EEE d MMM, HH:mm');
+      formatFechaCorta(start, 'es') + ', ' + Utilities.formatDate(start, TIMEZONE, 'HH:mm');
 
-    const fechaHumana = Utilities.formatDate(start, TIMEZONE, 'EEEE, d \'de\' MMMM \'de\' yyyy');
+    const fechaHumana = formatFechaHumana(start, lang);
+    const fechaHumanaEs = formatFechaHumana(start, 'es');
     const horaHumana = Utilities.formatDate(start, TIMEZONE, 'HH:mm');
 
     const plain = [
@@ -84,7 +85,7 @@ function doPost(e) {
       'Email:      ' + data.email,
       '',
       'Motivo:     ' + motivoLabel,
-      'Fecha:      ' + fechaHumana,
+      'Fecha:      ' + fechaHumanaEs,
       'Hora:       ' + horaHumana,
       'Idioma web: ' + lang.toUpperCase(),
       '',
@@ -103,7 +104,7 @@ function doPost(e) {
       telefono: data.telefono,
       email: data.email,
       motivoLabel: motivoLabel,
-      fechaHumana: fechaHumana,
+      fechaHumana: fechaHumanaEs,
       horaHumana: horaHumana,
       lang: lang,
       observaciones: data.observaciones,
@@ -572,6 +573,54 @@ function clientStrings(lang) {
     team: 'El equipo de Óptica Anaka',
     footer: 'Recibes este email porque has rellenado el formulario de cita en la web de Óptica Anaka. Si no has sido tú, ignóralo o avísanos.'
   };
+}
+
+// Apps Script's Utilities.formatDate ignores locale and uses the script's
+// default (English). We format manually with localized arrays so the date
+// reads naturally in ES/EU/FR regardless of the script's own locale.
+const DATE_NAMES = {
+  es: {
+    weekdays: ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],
+    months:   ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+    monthsShort: ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'],
+    weekdaysShort: ['dom','lun','mar','mié','jue','vie','sáb'],
+    long:  (wd, d, m, y, names) => names.weekdays[wd] + ', ' + d + ' de ' + names.months[m] + ' de ' + y,
+    short: (wd, d, m, y, names) => names.weekdaysShort[wd] + ' ' + d + ' ' + names.monthsShort[m]
+  },
+  eu: {
+    weekdays: ['igandea','astelehena','asteartea','asteazkena','osteguna','ostirala','larunbata'],
+    months:   ['urtarrila','otsaila','martxoa','apirila','maiatza','ekaina','uztaila','abuztua','iraila','urria','azaroa','abendua'],
+    monthsShort: ['urt','ots','mar','api','mai','eka','uzt','abu','ira','urr','aza','abe'],
+    weekdaysShort: ['ig.','al.','ar.','az.','og.','or.','lr.'],
+    long:  (wd, d, m, y, names) => names.weekdays[wd] + ', ' + y + 'ko ' + names.months[m] + 'ren ' + d + 'a',
+    short: (wd, d, m, y, names) => names.weekdaysShort[wd] + ' ' + d + ' ' + names.monthsShort[m]
+  },
+  fr: {
+    weekdays: ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'],
+    months:   ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],
+    monthsShort: ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'],
+    weekdaysShort: ['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'],
+    long:  (wd, d, m, y, names) => names.weekdays[wd] + ' ' + d + ' ' + names.months[m] + ' ' + y,
+    short: (wd, d, m, y, names) => names.weekdaysShort[wd] + ' ' + d + ' ' + names.monthsShort[m]
+  }
+};
+
+function formatFechaHumana(date, lang) {
+  const names = DATE_NAMES[lang] || DATE_NAMES.es;
+  const wd = parseInt(Utilities.formatDate(date, TIMEZONE, 'u'), 10) % 7; // 1=Mon..7=Sun → 0..6 with Sun=0
+  const d  = parseInt(Utilities.formatDate(date, TIMEZONE, 'd'), 10);
+  const m  = parseInt(Utilities.formatDate(date, TIMEZONE, 'M'), 10) - 1;
+  const y  = parseInt(Utilities.formatDate(date, TIMEZONE, 'yyyy'), 10);
+  return names.long(wd, d, m, y, names);
+}
+
+function formatFechaCorta(date, lang) {
+  const names = DATE_NAMES[lang] || DATE_NAMES.es;
+  const wd = parseInt(Utilities.formatDate(date, TIMEZONE, 'u'), 10) % 7;
+  const d  = parseInt(Utilities.formatDate(date, TIMEZONE, 'd'), 10);
+  const m  = parseInt(Utilities.formatDate(date, TIMEZONE, 'M'), 10) - 1;
+  const y  = parseInt(Utilities.formatDate(date, TIMEZONE, 'yyyy'), 10);
+  return names.short(wd, d, m, y, names);
 }
 
 function jsonOk() {
