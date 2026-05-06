@@ -1427,16 +1427,45 @@ function initCitaForm() {
 
   const dateEl = document.getElementById('cita-fecha');
   if (dateEl) {
-    const today = new Date();
-    const max = new Date(today);
-    max.setDate(max.getDate() + MAX_DAYS_AHEAD);
-    const fmt = d => d.toISOString().slice(0, 10);
-    dateEl.min = fmt(today);
-    dateEl.max = fmt(max);
-    dateEl.addEventListener('change', () => {
+    // toISOString returns UTC — at night in CET that flips a day. Use local
+    // components so iOS Safari doesn't show "yesterday" as still selectable.
+    const fmtLocal = d => {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${y}-${m}-${day}`;
+    };
+    const applyMinMax = () => {
+      const today = new Date();
+      const max = new Date(today);
+      max.setDate(max.getDate() + MAX_DAYS_AHEAD);
+      // setAttribute (not just .min/.max) — Safari iOS sometimes ignores the
+      // property assignment on the native date picker; the HTML attribute is
+      // more reliable.
+      dateEl.setAttribute('min', fmtLocal(today));
+      dateEl.setAttribute('max', fmtLocal(max));
+    };
+    applyMinMax();
+    // Re-apply on focus/pageshow: iOS keeps pages alive in the back-forward
+    // cache, so a returning user could otherwise see stale min/max from
+    // hours ago. pageshow fires even on bfcache restore.
+    window.addEventListener('pageshow', applyMinMax);
+    dateEl.addEventListener('focus', applyMinMax);
+
+    const onDateChange = () => {
       setError('fecha', '');
       const lang = form.dataset.lang || 'es';
       const t = I18N[lang] || I18N.es;
+      // Hard clamp: if the user typed a date past the max (iOS lets you type
+      // freely even when the picker is bounded), snap it back.
+      const maxStr = dateEl.getAttribute('max');
+      if (dateEl.value && maxStr && dateEl.value > maxStr) {
+        dateEl.value = '';
+        setError('fecha', t.invalidDateFar);
+        document.getElementById('citaSlotsWrap').classList.remove('is-visible');
+        document.getElementById('citaHoraHidden').value = '';
+        return;
+      }
       const err = validateDate(dateEl.value, t);
       if (err) {
         setError('fecha', err);
@@ -1445,7 +1474,12 @@ function initCitaForm() {
         return;
       }
       renderSlots(dateEl.value);
-    });
+    };
+    // change fires after picker dismissal on iOS; input fires for typed input
+    // and on each picker increment on some Safari versions. Listen to both.
+    dateEl.addEventListener('change', onDateChange);
+    dateEl.addEventListener('input', onDateChange);
+    dateEl.addEventListener('blur', onDateChange);
   }
 
   form.querySelectorAll('input[name="motivo"]').forEach(r => {
