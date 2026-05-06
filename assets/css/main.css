@@ -924,9 +924,13 @@ h2{text-wrap:balance}
 .cita-motivo:hover{border-color:var(--primary-light);background:var(--white)}
 .cita-motivo:has(input:checked){
   border-color:var(--primary);
-  background:var(--white);
+  background:var(--primary);
   box-shadow:var(--shadow-gold);
   transform:translateY(-2px)
+}
+.cita-motivo:has(input:checked) .cita-motivo-icon,
+.cita-motivo:has(input:checked) .cita-motivo-label{
+  color:#fff
 }
 .cita-motivo-icon{
   width:36px;height:36px;
