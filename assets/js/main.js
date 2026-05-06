@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageAnimations();
   initCookieBanner();
   initFloatingCitaCTA();
+  initWhatsAppFab();
   initSpaRouter();
 });
 
@@ -946,6 +947,54 @@ function initFloatingCitaCTA() {
   document.body.appendChild(a);
 }
 
+/* ── WhatsApp floating action button ──
+   Always-visible WhatsApp Business CTA injected on every page so we don't
+   have to maintain duplicate markup across 40+ HTML files. The phone (also
+   used for tel:) doubles as the WhatsApp number — managed from the optician's
+   mobile. */
+function initWhatsAppFab() {
+  if (document.querySelector('.wa-fab')) return; // idempotent (SPA-safe)
+
+  const lang = (document.documentElement.lang || 'es').slice(0, 2);
+  const labels = { es: 'WhatsApp', eu: 'WhatsApp', fr: 'WhatsApp' };
+  const aria = {
+    es: 'Escribir por WhatsApp al 943 24 84 90',
+    eu: 'WhatsApp bidez idatzi 943 24 84 90 zenbakira',
+    fr: 'Écrire par WhatsApp au 943 24 84 90'
+  };
+  const prefilled = {
+    es: 'Hola, me gustaría más información sobre Óptica Anaka.',
+    eu: 'Kaixo, Optika Anakari buruzko informazio gehiago nahi nuke.',
+    fr: 'Bonjour, je souhaiterais plus d’informations sur Optique Anaka.'
+  };
+
+  const phone = '34943248490';
+  const text = encodeURIComponent(prefilled[lang] || prefilled.es);
+  const a = document.createElement('a');
+  a.className = 'wa-fab';
+  a.href = `https://wa.me/${phone}?text=${text}`;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.setAttribute('aria-label', aria[lang] || aria.es);
+
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('viewBox', '0 0 32 32');
+  svg.setAttribute('fill', 'currentColor');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(SVG_NS, 'path');
+  path.setAttribute('d', 'M16.003 3C9.374 3 4 8.374 4 15c0 2.114.553 4.181 1.604 6.001L4 29l8.184-1.561A11.95 11.95 0 0 0 16.003 29C22.629 29 28 23.629 28 17S22.629 3 16.003 3zm0 21.93a9.93 9.93 0 0 1-5.062-1.387l-.363-.215-4.86.927.92-4.74-.235-.376A9.93 9.93 0 1 1 25.93 17c0 5.486-4.444 9.93-9.927 9.93zm5.444-7.43c-.298-.149-1.764-.871-2.038-.97-.273-.099-.471-.149-.67.149-.198.298-.768.97-.94 1.168-.174.198-.348.223-.645.075-.298-.149-1.258-.464-2.395-1.479-.886-.79-1.483-1.764-1.657-2.062-.174-.298-.019-.46.13-.609.133-.133.298-.348.447-.521.149-.174.198-.298.298-.496.099-.198.05-.372-.025-.521-.075-.149-.67-1.616-.918-2.213-.242-.582-.488-.503-.67-.512l-.571-.01c-.198 0-.521.075-.794.372-.273.298-1.04 1.016-1.04 2.478 0 1.462 1.066 2.875 1.214 3.073.149.198 2.099 3.207 5.085 4.495.71.306 1.264.488 1.696.625.713.227 1.362.195 1.875.118.572-.085 1.764-.72 2.013-1.416.248-.696.248-1.291.174-1.416-.075-.124-.273-.198-.571-.347z');
+  svg.appendChild(path);
+  a.appendChild(svg);
+
+  const label = document.createElement('span');
+  label.className = 'wa-fab-label';
+  label.textContent = labels[lang] || labels.es;
+  a.appendChild(label);
+
+  document.body.appendChild(a);
+}
+
 /* ── Citas (appointment booking form) ── */
 function initCitaForm() {
   const form = document.getElementById('citaForm');
@@ -1066,8 +1115,12 @@ function initCitaForm() {
     }
   };
 
-  const MORNING_SLOTS = ['09:30','10:00','10:30','11:00','11:30','12:00','12:30'];
-  const AFTERNOON_SLOTS = ['16:30','17:00','17:30','18:00','18:30','19:00'];
+  // Last appointment 30 min before close.
+  // L-V: 9:30–13:30 + 16:00–19:30  → mornings until 13:00, afternoons 16:00–19:00
+  // Sáb: 9:30–13:00                → mornings until 12:30, no afternoon
+  const MORNING_SLOTS = ['09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00'];
+  const AFTERNOON_SLOTS = ['16:00','16:30','17:00','17:30','18:00','18:30','19:00'];
+  const SATURDAY_MORNING_SLOTS = ['09:30','10:00','10:30','11:00','11:30','12:00','12:30'];
 
   function slotsForDate(dateStr) {
     if (!dateStr) return { morning: [], afternoon: [], closed: true };
@@ -1075,7 +1128,7 @@ function initCitaForm() {
     const dt = new Date(y, m - 1, d);
     const dow = dt.getDay();
     if (dow === 0) return { morning: [], afternoon: [], closed: true };
-    if (dow === 6) return { morning: MORNING_SLOTS.slice(), afternoon: [], closed: false };
+    if (dow === 6) return { morning: SATURDAY_MORNING_SLOTS.slice(), afternoon: [], closed: false };
     return { morning: MORNING_SLOTS.slice(), afternoon: AFTERNOON_SLOTS.slice(), closed: false };
   }
 

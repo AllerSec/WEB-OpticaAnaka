@@ -220,17 +220,16 @@ function validate(d) {
     max.setDate(max.getDate() + 60);
     if (dt > max) out.push('fecha too far');
     if (dt.getDay() === 0) out.push('fecha sunday');
-    // Saturday afternoon closed
-    if (dt.getDay() === 6) {
-      const hh = parseInt(d.hora.slice(0, 2), 10);
-      if (hh >= 13) out.push('saturday afternoon closed');
-    }
-    // Within opening windows
+    // Opening hours (last appointment 30 min before close):
+    //   L-V: 9:30–13:30 (mornings until 13:00) + 16:00–19:30 (afternoons 16:00–19:00)
+    //   Sáb: 9:30–13:00 (mornings until 12:30, no afternoon)
     const hh = parseInt(d.hora.slice(0, 2), 10);
     const mm = parseInt(d.hora.slice(3, 5), 10);
     const minutes = hh * 60 + mm;
-    const inMorning = minutes >= 9 * 60 + 30 && minutes <= 12 * 60 + 30;
-    const inAfternoon = minutes >= 16 * 60 + 30 && minutes <= 19 * 60;
+    const isSaturday = dt.getDay() === 6;
+    const morningEnd = isSaturday ? (12 * 60 + 30) : (13 * 60);
+    const inMorning = minutes >= 9 * 60 + 30 && minutes <= morningEnd;
+    const inAfternoon = !isSaturday && minutes >= 16 * 60 && minutes <= 19 * 60;
     if (!inMorning && !inAfternoon) out.push('hora outside opening hours');
   }
   return out;
