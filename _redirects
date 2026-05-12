@@ -1,6 +1,3 @@
-# Redirect dominio desnudo → www (canónico principal)
-https://anakaoptica.com/*  https://www.anakaoptica.com/:splat  301!
-
 # Redirects 301 - WordPress legacy URLs (Error 5xx → handled as 301 to home)
 /?page_id=875  /  301
 /?page_id=851  /  301
