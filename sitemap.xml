@@ -63,7 +63,7 @@
     <loc>https://www.anakaoptica.com/fr/collections/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/"/>
@@ -97,7 +97,7 @@
     <loc>https://www.anakaoptica.com/fr/services/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/zerbitzuak/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/services/"/>
@@ -131,7 +131,7 @@
     <loc>https://www.anakaoptica.com/fr/contact/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/kontaktua/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/contact/"/>
