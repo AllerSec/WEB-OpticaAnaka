@@ -3,5 +3,7 @@ Allow: /
 Disallow: /personalizar-cookies/
 Disallow: /404.html
 Disallow: /assets/videos/
+Disallow: /author/
+Disallow: /index.php
 
 Sitemap: https://www.anakaoptica.com/sitemap.xml

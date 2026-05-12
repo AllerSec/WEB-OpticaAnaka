@@ -1,0 +1,14 @@
+# Redirect dominio desnudo → www (canónico principal)
+https://anakaoptica.com/*  https://www.anakaoptica.com/:splat  301!
+
+# Redirects 301 - WordPress legacy URLs (Error 5xx → handled as 301 to home)
+/?page_id=875  /  301
+/?page_id=851  /  301
+/?page_id=899  /  301
+/?page_id=915  /  301
+/?page_id=868  /  301
+/index.php     /  301
+
+# Redirects 301 - SEO collection pages (old naming → current)
+/nuestra-coleccion-de-gafas-longchamp/  https://www.anakaoptica.com/colecciones/longchamp/  301
+/nuestra-coleccion-de-gafas-oakley/     https://www.anakaoptica.com/colecciones/oakley/      301

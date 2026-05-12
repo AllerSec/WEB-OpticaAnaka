@@ -1,0 +1,18 @@
+# Redirects para query params de WordPress (crawl budget + Error 5xx)
+# Netlify _redirects no soporta wildcards en query strings; se usan aquí con conditions
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = false
+  [redirects.conditions]
+    Query = {page_id = ":id"}
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = false
+  [redirects.conditions]
+    Query = {pid = ":id"}
