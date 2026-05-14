@@ -1297,3 +1297,123 @@ body.cookie-open .wa-fab{bottom:calc(max(1rem, env(safe-area-inset-bottom)) + 80
   .cita-success-modal{transition:none}
   .cita-success-card{transform:none}
 }
+
+/* ══════════════════════════════════════════════════
+   DARK MODE — warm low-light palette for an optician.
+   Activated by html[data-theme="dark"] (script-driven).
+══════════════════════════════════════════════════ */
+:root{
+  /* Smooth theme transition baseline (suppressed on first paint by .theme-no-anim) */
+  --theme-t: 0.45s;
+}
+html.theme-no-anim, html.theme-no-anim *{transition:none !important}
+html, body{transition:background-color var(--theme-t) var(--ease), color var(--theme-t) var(--ease)}
+
+html[data-theme="dark"]{
+  --primary:            #F08432;
+  --primary-accessible: #F8A65E;
+  --primary-dark:       #C76B22;
+  --primary-light:      #FFB173;
+  --primary-bg:         #1F1610;   /* surface 1 */
+  --primary-bg2:        #2A1E14;   /* surface 2 */
+  --text:               #F4E8D8;
+  --text-muted:         #B8A289;
+  --white:              #14100B;   /* "white" becomes the deepest base — paper inverted */
+  --border:             #3A2A1C;
+  --shadow:             0 4px 24px rgba(0,0,0,0.45);
+  --shadow-gold:        0 8px 32px rgba(240,132,50,0.18);
+}
+html[data-theme="dark"] body{background:#14100B;color:var(--text)}
+html[data-theme="dark"] .site-header.scrolled{background:#14100B;border-bottom-color:var(--border);box-shadow:0 1px 0 var(--border)}
+html[data-theme="dark"] .site-header.scrolled .nav-toggle span{background:var(--text)}
+html[data-theme="dark"] .nav-links li a{color:rgba(244,232,216,.85)}
+html[data-theme="dark"] .nav-links li a:hover, html[data-theme="dark"] .nav-links li a.active{color:var(--primary-light)}
+html[data-theme="dark"] .site-header.scrolled .nav-links li a{color:var(--text)}
+html[data-theme="dark"] .nav-phone{color:rgba(244,232,216,.92);background:rgba(244,232,216,.08);border-color:rgba(244,232,216,.18)}
+html[data-theme="dark"] .nav-phone:hover{background:rgba(244,232,216,.14)}
+html[data-theme="dark"] .site-header.scrolled .nav-phone{color:var(--primary-light);background:var(--primary-bg);border-color:var(--border)}
+html[data-theme="dark"] .nav-lang a:hover, html[data-theme="dark"] .nav-lang a.active{color:var(--primary-light)}
+html[data-theme="dark"] .site-header.scrolled .nav-lang a.active{color:var(--primary-light)}
+html[data-theme="dark"] .bg-cream{background:var(--primary-bg)}
+html[data-theme="dark"] .page-hero{background:linear-gradient(135deg,#1F1610 0%,#14100B 100%)}
+html[data-theme="dark"] .page-hero::after{background:radial-gradient(circle,rgba(240,132,50,.10) 0%,transparent 70%)}
+/* Footer in dark mode: keep dark surface, ensure all text is light & readable */
+html[data-theme="dark"] .site-footer{background:#0C0907;color:rgba(244,232,216,.85);border-top:1px solid var(--border)}
+html[data-theme="dark"] .footer-grid{border-bottom-color:rgba(244,232,216,.08)}
+html[data-theme="dark"] .footer-logo p{color:rgba(244,232,216,.7)}
+html[data-theme="dark"] .footer-col h4{color:rgba(244,232,216,.5)}
+html[data-theme="dark"] .footer-col a{color:rgba(244,232,216,.75)}
+html[data-theme="dark"] .footer-col a:hover{color:var(--primary-light)}
+html[data-theme="dark"] .footer-col p{color:rgba(244,232,216,.7)}
+html[data-theme="dark"] .footer-bottom{color:rgba(244,232,216,.55)}
+html[data-theme="dark"] .footer-credit-link{color:rgba(244,232,216,.75)}
+html[data-theme="dark"] .footer-credit-link:hover, html[data-theme="dark"] .footer-credit-link:focus-visible{color:var(--primary-light)}
+html[data-theme="dark"] .cookie-banner{background:#1F1610;color:var(--text);border:1px solid var(--border)}
+html[data-theme="dark"] .cookie-btn{background:transparent;color:var(--text);border:1px solid var(--border)}
+html[data-theme="dark"] .cookie-btn.cookie-accept{background:var(--primary);color:#14100B;border-color:transparent}
+html[data-theme="dark"] .lightbox{background:rgba(8,5,2,.95)}
+html[data-theme="dark"] .gallery-item{background:#241810}
+/* Brand carousel in dark mode: dark tiles + inverted (white) logos */
+html[data-theme="dark"] .brands-carousel::before{background:linear-gradient(to right,#14100B,transparent)}
+html[data-theme="dark"] .brands-carousel::after{background:linear-gradient(to left,#14100B,transparent)}
+html[data-theme="dark"] .brand-tile{background:#1F1610;border-color:var(--border)}
+html[data-theme="dark"] .brand-tile img{filter:grayscale(1) opacity(.7) invert(1)}
+html[data-theme="dark"] .brand-tile:hover img{filter:invert(1) opacity(1)}
+/* Section titles & helper text in dark */
+html[data-theme="dark"] .section-title, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4{color:var(--text)}
+html[data-theme="dark"] .section-sub, html[data-theme="dark"] p{color:var(--text-muted)}
+html[data-theme="dark"] .hero-desc{color:rgba(244,232,216,.85)}
+html[data-theme="dark"] .breadcrumb a{color:var(--primary-light)}
+html[data-theme="dark"] .breadcrumb{color:var(--text-muted)}
+/* Collection card name text */
+html[data-theme="dark"] .cc-name{color:var(--text)}
+/* Commitment cards (when NOT inside .compromiso-scene — outside the dark video overlay) */
+html[data-theme="dark"] .commitment-item:not(.compromiso-scene .commitment-item){background:var(--primary-bg);border-color:var(--border)}
+html[data-theme="dark"] .commitment-item:not(.compromiso-scene .commitment-item) h3{color:var(--text)}
+html[data-theme="dark"] .commitment-item:not(.compromiso-scene .commitment-item) p{color:var(--text-muted)}
+html[data-theme="dark"] .collection-card .cc-img{opacity:.85}
+html[data-theme="dark"] .brand-info-card{background:var(--primary-bg2);border-color:var(--border)}
+html[data-theme="dark"] .boss-hero{background:#14100B;border-bottom-color:var(--border)}
+html[data-theme="dark"] .boss-hero-text h1, html[data-theme="dark"] .boss-section h2{color:var(--text)}
+html[data-theme="dark"] .boss-divider{background:var(--text)}
+html[data-theme="dark"] .boss-grid-codes{border-top-color:var(--border);border-left-color:var(--border)}
+html[data-theme="dark"] .boss-code{border-right-color:var(--border);border-bottom-color:var(--border)}
+html[data-theme="dark"] .boss-code .num, html[data-theme="dark"] .boss-code h3{color:var(--text)}
+html[data-theme="dark"] .boss-code p{color:var(--text-muted)}
+html[data-theme="dark"] .brand-quote{background:var(--primary-bg)}
+html[data-theme="dark"] .brand-quote blockquote{color:var(--text)}
+html[data-theme="dark"] section[style*="background:#fbf6f1"], html[data-theme="dark"] section[style*="background:#fdf8f4"]{background:var(--primary-bg) !important}
+
+/* ── Theme toggle button ── */
+.theme-toggle{
+  --tt-size: 38px;
+  width:var(--tt-size); height:var(--tt-size); border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22);
+  color:rgba(255,255,255,.92); cursor:pointer; padding:0; flex-shrink:0;
+  transition:background var(--t) var(--ease), border-color var(--t) var(--ease), color var(--t) var(--ease), transform .25s var(--ease);
+  position:relative; overflow:hidden;
+}
+.theme-toggle:hover{background:rgba(255,255,255,.16); transform:translateY(-1px)}
+.theme-toggle:focus-visible{outline:2px solid var(--primary-light); outline-offset:3px}
+.site-header.scrolled .theme-toggle{
+  background:var(--primary-bg); color:var(--primary); border-color:var(--border)
+}
+html[data-theme="dark"] .site-header.scrolled .theme-toggle{background:var(--primary-bg2);color:var(--primary-light);border-color:var(--border)}
+.theme-toggle .tt-icon{
+  width:18px; height:18px; position:relative; display:block;
+}
+.theme-toggle .tt-sun, .theme-toggle .tt-moon{
+  position:absolute; inset:0; width:100%; height:100%;
+  transition:transform .55s var(--ease), opacity .35s var(--ease);
+}
+.theme-toggle .tt-sun{opacity:1; transform:rotate(0) scale(1)}
+.theme-toggle .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4)}
+html[data-theme="dark"] .theme-toggle .tt-sun{opacity:0; transform:rotate(90deg) scale(.4)}
+html[data-theme="dark"] .theme-toggle .tt-moon{opacity:1; transform:rotate(0) scale(1)}
+@media(max-width:900px){
+  .theme-toggle{order:5}
+}
+@media(prefers-reduced-motion:reduce){
+  .theme-toggle .tt-sun, .theme-toggle .tt-moon{transition:opacity .15s linear}
+}

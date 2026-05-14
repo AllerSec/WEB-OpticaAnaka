@@ -1,4 +1,9 @@
-# Redirects 301 - WordPress legacy URLs (Error 5xx → handled as 301 to home)
+# ════════════════════════════════════════════════════════
+# Netlify _redirects — Óptica Anaka
+# Format: <source> <destination> <status>
+# ════════════════════════════════════════════════════════
+
+# ── WordPress legacy URLs ──
 /?page_id=875  /  301
 /?page_id=851  /  301
 /?page_id=899  /  301
@@ -6,6 +11,48 @@
 /?page_id=868  /  301
 /index.php     /  301
 
-# Redirects 301 - SEO collection pages (old naming → current)
-/nuestra-coleccion-de-gafas-longchamp/  https://www.anakaoptica.com/colecciones/longchamp/  301
-/nuestra-coleccion-de-gafas-oakley/     https://www.anakaoptica.com/colecciones/oakley/      301
+# ── Legacy WordPress collection slugs (pre-2026) ──
+/nuestra-coleccion-de-gafas-longchamp/  /colecciones/   301
+/nuestra-coleccion-de-gafas-oakley/     /colecciones/   301
+
+# ════════════════════════════════════════════════════════
+# Brand migration 2026-05-13
+# Old brands removed: etnia, lacoste, longchamp, oakley, silhouette
+# All variants redirect to the language-appropriate collection index.
+# ════════════════════════════════════════════════════════
+
+# ── ES old brands → /colecciones/ ──
+/colecciones/etnia/       /colecciones/  301
+/colecciones/etnia        /colecciones/  301
+/colecciones/lacoste/     /colecciones/  301
+/colecciones/lacoste      /colecciones/  301
+/colecciones/longchamp/   /colecciones/  301
+/colecciones/longchamp    /colecciones/  301
+/colecciones/oakley/      /colecciones/  301
+/colecciones/oakley       /colecciones/  301
+/colecciones/silhouette/  /colecciones/  301
+/colecciones/silhouette   /colecciones/  301
+
+# ── EU old brands → /eu/bildumak/ ──
+/eu/bildumak/etnia/       /eu/bildumak/  301
+/eu/bildumak/etnia        /eu/bildumak/  301
+/eu/bildumak/lacoste/     /eu/bildumak/  301
+/eu/bildumak/lacoste      /eu/bildumak/  301
+/eu/bildumak/longchamp/   /eu/bildumak/  301
+/eu/bildumak/longchamp    /eu/bildumak/  301
+/eu/bildumak/oakley/      /eu/bildumak/  301
+/eu/bildumak/oakley       /eu/bildumak/  301
+/eu/bildumak/silhouette/  /eu/bildumak/  301
+/eu/bildumak/silhouette   /eu/bildumak/  301
+
+# ── FR old brands → /fr/collections/ ──
+/fr/collections/etnia/       /fr/collections/  301
+/fr/collections/etnia        /fr/collections/  301
+/fr/collections/lacoste/     /fr/collections/  301
+/fr/collections/lacoste      /fr/collections/  301
+/fr/collections/longchamp/   /fr/collections/  301
+/fr/collections/longchamp    /fr/collections/  301
+/fr/collections/oakley/      /fr/collections/  301
+/fr/collections/oakley       /fr/collections/  301
+/fr/collections/silhouette/  /fr/collections/  301
+/fr/collections/silhouette   /fr/collections/  301
