@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ─────────── HOME ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HOME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -34,10 +34,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/"/>
   </url>
 
-  <!-- ─────────── SERVICIOS ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ SERVICIOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/servicios/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/zerbitzuak/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/services/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/servicios/"/>
@@ -66,10 +66,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/servicios/"/>
   </url>
 
-  <!-- ─────────── CONTACTO ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CONTACTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/contacto/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/kontaktua/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/contact/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/contacto/"/>
@@ -98,10 +98,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/contacto/"/>
   </url>
 
-  <!-- ─────────── CITA PREVIA ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CITA PREVIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/cita-previa/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/hitzordua/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
@@ -121,7 +121,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/rendez-vous/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/cita-previa/"/>
@@ -130,10 +130,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/cita-previa/"/>
   </url>
 
-  <!-- ─────────── COLECCIONES (índice) ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ COLECCIONES (Ã­ndice) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -143,7 +143,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -162,10 +162,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/"/>
   </url>
 
-  <!-- ─────────── CAROLINA HERRERA ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CAROLINA HERRERA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/carolina-herrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -175,7 +175,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/carolina-herrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -185,7 +185,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/carolina-herrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -194,10 +194,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
   </url>
 
-  <!-- ─────────── CARRERA ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CARRERA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/carrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/"/>
@@ -207,7 +207,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/carrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/"/>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/carrera/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/"/>
@@ -226,10 +226,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/"/>
   </url>
 
-  <!-- ─────────── HUGO ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HUGO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/hugo/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
@@ -239,7 +239,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/hugo/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
@@ -249,7 +249,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/hugo/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
@@ -258,10 +258,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/hugo/"/>
   </url>
 
-  <!-- ─────────── HUGO BOSS ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HUGO BOSS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/hugo-boss/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
@@ -271,7 +271,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/hugo-boss/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
@@ -281,7 +281,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/hugo-boss/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
@@ -290,24 +290,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
   </url>
 
-  <!-- ─────────── LEGAL (solo ES) ─────────── -->
+  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ LEGAL (solo ES) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
   <url>
     <loc>https://www.anakaoptica.com/aviso-legal/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.anakaoptica.com/politica-cookies/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.anakaoptica.com/personalizar-cookies/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
 </urlset>
+
