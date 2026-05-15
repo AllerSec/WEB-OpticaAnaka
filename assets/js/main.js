@@ -70,11 +70,27 @@ function initNav() {
   if (!document.querySelector('.hero')) {
     header.classList.add('scrolled');
   } else {
-    ScrollTrigger.create({
-      start: '80px top',
-      onEnter: () => header.classList.add('scrolled'),
-      onLeaveBack: () => header.classList.remove('scrolled'),
-    });
+    // Native fallback (independent of GSAP): always wire a scroll listener
+    // so the navbar never gets stuck transparent even if GSAP fails to load.
+    const SCROLL_THRESHOLD = 80;
+    const syncScrolledState = () => {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    syncScrolledState(); // initial state
+    window.addEventListener('scroll', syncScrolledState, { passive: true });
+
+    // GSAP ScrollTrigger (if available) — adds precision but isn't required.
+    if (typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.create({
+        start: '80px top',
+        onEnter: () => header.classList.add('scrolled'),
+        onLeaveBack: () => header.classList.remove('scrolled'),
+      });
+    }
   }
 
   if (toggle && links) {
