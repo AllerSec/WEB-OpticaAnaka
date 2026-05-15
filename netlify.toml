@@ -1,25 +1,12 @@
 # ════════════════════════════════════════════════════════
 # Netlify config — Óptica Anaka
 # ════════════════════════════════════════════════════════
-
-# ── Forzar canonical: apex → www (un solo host para SEO) ──
-[[redirects]]
-  from = "https://anakaoptica.com/*"
-  to = "https://www.anakaoptica.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://anakaoptica.com/*"
-  to = "https://www.anakaoptica.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.anakaoptica.com/*"
-  to = "https://www.anakaoptica.com/:splat"
-  status = 301
-  force = true
+#
+# NOTA: NO añadir redirects manuales apex→www ni http→https.
+# Netlify los gestiona automáticamente cuando el "Primary domain"
+# está configurado en el panel de Domain Management.
+# Intentarlo manualmente causa ERR_TOO_MANY_REDIRECTS
+# (ya pasó en commit 2e8ff96, revertido entonces — no repetir).
 
 # ── Redirects para query params de WordPress (crawl budget + Error 5xx) ──
 # Netlify _redirects no soporta wildcards en query strings; se usan aquí con conditions
