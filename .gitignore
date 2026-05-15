@@ -12,3 +12,17 @@ package.json
 
 # Claude Code local state
 .claude/
+
+# ── Artefactos de desarrollo: NO desplegar a producción ──
+# Originales sin procesar de marcas (JPGs del fabricante)
+nuevasmarcas/
+
+# Scripts de generación / desarrollo
+generate_*.py
+*.py
+
+# Backend privado del formulario (Google Apps Script)
+apps-script/
+
+# Documentación interna (skills, notas)
+docs/

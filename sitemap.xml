@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HOME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- HOME -->
   <url>
     <loc>https://www.anakaoptica.com/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/"/>
@@ -34,7 +34,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ SERVICIOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- SERVICIOS -->
   <url>
     <loc>https://www.anakaoptica.com/servicios/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -66,7 +66,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/servicios/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CONTACTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- CONTACTO -->
   <url>
     <loc>https://www.anakaoptica.com/contacto/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -98,7 +98,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/contacto/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CITA PREVIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- CITA PREVIA -->
   <url>
     <loc>https://www.anakaoptica.com/cita-previa/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -130,10 +130,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/cita-previa/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ COLECCIONES (Ã­ndice) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- COLECCIONES INDEX -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -143,7 +143,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/eu/bildumak/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://www.anakaoptica.com/fr/collections/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/"/>
@@ -162,7 +162,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CAROLINA HERRERA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- MARCAS — Carolina Herrera -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/carolina-herrera/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -194,7 +194,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carolina-herrera/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CARRERA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- MARCAS — Carrera -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/carrera/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -226,12 +226,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HUGO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- MARCAS — Hugo -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/hugo/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo/"/>
@@ -241,7 +241,7 @@
     <loc>https://www.anakaoptica.com/eu/bildumak/hugo/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo/"/>
@@ -251,19 +251,19 @@
     <loc>https://www.anakaoptica.com/fr/collections/hugo/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/hugo/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ HUGO BOSS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- MARCAS — Hugo Boss -->
   <url>
     <loc>https://www.anakaoptica.com/colecciones/hugo-boss/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo-boss/"/>
@@ -273,7 +273,7 @@
     <loc>https://www.anakaoptica.com/eu/bildumak/hugo-boss/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo-boss/"/>
@@ -283,14 +283,494 @@
     <loc>https://www.anakaoptica.com/fr/collections/hugo-boss/</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/hugo-boss/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/hugo-boss/"/>
   </url>
 
-  <!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ LEGAL (solo ES) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <!-- MARCAS — Carrera Ducati -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera-ducati/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera-ducati/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera-ducati/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
+  </url>
+
+  <!-- MARCAS — Marc Jacobs -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/marc-jacobs/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/marc-jacobs/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/marc-jacobs/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
+  </url>
+
+  <!-- MARCAS — Missoni -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/missoni/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/missoni/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/missoni/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
+  </url>
+
+  <!-- MARCAS — Moschino -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
+  </url>
+
+  <!-- MARCAS — Love Moschino -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/love-moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/love-moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/love-moschino/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
+  </url>
+
+  <!-- MARCAS — Polaroid -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/polaroid/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/polaroid/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/polaroid/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
+  </url>
+
+  <!-- MARCAS — Safilo (NUEVA, con i18n completo) -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/safilo/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/safilo/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/safilo/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/safilo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/safilo/"/>
+  </url>
+
+  <!-- MARCAS — Tommy Hilfiger (NUEVA, con i18n completo) -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/tommy-hilfiger/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/tommy-hilfiger/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/tommy-hilfiger/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/tommy-hilfiger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/tommy-hilfiger/"/>
+  </url>
+
+  <!-- MARCAS — Seventh Street (NUEVA, con i18n completo) -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/seventh-street/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/seventh-street/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/seventh-street/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/seventh-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — 1146 -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/1146/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/1146/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/1146/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/1146/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/1146/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — 3089s -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/3089s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/3089s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/3089s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3089s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3089s/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — 3101 -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/3101/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/3101/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/3101/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/3101/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/3101/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — Victory C18/S -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/victory-c18s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/victory-c18s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/victory-c18s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c18s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c18s/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — Victory C20/S -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/victory-c20s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/victory-c20s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/victory-c20s/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c20s/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c20s/"/>
+  </url>
+
+  <!-- SUBMODELOS Carrera — Victory C23 -->
+  <url>
+    <loc>https://www.anakaoptica.com/colecciones/carrera/victory-c23/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/eu/bildumak/carrera/victory-c23/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+  </url>
+  <url>
+    <loc>https://www.anakaoptica.com/fr/collections/carrera/victory-c23/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera/victory-c23/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera/victory-c23/"/>
+  </url>
+
+  <!-- LEGAL (solo ES, sin hreflang i18n) -->
   <url>
     <loc>https://www.anakaoptica.com/aviso-legal/</loc>
     <lastmod>2026-05-14</lastmod>
@@ -303,194 +783,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://www.anakaoptica.com/personalizar-cookies/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 
-
-  <!-- ─────────── MARCAS SAFILO 2026-05-14 ─────────── -->
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/carrera-ducati/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/carrera-ducati/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/marc-jacobs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/marc-jacobs/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/missoni/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/missoni/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/love-moschino/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/love-moschino/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/colecciones/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/eu/bildumak/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-  </url>
-  <url>
-    <loc>https://www.anakaoptica.com/fr/collections/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/polaroid/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/polaroid/"/>
-  </url>
 </urlset>
-

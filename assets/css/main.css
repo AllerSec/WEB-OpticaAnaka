@@ -502,6 +502,10 @@ h2{text-wrap:balance}
   filter:grayscale(1) opacity(.55);transition:filter var(--t),opacity var(--t)
 }
 .brand-tile:hover img{filter:grayscale(0) opacity(1)}
+.brand-tile--text{min-width:120px}
+.brand-tile--text span{font-family:Outfit,sans-serif;font-weight:800;font-size:1rem;letter-spacing:.04em;color:var(--text);opacity:.55;transition:opacity var(--t);white-space:nowrap}
+.brand-tile--small span{font-size:.78rem;letter-spacing:.06em}
+.brand-tile--text:hover span{opacity:1}
 
 /* Pause CSS-driven carousel on hover/focus (WCAG 2.1 AA 2.2.2) */
 .brands-carousel:hover .brands-track,
@@ -760,20 +764,20 @@ h2{text-wrap:balance}
 @media(max-width:540px){.footer-grid{grid-template-columns:1fr}}
 .footer-logo img{height:46px;width:auto;object-fit:contain;margin-bottom:.9rem;filter:brightness(0) invert(1);opacity:.8}
 .footer-logo p{font-size:.86rem;margin-bottom:.9rem;max-width:none}
-.footer-col h4{
+.footer-col h4,.footer-col-title{
   font-family:var(--ff-body);font-size:.7rem;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;
   color:rgba(255,255,255,.4);margin-bottom:.85rem
 }
 .footer-col a{display:block;font-size:.86rem;color:rgba(255,255,255,.55);margin-bottom:.42rem;transition:color var(--t)}
 .footer-col a:hover{color:var(--primary-light)}
-.footer-col p{font-size:.86rem;margin-bottom:.4rem;max-width:none}
+.footer-col p:not(.footer-col-title){font-size:.86rem;margin-bottom:.4rem;max-width:none}
 .footer-bottom{
   padding:1.35rem 0;display:flex;align-items:center;
   justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-size:.76rem;color:rgba(255,255,255,.6)
 }
-.footer-bottom a{color:rgba(255,255,255,.8);transition:color var(--t)}
+.footer-bottom a{color:rgba(255,255,255,.8);transition:color var(--t);text-decoration:underline}
 .footer-bottom a:hover{color:var(--primary-light)}
 
 /* ── Cookie Banner ── */
@@ -787,7 +791,7 @@ h2{text-wrap:balance}
 }
 .cookie-banner.show{transform:translateY(0)}
 .cookie-banner p{max-width:none;margin-bottom:.9rem;line-height:1.5}
-.cookie-banner a{color:var(--primary-light)}
+.cookie-banner a{color:var(--primary-light);text-decoration:underline}
 .cookie-btns{display:flex;gap:.65rem;flex-wrap:wrap}
 .cookie-btn{
   padding:.75rem 1.25rem;min-height:44px;border-radius:50px;font-size:.83rem;
@@ -1334,17 +1338,17 @@ html[data-theme="dark"] .nav-phone:hover{background:rgba(244,232,216,.14)}
 html[data-theme="dark"] .site-header.scrolled .nav-phone{color:var(--primary-light);background:var(--primary-bg);border-color:var(--border)}
 html[data-theme="dark"] .nav-lang a:hover, html[data-theme="dark"] .nav-lang a.active{color:var(--primary-light)}
 html[data-theme="dark"] .site-header.scrolled .nav-lang a.active{color:var(--primary-light)}
-html[data-theme="dark"] .bg-cream{background:var(--primary-bg)}
+html[data-theme="dark"] .bg-cream{background:var(--primary-bg2)}
 html[data-theme="dark"] .page-hero{background:linear-gradient(135deg,#1F1610 0%,#14100B 100%)}
 html[data-theme="dark"] .page-hero::after{background:radial-gradient(circle,rgba(240,132,50,.10) 0%,transparent 70%)}
 /* Footer in dark mode: keep dark surface, ensure all text is light & readable */
 html[data-theme="dark"] .site-footer{background:#0C0907;color:rgba(244,232,216,.85);border-top:1px solid var(--border)}
 html[data-theme="dark"] .footer-grid{border-bottom-color:rgba(244,232,216,.08)}
 html[data-theme="dark"] .footer-logo p{color:rgba(244,232,216,.7)}
-html[data-theme="dark"] .footer-col h4{color:rgba(244,232,216,.5)}
+html[data-theme="dark"] .footer-col h4,html[data-theme="dark"] .footer-col-title{color:rgba(244,232,216,.5)}
 html[data-theme="dark"] .footer-col a{color:rgba(244,232,216,.75)}
 html[data-theme="dark"] .footer-col a:hover{color:var(--primary-light)}
-html[data-theme="dark"] .footer-col p{color:rgba(244,232,216,.7)}
+html[data-theme="dark"] .footer-col p:not(.footer-col-title){color:rgba(244,232,216,.7)}
 html[data-theme="dark"] .footer-bottom{color:rgba(244,232,216,.55)}
 html[data-theme="dark"] .footer-credit-link{color:rgba(244,232,216,.75)}
 html[data-theme="dark"] .footer-credit-link:hover, html[data-theme="dark"] .footer-credit-link:focus-visible{color:var(--primary-light)}
@@ -1353,12 +1357,14 @@ html[data-theme="dark"] .cookie-btn{background:transparent;color:var(--text);bor
 html[data-theme="dark"] .cookie-btn.cookie-accept{background:var(--primary);color:#14100B;border-color:transparent}
 html[data-theme="dark"] .lightbox{background:rgba(8,5,2,.95)}
 html[data-theme="dark"] .gallery-item{background:#241810}
-/* Brand carousel in dark mode: dark tiles + inverted (white) logos */
+/* Brand carousel in dark mode: white tiles (logos preserve original colors, no invert) */
 html[data-theme="dark"] .brands-carousel::before{background:linear-gradient(to right,#14100B,transparent)}
 html[data-theme="dark"] .brands-carousel::after{background:linear-gradient(to left,#14100B,transparent)}
-html[data-theme="dark"] .brand-tile{background:#1F1610;border-color:var(--border)}
-html[data-theme="dark"] .brand-tile img{filter:grayscale(1) opacity(.7) invert(1)}
-html[data-theme="dark"] .brand-tile:hover img{filter:invert(1) opacity(1)}
+html[data-theme="dark"] .brand-tile{background:#FFFFFF;border-color:rgba(255,255,255,0.12)}
+html[data-theme="dark"] .brand-tile img{filter:none;opacity:1}
+html[data-theme="dark"] .brand-tile:hover img{filter:none;opacity:1}
+html[data-theme="dark"] .brand-tile--text span{color:#1A0E05;opacity:.85}
+html[data-theme="dark"] .brand-tile--text:hover span{opacity:1}
 /* Section titles & helper text in dark */
 html[data-theme="dark"] .section-title, html[data-theme="dark"] h2, html[data-theme="dark"] h3, html[data-theme="dark"] h4{color:var(--text)}
 html[data-theme="dark"] .section-sub, html[data-theme="dark"] p{color:var(--text-muted)}
@@ -1417,3 +1423,50 @@ html[data-theme="dark"] .theme-toggle .tt-moon{opacity:1; transform:rotate(0) sc
 @media(prefers-reduced-motion:reduce){
   .theme-toggle .tt-sun, .theme-toggle .tt-moon{transition:opacity .15s linear}
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Dark mode legibility fixes — áreas con fondo oscuro fijo (vídeo, hero,
+   parallax). El color "blanco" se invierte a casi negro al cambiar tema,
+   así que aquí forzamos blanco real para mantener contraste.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* Hero principal — el fondo es siempre oscuro (imagen + overlay) */
+html[data-theme="dark"] .hero h1{color:#fff}
+html[data-theme="dark"] .hero h1 em{color:var(--primary-light)}
+html[data-theme="dark"] .hero-desc{color:rgba(255,255,255,.85)}
+html[data-theme="dark"] .hero-eyebrow{color:var(--primary-light)}
+html[data-theme="dark"] .btn-outline-white{color:#fff;border-color:rgba(255,255,255,.4)}
+html[data-theme="dark"] .btn-outline-white:hover{background:rgba(255,255,255,.12)}
+
+/* Compromiso parallax — fondo de imagen oscura siempre */
+html[data-theme="dark"] .compromiso-scene .section-title{color:#fff}
+html[data-theme="dark"] .compromiso-scene .section-sub{color:rgba(255,255,255,.92)}
+html[data-theme="dark"] .compromiso-scene .commitment-item h3{color:#fff}
+html[data-theme="dark"] .compromiso-scene .commitment-item p{color:rgba(255,255,255,.85)}
+html[data-theme="dark"] .compromiso-scene .commitment-icon{color:var(--primary-light)}
+html[data-theme="dark"] .compromiso-scene .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(0,0,0,.45)}
+html[data-theme="dark"] .compromiso-scene .btn-ghost:hover{background:rgba(255,255,255,.18)}
+
+/* Footer logo paragraph & stats — el footer es oscuro en ambos modos */
+html[data-theme="dark"] .footer-logo p{color:rgba(244,232,216,.78)}
+html[data-theme="dark"] .stats-bar{background:#0C0907}
+html[data-theme="dark"] .stats-bar .stat-number{color:var(--primary-light)}
+html[data-theme="dark"] .stats-bar .stat-label{color:rgba(244,232,216,.7)}
+
+/* Nav phone & lang in dark when not scrolled (header transparent over hero) */
+html[data-theme="dark"] .nav-phone{color:rgba(255,255,255,.92)}
+html[data-theme="dark"] .nav-lang a{color:rgba(255,255,255,.85)}
+html[data-theme="dark"] .nav-lang span{color:rgba(255,255,255,.4)}
+html[data-theme="dark"] .nav-toggle span{background:#fff}
+html[data-theme="dark"] .nav-cta{color:#14100B}
+
+/* Boss hero (Hugo Boss page) — fondo crema/blanco en claro, oscuro en oscuro */
+html[data-theme="dark"] .boss-hero-text p{color:var(--text-muted)}
+html[data-theme="dark"] .boss-section p{color:var(--text-muted)}
+
+/* Brand quote / .hl underline behavior in dark — keep gold readable */
+html[data-theme="dark"] .hl{background-image:linear-gradient(var(--primary-light),var(--primary-light))}
+
+/* Generic .text-center sub-text/notes inside dark sections that were inline-styled */
+html[data-theme="dark"] [style*="color:var(--text-muted)"]{color:var(--text-muted) !important}
+

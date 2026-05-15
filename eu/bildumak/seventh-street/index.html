@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <script>(function(){try{var s=localStorage.getItem('theme'),m=window.matchMedia('(prefers-color-scheme: dark)').matches,t=s||(m?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('theme-no-anim');requestAnimationFrame(function(){requestAnimationFrame(function(){document.documentElement.classList.remove('theme-no-anim')})});}catch(e){}})();</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0A0A0A"/>
+  <title>Seventh Street by Safilo Irunen — Urban Eyewear | Optika Anaka</title>
+  <meta name="description" content="Seventh Street by Safilo Optika Anakan, Irunen. Safilo Group-eko eyewear urbano eta eskuragarria. Munturak gazte eta nortasunarekin. 943 24 84 90."/>
+  <link rel="canonical" href="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="eu_ES"/>
+  <meta property="og:site_name" content="Óptica Anaka"/>
+  <meta property="og:title" content="Seventh Street by Safilo Irunen — Urban Eyewear | Optika Anaka"/>
+  <meta property="og:description" content="Seventh Street by Safilo Optika Anakan, Irunen. Safilo Group-eko eyewear urbano eta eskuragarria. Munturak gazte eta nortasunarekin."/>
+  <meta property="og:url" content="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+  <meta property="og:image" content="https://www.anakaoptica.com/colecciones/seventh-street/seventh-street-logo.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Seventh Street by Safilo Irunen — Urban Eyewear | Optika Anaka"/>
+  <meta name="twitter:description" content="Safilo Group-eko eyewear urbano eta eskuragarria. Munturak gazte eta nortasunarekin Optika Anakan, Irunen."/>
+  <meta name="twitter:image" content="https://www.anakaoptica.com/colecciones/seventh-street/seventh-street-logo.webp"/>
+  <link rel="icon" type="image/webp" href="../../../logos/OPTICA-ANACA-LOGO-1.webp"/>
+  <link rel="alternate" hreflang="es" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+  <link rel="alternate" hreflang="eu" href="https://www.anakaoptica.com/eu/bildumak/seventh-street/"/>
+  <link rel="alternate" hreflang="fr" href="https://www.anakaoptica.com/fr/collections/seventh-street/"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.anakaoptica.com/colecciones/seventh-street/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"/></noscript>
+  <link rel="stylesheet" href="../../../assets/css/main.css"/>
+
+  <style>
+    /* =============================================
+       SEVENTH STREET — URBAN EYEWEAR
+       Design: Dark / Monospace / Hype-drop aesthetic
+    ============================================= */
+    :root {
+      --ss-black:  #0A0A0A;
+      --ss-white:  #F5F5F5;
+      --ss-accent: #FF3D00;
+      --ss-mid:    #2D2D2D;
+      --ss-grey:   #888888;
+    }
+
+    body {
+      background: var(--ss-black);
+      color: var(--ss-white);
+    }
+
+    .ss-hero {
+      position: relative;
+      min-height: 100vh;
+      background: var(--ss-black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 8rem 6vw 6rem;
+    }
+    @media(max-width:600px){.ss-hero{padding:6rem 5vw 4rem}}
+
+    .ss-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .ss-hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 200px; height: 200px;
+      border-top: 2px solid var(--ss-accent);
+      border-left: 2px solid var(--ss-accent);
+      pointer-events: none;
+    }
+
+    .ss-hero-corner-br {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 200px; height: 200px;
+      border-bottom: 2px solid var(--ss-accent);
+      border-right: 2px solid var(--ss-accent);
+      pointer-events: none;
+    }
+
+    .ss-hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .3em;
+      color: var(--ss-accent);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+    }
+    .ss-hero-label::before,
+    .ss-hero-label::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--ss-accent);
+    }
+
+    .ss-hero-logo {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 3.5rem;
+    }
+    .ss-hero-logo img {
+      width: min(420px, 72vw);
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .ss-hero-headline {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.8rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: center;
+      color: var(--ss-white);
+      letter-spacing: -.02em;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .ss-hero-headline .acc {
+      color: var(--ss-accent);
+    }
+
+    .ss-hero-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: .85rem;
+      color: var(--ss-grey);
+      letter-spacing: .15em;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ss-hero-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .ss-hero-meta-item {
+      font-family: 'Space Mono', monospace;
+      font-size: .8rem;
+      letter-spacing: .2em;
+      color: var(--ss-grey);
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .3rem;
+    }
+    .ss-hero-meta-item strong {
+      color: var(--ss-white);
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+
+    .ss-ticker {
+      background: var(--ss-accent);
+      color: var(--ss-white);
+      overflow: hidden;
+      padding: .9rem 0;
+      position: relative;
+    }
+    .ss-ticker-track {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      animation: ss-ticker-scroll 22s linear infinite;
+    }
+    .ss-ticker-track span {
+      font-family: 'Space Mono', monospace;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 0 2.5rem;
+    }
+    .ss-ticker-track span::after {
+      content: "·";
+      margin-left: 2.5rem;
+    }
+    @keyframes ss-ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ss-section {
+      padding: 6rem 6vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ss-divider {
+      border: none;
+      border-top: 1px solid var(--ss-mid);
+      margin: 0;
+    }
+    .ss-divider-dotted {
+      border: none;
+      border-top: 1px dashed var(--ss-mid);
+      margin: 0;
+    }
+
+    .ss-section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: .68rem;
+      letter-spacing: .35em;
+      color: var(--ss-accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .ss-section-label::before {
+      content: attr(data-num);
+      display: inline-block;
+      color: var(--ss-mid);
+      font-size: .6rem;
+    }
+
+    .ss-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    @media (max-width: 760px) {
+      .ss-about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    .ss-about-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ss-white);
+      margin-bottom: 1.5rem;
+    }
+    .ss-about-heading .acc { color: var(--ss-accent); }
+
+    .ss-about-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(245,245,245,.75);
+      margin-bottom: 1.5rem;
+    }
+
+    .ss-trait-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .ss-trait-list li {
+      font-family: 'Space Mono', monospace;
+      font-size: .78rem;
+      letter-spacing: .1em;
+      color: var(--ss-grey);
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+    }
+    .ss-trait-list li::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--ss-accent);
+      flex-shrink: 0;
+    }
+    .ss-trait-list li strong {
+      color: var(--ss-white);
+      font-weight: 700;
+    }
+
+    .ss-brand-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--ss-mid);
+      border: 1px solid var(--ss-mid);
+      margin-top: 1rem;
+    }
+    .ss-stat {
+      background: var(--ss-black);
+      padding: 1.5rem;
+    }
+    .ss-stat-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ss-white);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+    .ss-stat-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ss-grey);
+    }
+
+    .ss-cards-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--ss-white);
+      margin-bottom: .6rem;
+    }
+    .ss-cards-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: var(--ss-grey);
+      margin-bottom: 3rem;
+    }
+
+    .ss-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--ss-mid);
+    }
+    @media (max-width: 680px) {
+      .ss-cards-grid { grid-template-columns: 1fr; }
+    }
+
+    .ss-card {
+      position: relative;
+      background: var(--ss-mid);
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.8rem 1.5rem;
+    }
+
+    .ss-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--ss-black);
+    }
+    .ss-card-art {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .ss-card[data-cat="sol"] .ss-card-art::before {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,.08);
+      box-shadow:
+        0 0 0 12px rgba(255,61,0,.06),
+        0 0 0 30px rgba(255,61,0,.03),
+        -70px 0 0 0 rgba(255,255,255,.04);
+    }
+    .ss-card[data-cat="grad"] .ss-card-art::before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 56px;
+      border: 3px solid rgba(255,255,255,.1);
+      border-radius: 6px;
+      box-shadow:
+        -120px 0 0 0 rgba(255,255,255,.03),
+        0 0 40px rgba(255,61,0,.08);
+    }
+    .ss-card[data-cat="sport"] .ss-card-art::before {
+      content: "";
+      display: block;
+      width: 130px;
+      height: 50px;
+      border-radius: 50% 50% 40% 40%;
+      border: 3px solid rgba(255,255,255,.09);
+      box-shadow:
+        0 0 0 20px rgba(255,61,0,.04),
+        0 0 60px rgba(255,61,0,.12);
+    }
+
+    .ss-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 12px,
+        rgba(255,255,255,.012) 12px,
+        rgba(255,255,255,.012) 13px
+      );
+      pointer-events: none;
+    }
+
+    .ss-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .ss-card-badge {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: .25em;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: var(--ss-accent);
+      color: #fff;
+      padding: .25rem .65rem;
+      margin-bottom: .9rem;
+    }
+
+    .ss-card-cat {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ss-white);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+    }
+
+    .ss-card-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      color: var(--ss-grey);
+      line-height: 1.5;
+    }
+
+    .ss-card-num {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: .62rem;
+      letter-spacing: .2em;
+      color: rgba(255,255,255,.2);
+      z-index: 2;
+    }
+
+    .ss-cta-section {
+      background: var(--ss-mid);
+      padding: 6rem 6vw;
+    }
+    .ss-cta-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .ss-cta-inner .ss-section-label {
+      justify-content: center;
+    }
+    .ss-cta-inner .ss-section-label::before {
+      display: none;
+    }
+    .ss-cta-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+      font-weight: 700;
+      color: var(--ss-white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .ss-cta-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: rgba(245,245,245,.65);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .ss-cta-btn {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ss-black);
+      background: var(--ss-white);
+      padding: 1rem 2.2rem;
+      transition: background .2s, color .2s;
+    }
+    .ss-cta-btn:hover {
+      background: var(--ss-accent);
+      color: #fff;
+    }
+    .ss-cta-btn-ghost {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ss-white);
+      background: transparent;
+      border: 1px solid rgba(245,245,245,.3);
+      padding: 1rem 2.2rem;
+      margin-left: 1rem;
+      transition: border-color .2s, color .2s;
+    }
+    .ss-cta-btn-ghost:hover {
+      border-color: var(--ss-accent);
+      color: var(--ss-accent);
+    }
+    @media (max-width: 540px) {
+      .ss-cta-btn-ghost { margin-left: 0; margin-top: .8rem; }
+      .ss-cta-inner .ss-btns { display: flex; flex-direction: column; align-items: center; gap: .8rem; }
+    }
+
+    .ss-manifesto {
+      background: var(--ss-accent);
+      padding: 4rem 6vw;
+      text-align: center;
+    }
+    .ss-manifesto blockquote {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+      max-width: 760px;
+      margin: 0 auto 1rem;
+    }
+    .ss-manifesto cite {
+      font-family: 'DM Sans', sans-serif;
+      font-style: normal;
+      font-size: .78rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+    }
+
+    .breadcrumb {
+      background: transparent;
+      border-bottom-color: var(--ss-mid);
+    }
+    .breadcrumb a, .breadcrumb li {
+      color: var(--ss-grey);
+    }
+    .breadcrumb li:last-child {
+      color: var(--ss-white);
+    }
+
+    .site-footer {
+      background: var(--ss-black);
+      border-top: 1px solid var(--ss-mid);
+    }
+  </style>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hasiera","item":"https://www.anakaoptica.com/eu/"},{"@type":"ListItem","position":2,"name":"Bildumak","item":"https://www.anakaoptica.com/eu/bildumak/"},{"@type":"ListItem","position":3,"name":"Seventh Street","item":"https://www.anakaoptica.com/eu/bildumak/seventh-street/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Brand","name":"Seventh Street","alternateName":"Seventh Street by Safilo","description":"Seventh Street Safilo Group-en marka urbano eta eskuragarria da, nortasunarekin pertsonalitatea bilatzen duten gazteentzat diseinatua, prezio eskuragarrian.","logo":"https://www.anakaoptica.com/colecciones/seventh-street/seventh-street-logo.webp","url":"https://www.anakaoptica.com/eu/bildumak/seventh-street/","inLanguage":"eu","brand":{"@type":"Organization","name":"Safilo Group"},"offeredBy":{"@type":"Optician","@id":"https://www.anakaoptica.com/#optica","name":"Óptica Anaka","url":"https://www.anakaoptica.com/","telephone":"+34943248490","address":{"@type":"PostalAddress","streetAddress":"C. de Fuenterrabía, 14","addressLocality":"Irun","postalCode":"20301","addressRegion":"Gipuzkoa","addressCountry":"ES"}}}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Edukira salto egin</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Nabigazio nagusia">
+    <a class="nav-logo" href="../../index.html" aria-label="Optika Anaka — Hasiera"><img src="../../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="44" height="44"/></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menua ireki" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="../../index.html">Hasiera</a></li>
+      <li><a href="../../zerbitzuak/index.html">Zerbitzuak</a></li>
+      <li><a href="../index.html" class="active" aria-current="page">Bildumak</a></li>
+      <li><a href="../../kontaktua/index.html">Kontaktua</a></li>
+      <li><a href="../../hitzordua/index.html" class="nav-cta">Hitzordua eskatu</a></li>
+    </ul>
+    <div class="nav-lang" aria-label="Hizkuntza">
+      <a href="../../../colecciones/seventh-street/index.html" lang="es" hreflang="es">ES</a><span aria-hidden="true">|</span>
+      <a href="index.html" class="active" lang="eu" hreflang="eu" aria-current="page">EU</a><span aria-hidden="true">|</span>
+      <a href="../../../fr/collections/seventh-street/index.html" lang="fr" hreflang="fr">FR</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Tema argia edo iluna aldatu" aria-pressed="false" title="Tema argia edo iluna aldatu">
+      <span class="tt-icon" aria-hidden="true">
+        <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </span>
+    </button>
+    <a class="nav-phone" href="tel:+34943248490" aria-label="Deitu 943 24 84 90 zenbakira"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.29 21 3 13.71 3 4.5 3 3.95 3.45 3.5 4 3.5H7.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02L6.6 10.8z"/></svg>943 24 84 90</a>
+  </nav>
+</header>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Nabigazio bidea">
+  <div class="container">
+    <ol role="list">
+      <li><a href="../../index.html">Hasiera</a></li>
+      <li><a href="../index.html">Bildumak</a></li>
+      <li aria-current="page">Seventh Street</li>
+    </ol>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="ss-hero" aria-label="Seventh Street by Safilo — Urban Eyewear">
+    <div class="ss-hero-corner-br" aria-hidden="true"></div>
+
+    <p class="ss-hero-label" aria-label="Berria Optika Anakan">
+      Berria Optika Anakan
+    </p>
+
+    <div class="ss-hero-logo">
+      <img
+        src="../../../colecciones/seventh-street/seventh-street-logo.webp"
+        alt="Seventh Street by Safilo — logo ofiziala"
+        width="120" height="120"
+        fetchpriority="high"
+      />
+    </div>
+
+    <h1 class="ss-hero-headline">
+      Marka berria.<br/><span class="acc">Hizkuntza berria.</span>
+    </h1>
+
+    <p class="ss-hero-sub">
+      // URBAN_EYEWEAR &nbsp;·&nbsp; BY_SAFILO_GROUP &nbsp;·&nbsp; EST._1878
+    </p>
+
+    <div class="ss-hero-meta" aria-label="Markaren datuak">
+      <div class="ss-hero-meta-item">
+        <strong>Safilo</strong>
+        Taldea
+      </div>
+      <div class="ss-hero-meta-item">
+        <strong>Urban</strong>
+        Estiloa
+      </div>
+      <div class="ss-hero-meta-item">
+        <strong>Irun</strong>
+        Eskuragarri
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ss-ticker" aria-hidden="true">
+    <div class="ss-ticker-track">
+      <span>Seventh Street</span>
+      <span>By Safilo</span>
+      <span>Urban Eyewear</span>
+      <span>Laster</span>
+      <span>Bilduma berria</span>
+      <span>Irun</span>
+      <span>Optika Anaka</span>
+      <span>Seventh Street</span>
+      <span>By Safilo</span>
+      <span>Urban Eyewear</span>
+      <span>Laster</span>
+      <span>Bilduma berria</span>
+      <span>Irun</span>
+      <span>Optika Anaka</span>
+    </div>
+  </div>
+
+  <hr class="ss-divider"/>
+
+  <!-- ===== ABOUT ===== -->
+  <section aria-labelledby="ss-about-title">
+    <div class="ss-section">
+      <div class="ss-about-grid">
+        <div>
+          <p class="ss-section-label" data-num="01.">Markari buruz</p>
+          <h2 class="ss-about-heading" id="ss-about-title">
+            Kalean bizi denarentzako<br/>eyewear-a <span class="acc">kalean.</span>
+          </h2>
+          <p class="ss-about-body">
+            Seventh Street <strong style="color:var(--ss-white)">Safilo Group</strong>-en proposamen urbano eta eskuragarria da, Italian egoitza duen munduko eyewear-fabrikatzaile handienetako batena. Estiloa eta egunerokoa bereizten ez dituen belaunaldi batentzat diseinatua, Seventh Street-ek nortasun propioko munturak eskaintzen ditu, konpromisorik eskatzen ez duen prezioan.</p>
+          <p class="ss-about-body">
+            Itxurakeriarik gabe. Bete-betekorik gabe. Edozein testuingurutan funtzionatzen duen diseinu zintzoa besterik ez — skateparketik bulegoraino, metrotik kontzertuko azken errenkadaraino.
+          </p>
+          <ul class="ss-trait-list" aria-label="Markaren ezaugarriak">
+            <li><strong>Gaztea</strong> — Belaunaldi urbanorako pentsatutako diseinua</li>
+            <li><strong>Eskuragarria</strong> — Fabrikako premium, prezio erreala</li>
+            <li><strong>Aniztuna</strong> — Eguzkitarakoak, graduatuak eta sport lerro berean</li>
+            <li><strong>Safilo Group</strong> — 140 urteko ofizioaren babesa</li>
+          </ul>
+        </div>
+        <div>
+          <div class="ss-brand-stats" role="list" aria-label="Safilo Group-en zifrak">
+            <div class="ss-stat" role="listitem">
+              <div class="ss-stat-num">1878</div>
+              <div class="ss-stat-label">Safilo sortze-urtea</div>
+            </div>
+            <div class="ss-stat" role="listitem">
+              <div class="ss-stat-num">+50</div>
+              <div class="ss-stat-label">Banaketa-herrialdeak</div>
+            </div>
+            <div class="ss-stat" role="listitem">
+              <div class="ss-stat-num">30+</div>
+              <div class="ss-stat-label">Markak taldean</div>
+            </div>
+            <div class="ss-stat" role="listitem">
+              <div class="ss-stat-num">7.</div>
+              <div class="ss-stat-label">Kalea. Izenak dena dio.</div>
+            </div>
+          </div>
+
+          <hr class="ss-divider-dotted" style="margin: 1.5rem 0;"/>
+
+          <p style="font-family:'Space Mono',monospace; font-size:.8rem; letter-spacing:.15em; color:var(--ss-grey); line-height:1.9;">
+            // FABRIKAZIOA — DISEINU PROPIOA<br/>
+            // BANAKETA — GLOBALA<br/>
+            // KATEGORIA — URBAN / ACCESSIBLE<br/>
+            // TALDEA — SAFILO S.P.A., PADUA, IT
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="ss-divider"/>
+
+  <!-- ===== MANIFESTO ===== -->
+  <div class="ss-manifesto">
+    <blockquote>
+      "Ez da luxua. Ez da oinarrizkoa.<br/>Behar duzun hori bera da."
+    </blockquote>
+    <cite>Seventh Street by Safilo</cite>
+  </div>
+
+  <hr class="ss-divider"/>
+
+  <!-- ===== CATEGORY CARDS ===== -->
+  <section aria-labelledby="ss-cat-title">
+    <div class="ss-section">
+      <p class="ss-section-label" data-num="02.">Kategoriak</p>
+      <h2 class="ss-cards-heading" id="ss-cat-title">Datorrena.</h2>
+      <p class="ss-cards-sub">Bilduma bidean dator. Hiru lerro, hizkuntza bakarra.</p>
+
+      <div class="ss-cards-grid" role="list" aria-label="Seventh Street kategoriak">
+        <!-- Card 1: Eguzkitarakoak -->
+        <article class="ss-card" data-cat="sol" role="listitem">
+          <div class="ss-card-art" aria-hidden="true"></div>
+          <span class="ss-card-num" aria-hidden="true">01 / SOL</span>
+          <div class="ss-card-content">
+            <span class="ss-card-badge">Laster</span>
+            <p class="ss-card-cat">Eguzkitarakoak</p>
+            <p class="ss-card-desc">Kanporako munturak. Polarizatuak, UV400-rekin eta edozein egoeratarako sobera dagoen jarrera.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Graduatuak -->
+        <article class="ss-card" data-cat="grad" role="listitem">
+          <div class="ss-card-art" aria-hidden="true"></div>
+          <span class="ss-card-num" aria-hidden="true">02 / GRAD</span>
+          <div class="ss-card-content">
+            <span class="ss-card-badge">Laster</span>
+            <p class="ss-card-cat">Graduatuak</p>
+            <p class="ss-card-desc">Egun osoan daramazun marko hori. Arinak, erresistenteak, forma urbanoekin, oharkabean igarotzen ez direnak.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Sport -->
+        <article class="ss-card" data-cat="sport" role="listitem">
+          <div class="ss-card-art" aria-hidden="true"></div>
+          <span class="ss-card-num" aria-hidden="true">03 / SPORT</span>
+          <div class="ss-card-content">
+            <span class="ss-card-badge">Laster</span>
+            <p class="ss-card-cat">Sport</p>
+            <p class="ss-card-desc">Errendimendua estiloa sakrifikatu gabe. Gorputzak eskatzen duenean ere geratzen ez direnentzat.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="ss-divider"/>
+
+  <!-- ===== CTA ===== -->
+  <div class="ss-cta-section">
+    <div class="ss-cta-inner">
+      <p class="ss-section-label" aria-label="Bitartean">Bitartean</p>
+      <h2 class="ss-cta-heading">Marka gehiago ditugu<br/>zure zain.</h2>
+      <p class="ss-cta-body">
+        Seventh Street laster iristen da Optika Anakara. Bien bitartean, esplora gure marka premium hautaketa osoa — edo etorri dendara, Fuenterrabía kaleko 14 zenbakira, Irunen. Gustura lagunduko dizugu.
+      </p>
+      <div class="ss-btns">
+        <a class="ss-cta-btn" href="../index.html">Bilduma guztiak ikusi</a>
+        <a class="ss-cta-btn-ghost" href="../../hitzordua/index.html">Hitzordua eskatu</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="../../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="46" height="46"/>
+        <p>Zure erreferentziazko optika<br/>Irunen 2007tik.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Nabigazioa</p>
+        <a href="../../index.html">Hasiera</a>
+        <a href="../../zerbitzuak/index.html">Zerbitzuak</a>
+        <a href="../index.html">Bildumak</a>
+        <a href="../../kontaktua/index.html">Kontaktua</a>
+        <a href="../../hitzordua/index.html">Hitzordua eskatu</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Bildumak</p>
+        <a href="../carolina-herrera/index.html">Carolina Herrera</a>
+        <a href="../carrera/index.html">Carrera</a>
+        <a href="../marc-jacobs/index.html">Marc Jacobs</a>
+        <a href="../missoni/index.html">Missoni</a>
+        <a href="../moschino/index.html">Moschino</a>
+        <a href="../polaroid/index.html">Polaroid</a>
+        <a href="../safilo/index.html">Safilo</a>
+        <a href="../tommy-hilfiger/index.html">Tommy Hilfiger</a>
+        <a href="index.html">Seventh Street</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Legala</p>
+        <a href="../../../aviso-legal/index.html">Lege Oharra</a>
+        <a href="../../../politica-cookies/index.html">Cookieen Politika</a>
+        <a href="../../../personalizar-cookies/index.html">Cookieak Pertsonalizatu</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Óptica Anaka · C. de Fuenterrabía, 14, 20301 Irun, Gipuzkoa</p>
+      <p>Diseinatua <a class="footer-credit-link" href="https://unaxaller.com" target="_blank" rel="noopener noreferrer">Unax Aller</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" role="dialog" aria-label="Cookies" aria-live="polite">
+  <p>Cookieak erabiltzen ditugu zure esperientzia hobetzeko. <a href="../../../politica-cookies/index.html">Informazio gehiago</a>.</p>
+  <div class="cookie-btns"><button class="cookie-btn cookie-accept">Onartu</button><a href="../../../personalizar-cookies/index.html" class="cookie-btn cookie-config" style="text-align:center">Konfiguratu</a><button class="cookie-btn cookie-decline">Errefusatu</button></div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script defer src="../../../assets/js/main.js"></script>
+<script>(function(){var b=document.getElementById('themeToggle');if(!b)return;var tc=document.querySelector('meta[name="theme-color"]');function sync(){var t=document.documentElement.getAttribute('data-theme')||'light';b.setAttribute('aria-pressed', t==='dark'?'true':'false');if(tc)tc.setAttribute('content', t==='dark'?'#0A0A0A':'#0A0A0A');}sync();b.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('theme',next);}catch(e){}sync();});var mq=window.matchMedia('(prefers-color-scheme: dark)');try{mq.addEventListener('change',function(e){if(localStorage.getItem('theme'))return;var t=e.matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);sync();});}catch(_){}})();</script>
+</body>
+</html>

@@ -46,7 +46,7 @@
   {"@context":"https://schema.org","@type":"Optician","@id":"https://www.anakaoptica.com/#optica","name":"Óptica Anaka","url":"https://www.anakaoptica.com/","logo":"https://www.anakaoptica.com/logos/OPTICA-ANACA-LOGO-1.webp","image":"https://www.anakaoptica.com/logos/OPTICA-ANACA-LOGO-1.webp","description":"Tu óptica de referencia en Irún desde 2007. Máxima atención, profesionalidad y calidad.","address":{"@type":"PostalAddress","streetAddress":"C. de Fuenterrabía, 14","addressLocality":"Irún","addressRegion":"Gipuzkoa","postalCode":"20301","addressCountry":"ES"},"telephone":"+34943248490","email":"info@anakaoptica.com","sameAs":["https://www.facebook.com/opticaanaka","https://www.instagram.com/opticaanaka"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"13:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"19:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:30","closes":"13:00"}],"geo":{"@type":"GeoCoordinates","latitude":43.339,"longitude":-1.7895},"priceRange":"€€","foundingDate":"2007"}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde está Óptica Anaka en Irún?","acceptedAnswer":{"@type":"Answer","text":"Estamos en C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa."}},{"@type":"Question","name":"¿Qué horario tiene Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"De lunes a viernes: mañanas 9:30–13:30 y tardes 16:00–19:30. Sábados: 9:30–13:00. Sábado tarde cerrado."}},{"@type":"Question","name":"¿Realiza retinografías Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"Sí, ofrecemos retinografía para la detección precoz de enfermedades oculares como glaucoma, DMAE y retinopatía diabética."}},{"@type":"Question","name":"¿Qué marcas de gafas vende Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con Carolina Herrera, Carrera, Hugo y Hugo Boss, marcas del Grupo Safilo."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde está Óptica Anaka en Irún?","acceptedAnswer":{"@type":"Answer","text":"Estamos en C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa."}},{"@type":"Question","name":"¿Qué horario tiene Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"De lunes a viernes: mañanas 9:30–13:30 y tardes 16:00–19:30. Sábados: 9:30–13:00. Sábado tarde cerrado."}},{"@type":"Question","name":"¿Realiza retinografías Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"Sí, ofrecemos retinografía para la detección precoz de enfermedades oculares como glaucoma, DMAE y retinopatía diabética."}},{"@type":"Question","name":"¿Qué marcas de gafas vende Óptica Anaka?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos con 13 marcas internacionales del Grupo Safilo: Carolina Herrera, Carrera, Hugo, Hugo Boss, Carrera Ducati, Marc Jacobs, Missoni, Moschino, Love Moschino, Polaroid, Safilo, Tommy Hilfiger y Seventh Street."}}]}
   </script>
 </head>
 <body>
@@ -57,7 +57,7 @@
 <header class="site-header" role="banner">
   <nav class="nav-inner" aria-label="Navegación principal">
     <a class="nav-logo" href="index.html" aria-label="Óptica Anaka — Inicio">
-      <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="120" height="44"/>
+      <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="44" height="44"/>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -109,7 +109,7 @@
       </div>
     </div><!-- /.hero-content -->
     <div class="hero-logo-wrap">
-      <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="280" height="103" fetchpriority="high" decoding="async"/>
+      <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="280" height="280" fetchpriority="high" decoding="async"/>
     </div>
     </div><!-- /.hero-inner -->
   </div>
@@ -123,7 +123,9 @@
 <section class="compromiso-scene" aria-labelledby="compromiso-title">
   <video class="compromiso-photo"
          autoplay muted loop playsinline
-         preload="metadata" disablepictureinpicture disableremoteplayback
+         preload="none" disablepictureinpicture disableremoteplayback
+         poster="assets/images/foto-interior.webp"
+         width="1920" height="1080"
          aria-hidden="true">
     <source src="assets/videos/compromiso.mp4" type="video/mp4">
   </video>
@@ -179,7 +181,7 @@
         <p class="stat-label">Años de experiencia cuidando tu visión en Irún</p>
       </div>
       <div class="text-center">
-        <span class="stat-number" data-count="6" aria-label="6 marcas exclusivas">6</span>
+        <span class="stat-number" data-count="13" aria-label="13 marcas exclusivas">13</span>
         <p class="stat-label">Marcas exclusivas de gafas y monturas</p>
       </div>
       <div class="text-center">
@@ -198,58 +200,156 @@
     <p class="section-sub reveal">Descubre nuestras colecciones en monturas, gafas graduadas y gafas de sol.</p>
   </div>
 
-  <div class="brands-carousel" aria-label="Marcas disponibles">
+  <div class="brands-carousel" role="region" aria-label="Marcas disponibles">
     <div class="brands-track" aria-hidden="true">
-      <!-- duplicated for infinite loop -->
-      <div class="brand-tile"><img src="colecciones/carolina-herrera/logo.webp" alt="Carolina Herrera" width="130" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/carrera/logo.webp" alt="Carrera" width="130" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/hugo/logo.webp" alt="Hugo" width="100" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/hugo-boss/logo.webp" alt="Hugo Boss" width="110" height="36"/></div>
-      <!-- duplicate -->
-      <div class="brand-tile"><img src="colecciones/carolina-herrera/logo.webp" alt="Carolina Herrera" width="130" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/carrera/logo.webp" alt="Carrera" width="130" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/hugo/logo.webp" alt="Hugo" width="100" height="36"/></div>
-      <div class="brand-tile"><img src="colecciones/hugo-boss/logo.webp" alt="Hugo Boss" width="110" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/carolina-herrera/logo.webp" alt="Carolina Herrera" width="3537" height="1629"/></div>
+      <div class="brand-tile"><img src="colecciones/carrera/logo.webp" alt="Carrera" width="183" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/hugo/logo.webp" alt="Hugo" width="71" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/hugo-boss/logo.webp" alt="Hugo Boss" width="71" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/marc-jacobs/logo.webp" alt="Marc Jacobs" width="491" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/missoni/logo.webp" alt="Missoni" width="51" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/moschino/logo.webp" alt="Moschino" width="137" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/love-moschino/logo.webp" alt="Love Moschino" width="65" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/carrera-ducati/logo.webp" alt="Carrera Ducati" width="292" height="36"/></div>
+      <div class="brand-tile brand-tile--text"><span>POLAROID</span></div>
+      <div class="brand-tile brand-tile--text"><span style="font-style:italic">SAFILO</span></div>
+      <div class="brand-tile brand-tile--text brand-tile--small"><span>TOMMY HILFIGER</span></div>
+      <div class="brand-tile brand-tile--text brand-tile--small"><span>SEVENTH STREET</span></div>
+      <!-- duplicate set for infinite loop -->
+      <div class="brand-tile"><img src="colecciones/carolina-herrera/logo.webp" alt="Carolina Herrera" width="3537" height="1629"/></div>
+      <div class="brand-tile"><img src="colecciones/carrera/logo.webp" alt="Carrera" width="183" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/hugo/logo.webp" alt="Hugo" width="71" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/hugo-boss/logo.webp" alt="Hugo Boss" width="71" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/marc-jacobs/logo.webp" alt="Marc Jacobs" width="491" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/missoni/logo.webp" alt="Missoni" width="51" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/moschino/logo.webp" alt="Moschino" width="137" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/love-moschino/logo.webp" alt="Love Moschino" width="65" height="36"/></div>
+      <div class="brand-tile"><img src="colecciones/carrera-ducati/logo.webp" alt="Carrera Ducati" width="292" height="36"/></div>
+      <div class="brand-tile brand-tile--text"><span>POLAROID</span></div>
+      <div class="brand-tile brand-tile--text"><span style="font-style:italic">SAFILO</span></div>
+      <div class="brand-tile brand-tile--text brand-tile--small"><span>TOMMY HILFIGER</span></div>
+      <div class="brand-tile brand-tile--text brand-tile--small"><span>SEVENTH STREET</span></div>
     </div>
   </div>
 
   <div class="container" style="margin-top:3rem">
     <div class="collections-grid" data-stagger>
-      <a class="collection-card" href="colecciones/carolina-herrera/index.html" aria-label="Ver colección Carolina Herrera">
-        <img class="cc-img" src="colecciones/carolina-herrera/01-essential-square-graduada.webp" alt="Gafas Carolina Herrera en Óptica Anaka Irún" loading="lazy" width="400" height="300"/>
+      <a class="collection-card" href="colecciones/carolina-herrera/index.html" aria-label="Carolina Herrera">
+        <img class="cc-img" src="colecciones/carolina-herrera/01-essential-square-graduada.webp" alt="Gafas Carolina Herrera en Óptica Anaka Irún" loading="lazy" width="1600" height="900"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
-          <div class="cc-logo-frame"><img src="colecciones/carolina-herrera/logo.webp" alt="Logo Carolina Herrera" width="130" height="36"/></div>
+          <div class="cc-logo-frame"><img src="colecciones/carolina-herrera/logo.webp" alt="Logo Carolina Herrera" width="3537" height="1629"/></div>
           <span class="cc-pill">Ver colección</span>
         </div>
         <span class="cc-name">Carolina Herrera</span>
       </a>
-      <a class="collection-card" href="colecciones/carrera/index.html" aria-label="Ver colección Carrera">
-        <img class="cc-img" src="colecciones/carrera/hero-3089s-drive.webp" alt="Gafas Carrera en Óptica Anaka Irún" loading="lazy" width="400" height="300"/>
+      <a class="collection-card" href="colecciones/carrera/index.html" aria-label="Carrera">
+        <img class="cc-img" src="colecciones/carrera/hero-3089s-drive.webp" alt="Gafas Carrera en Óptica Anaka Irún" loading="lazy" width="1920" height="1080"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
-          <div class="cc-logo-frame"><img src="colecciones/carrera/logo.webp" alt="Logo Carrera" width="130" height="36"/></div>
+          <div class="cc-logo-frame"><img src="colecciones/carrera/logo.webp" alt="Logo Carrera" width="183" height="36"/></div>
           <span class="cc-pill">Ver colección</span>
         </div>
         <span class="cc-name">Carrera</span>
       </a>
-      <a class="collection-card" href="colecciones/hugo/index.html" aria-label="Ver colección Hugo">
-        <img class="cc-img" src="colecciones/hugo/hugo-square-negra-pedestal.webp" alt="Gafas Hugo en Óptica Anaka Irún" loading="lazy" width="400" height="300"/>
+      <a class="collection-card" href="colecciones/hugo/index.html" aria-label="Hugo">
+        <img class="cc-img" src="colecciones/hugo/hugo-square-negra-pedestal.webp" alt="Gafas Hugo en Óptica Anaka Irún" loading="lazy" width="1060" height="1600"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
-          <div class="cc-logo-frame"><img src="colecciones/hugo/logo.webp" alt="Logo Hugo" width="100" height="36"/></div>
+          <div class="cc-logo-frame"><img src="colecciones/hugo/logo.webp" alt="Logo Hugo" width="71" height="36"/></div>
           <span class="cc-pill">Ver colección</span>
         </div>
         <span class="cc-name">Hugo</span>
       </a>
-      <a class="collection-card" href="colecciones/hugo-boss/index.html" aria-label="Ver colección Hugo Boss">
-        <img class="cc-img" src="colecciones/carrera/hero-3101-bold-square.webp" alt="Monturas Hugo Boss en Óptica Anaka Irún" loading="lazy" width="400" height="300"/>
+      <a class="collection-card" href="colecciones/hugo-boss/index.html" aria-label="Hugo Boss">
+        <img class="cc-img" src="colecciones/carrera/hero-3101-bold-square.webp" alt="Monturas Hugo Boss en Óptica Anaka Irún" loading="lazy" width="1080" height="1920"/>
         <div class="cc-overlay"></div>
         <div class="cc-content">
-          <div class="cc-logo-frame"><img src="colecciones/hugo-boss/logo.webp" alt="Logo Hugo Boss" width="110" height="36"/></div>
+          <div class="cc-logo-frame"><img src="colecciones/hugo-boss/logo.webp" alt="Logo Hugo Boss" width="71" height="36"/></div>
           <span class="cc-pill">Ver colección</span>
         </div>
         <span class="cc-name">Hugo Boss</span>
+      </a>
+      <a class="collection-card" href="colecciones/carrera-ducati/index.html" aria-label="Carrera Ducati">
+        <img class="cc-img" src="colecciones/carrera-ducati/carrera-ducati-04-2601-carrera-ducati-still-sun-02-911-c.webp" alt="Gafas Carrera Ducati en Óptica Anaka Irún" loading="lazy" width="1230" height="1230"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><img src="colecciones/carrera-ducati/logo.webp" alt="Logo Carrera Ducati" width="292" height="36"/></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Carrera Ducati</span>
+      </a>
+      <a class="collection-card" href="colecciones/marc-jacobs/index.html" aria-label="Marc Jacobs">
+        <img class="cc-img" src="colecciones/marc-jacobs/marc-jacobs-04-marc-895-web-logo-1920x1080.webp" alt="Gafas Marc Jacobs en Óptica Anaka Irún" loading="lazy" width="1400" height="787"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><img src="colecciones/marc-jacobs/logo.webp" alt="Logo Marc Jacobs" width="491" height="36"/></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Marc Jacobs</span>
+      </a>
+      <a class="collection-card" href="colecciones/missoni/index.html" aria-label="Missoni">
+        <img class="cc-img" src="colecciones/missoni/missoni-01-00040-still-087-b.webp" alt="Gafas Missoni en Óptica Anaka Irún" loading="lazy" width="1400" height="787"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><img src="colecciones/missoni/logo.webp" alt="Logo Missoni" width="51" height="36"/></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Missoni</span>
+      </a>
+      <a class="collection-card" href="colecciones/moschino/index.html" aria-label="Moschino">
+        <img class="cc-img" src="colecciones/moschino/moschino-01-still-shoot-still-1-0175.webp" alt="Gafas Moschino en Óptica Anaka Irún" loading="lazy" width="1400" height="1400"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><img src="colecciones/moschino/logo.webp" alt="Logo Moschino" width="137" height="36"/></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Moschino</span>
+      </a>
+      <a class="collection-card" href="colecciones/love-moschino/index.html" aria-label="Love Moschino">
+        <img class="cc-img" src="colecciones/love-moschino/love-moschino-02-mol099s-web-logo-2160x1080.webp" alt="Gafas Love Moschino en Óptica Anaka Irún" loading="lazy" width="1400" height="700"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><img src="colecciones/love-moschino/logo.webp" alt="Logo Love Moschino" width="65" height="36"/></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Love Moschino</span>
+      </a>
+      <a class="collection-card" href="colecciones/polaroid/index.html" aria-label="Polaroid">
+        <img class="cc-img" src="colecciones/polaroid/polaroid-09-pc-8548-c-still-37191.webp" alt="Gafas Polaroid en Óptica Anaka Irún" loading="lazy" width="1400" height="787"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><span style="font-family:Outfit,sans-serif;font-weight:800;font-size:1.1rem;color:#1f2a44;letter-spacing:.02em">POLAROID</span></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Polaroid</span>
+      </a>
+      <a class="collection-card" href="colecciones/safilo/index.html" aria-label="Safilo">
+        <img class="cc-img" src="colecciones/safilo/sl_7a-134_027_c_v2.webp" alt="Gafas Safilo artesanía italiana en Óptica Anaka Irún" loading="lazy" width="400" height="225"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><span style="font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:1.1rem;color:#1a1a1a;letter-spacing:.08em">SAFILO</span></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Safilo</span>
+      </a>
+      <a class="collection-card" href="colecciones/tommy-hilfiger/index.html" aria-label="Tommy Hilfiger">
+        <img class="cc-img" src="colecciones/tommy-hilfiger/th-2328_web-logo-1920x1080.webp" alt="Gafas Tommy Hilfiger en Óptica Anaka Irún" loading="lazy" width="400" height="225"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><span style="font-family:Outfit,sans-serif;font-weight:900;font-size:.9rem;color:#1a1a1a;letter-spacing:.05em">TOMMY HILFIGER</span></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Tommy Hilfiger</span>
+      </a>
+      <a class="collection-card" href="colecciones/seventh-street/index.html" aria-label="Seventh Street">
+        <img class="cc-img" src="colecciones/seventh-street/seventh-street-logo.webp" alt="Seventh Street by Safilo en Óptica Anaka Irún" loading="lazy" width="400" height="400" style="object-fit:contain;background:#0a0a0a;padding:2rem"/>
+        <div class="cc-overlay"></div>
+        <div class="cc-content">
+          <div class="cc-logo-frame"><span style="font-family:monospace;font-weight:700;font-size:.82rem;color:#1a1a1a;letter-spacing:.1em">SEVENTH STREET</span></div>
+          <span class="cc-pill">Ver colección</span>
+        </div>
+        <span class="cc-name">Seventh Street</span>
       </a>
     </div>
     <div class="text-center mt-2">
@@ -356,7 +456,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="120" height="46"/>
+        <img src="logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="46" height="46"/>
         <p>Tu óptica de referencia<br/>en Irún desde 2007.</p>
         <div class="social-links">
           <a class="social-link" href="https://www.facebook.com/opticaanaka" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Óptica Anaka">
@@ -370,26 +470,26 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Navegación</h4>
+        <p class="footer-col-title">Navegación</p>
         <a href="index.html">Inicio</a>
         <a href="servicios/index.html">Servicios</a>
         <a href="colecciones/index.html">Colecciones</a>
         <a href="contacto/index.html">Contacto</a>
       </div>
       <div class="footer-col">
-        <h4>Colecciones</h4>
+        <p class="footer-col-title">Colecciones</p>
         <a href="colecciones/carolina-herrera/index.html">Carolina Herrera</a>
         <a href="colecciones/carrera/index.html">Carrera</a>
         <a href="colecciones/hugo/index.html">Hugo</a>
         <a href="colecciones/hugo-boss/index.html">Hugo Boss</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
+        <p class="footer-col-title">Legal</p>
         <a href="aviso-legal/index.html">Aviso Legal</a>
         <a href="politica-cookies/index.html">Política de Cookies</a>
         <a href="personalizar-cookies/index.html">Personalizar Cookies</a>
         <br/>
-        <h4 style="margin-top:1rem">Idioma</h4>
+        <p class="footer-col-title" style="margin-top:1rem">Idioma</p>
         <a href="eu/index.html" lang="eu">Euskara</a>
         <a href="fr/index.html" lang="fr">Français</a>
       </div>
@@ -403,7 +503,7 @@
 
 <!-- ── COOKIE BANNER ── -->
 <div class="cookie-banner" role="dialog" aria-modal="true" aria-label="Política de cookies" aria-live="polite">
-  <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptarlas o configurarlas. <a href="politica-cookies/index.html">Más información</a>.</p>
+  <p>Usamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptarlas o configurarlas. <a href="politica-cookies/index.html">Más información sobre nuestra política de cookies</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-btn cookie-accept">Aceptar</button>
     <button class="cookie-btn cookie-decline">Rechazar</button>
@@ -411,8 +511,8 @@
   </div>
 </div>
 
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 <script defer src="assets/js/main.js"></script>
 <script>(function(){var b=document.getElementById('themeToggle');if(!b)return;var tc=document.querySelector('meta[name="theme-color"]');function sync(){var t=document.documentElement.getAttribute('data-theme')||'light';b.setAttribute('aria-pressed', t==='dark'?'true':'false');if(tc)tc.setAttribute('content', t==='dark'?'#14100B':'#D4620E');}sync();b.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('theme',next);}catch(e){}sync();});var mq=window.matchMedia('(prefers-color-scheme: dark)');try{mq.addEventListener('change',function(e){if(localStorage.getItem('theme'))return;var t=e.matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);sync();});}catch(_){}})();</script>
 </body>

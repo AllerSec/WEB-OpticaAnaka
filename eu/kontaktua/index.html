@@ -42,7 +42,7 @@
 <header class="site-header" role="banner">
   <nav class="nav-inner" aria-label="Nabigazio nagusia">
     <a class="nav-logo" href="../index.html" aria-label="Optika Anaka — Hasiera">
-      <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="120" height="44"/>
+      <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="44" height="44"/>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menua ireki" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
@@ -217,25 +217,25 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="120" height="46"/>
+        <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Optika Anaka logoa" width="46" height="46"/>
         <p>Zure erreferentziazko optika<br/>Irunen 2007tik.</p>
       </div>
       <div class="footer-col">
-        <h4>Nabigazioa</h4>
+        <p class="footer-col-title">Nabigazioa</p>
         <a href="../index.html">Hasiera</a>
         <a href="../zerbitzuak/index.html">Zerbitzuak</a>
         <a href="../bildumak/index.html">Bildumak</a>
         <a href="index.html">Kontaktua</a>
       </div>
       <div class="footer-col">
-        <h4>Bildumak</h4>
+        <p class="footer-col-title">Bildumak</p>
         <a href="../bildumak/carolina-herrera/index.html">Carolina Herrera</a>
         <a href="../bildumak/carrera/index.html">Carrera</a>
         <a href="../bildumak/hugo/index.html">Hugo</a>
         <a href="../bildumak/hugo-boss/index.html">Hugo Boss</a>
       </div>
       <div class="footer-col">
-        <h4>Legala</h4>
+        <p class="footer-col-title">Legala</p>
         <a href="../../aviso-legal/index.html">Aviso Legal</a>
         <a href="../../politica-cookies/index.html">Política de Cookies</a>
         <a href="../../personalizar-cookies/index.html">Personalizar Cookies</a>
@@ -253,8 +253,8 @@
   <div class="cookie-btns"><button class="cookie-btn cookie-accept">Onartu</button><a class="cookie-btn cookie-config" href="../../personalizar-cookies/index.html">Ezarri</a><button class="cookie-btn cookie-decline">Baztertu</button></div>
 </div>
 
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 <script defer src="../../assets/js/main.js"></script>
 <script>(function(){var b=document.getElementById('themeToggle');if(!b)return;var tc=document.querySelector('meta[name="theme-color"]');function sync(){var t=document.documentElement.getAttribute('data-theme')||'light';b.setAttribute('aria-pressed', t==='dark'?'true':'false');if(tc)tc.setAttribute('content', t==='dark'?'#14100B':'#D4620E');}sync();b.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('theme',next);}catch(e){}sync();});var mq=window.matchMedia('(prefers-color-scheme: dark)');try{mq.addEventListener('change',function(e){if(localStorage.getItem('theme'))return;var t=e.matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);sync();});}catch(_){}})();</script>
 </body>

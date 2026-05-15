@@ -34,27 +34,27 @@
 <style>
 /* ───── Carrera Ducati brand styles ───── */
 .b-carrera-ducati{ --bp:#C8102E; --bd:#0a0a0a; --ba:#FFD400; --bc:#f3f3f3; --bt:#1a1a1a; }
-.b-carrera-ducati .hero{
+.b-carrera-ducati .bh{
   position:relative;color:#fff;
   min-height:clamp(560px,82vh,820px);
   display:flex;flex-direction:column;justify-content:flex-end;
   padding:0;overflow:hidden;background:var(--bd);
   padding-top:env(safe-area-inset-top);
 }
-.b-carrera-ducati .hero-bg{position:absolute;inset:0;z-index:0}
-.b-carrera-ducati .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.82}
-.b-carrera-ducati .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.05) 38%,rgba(0,0,0,.92) 100%)}
-.b-carrera-ducati .hero-inner{position:relative;z-index:2;width:100%;max-width:1500px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.2rem,5vw,5rem) clamp(2.5rem,5vw,4rem);display:grid;gap:2rem;grid-template-columns:1fr;align-items:end}
-@media(min-width:768px){.b-carrera-ducati .hero-inner{grid-template-columns:minmax(0,1fr) auto}}
-.b-carrera-ducati .hero-eyebrow{display:inline-block;font-family:'Bebas Neue',sans-serif;letter-spacing:.32em;font-size:clamp(.72rem,1.4vw,.9rem);color:var(--ba);padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.35);margin-bottom:1.4rem;text-transform:uppercase}
+.b-carrera-ducati .bh-bg{position:absolute;inset:0;z-index:0}
+.b-carrera-ducati .bh-bg img{width:100%;height:100%;object-fit:cover;opacity:.82}
+.b-carrera-ducati .bh-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.05) 38%,rgba(0,0,0,.92) 100%)}
+.b-carrera-ducati .bh-inner{position:relative;z-index:2;width:100%;max-width:1500px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.2rem,5vw,5rem) clamp(2.5rem,5vw,4rem);display:grid;gap:2rem;grid-template-columns:1fr;align-items:end}
+@media(min-width:768px){.b-carrera-ducati .bh-inner{grid-template-columns:minmax(0,1fr) auto}}
+.b-carrera-ducati .bh-eyebrow{display:inline-block;font-family:'Bebas Neue',sans-serif;letter-spacing:.32em;font-size:clamp(.72rem,1.4vw,.9rem);color:var(--ba);padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.35);margin-bottom:1.4rem;text-transform:uppercase}
 .b-carrera-ducati h1{font-family:'Bebas Neue',serif;font-size:clamp(2.4rem,8vw,6.6rem);line-height:.98;letter-spacing:.005em;margin:0 0 1rem;font-weight:700}
 .b-carrera-ducati h1 .accent{color:var(--ba)}
-.b-carrera-ducati .hero-lede{font-family:'Outfit',sans-serif;font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.65;max-width:560px;color:rgba(255,255,255,.92);margin:0 0 1.8rem}
-.b-carrera-ducati .hero-ctas{display:flex;flex-wrap:wrap;gap:.6rem}
-.b-carrera-ducati .hero-logo{max-height:64px;width:auto;height:auto;filter:brightness(0) invert(1);opacity:.96;justify-self:end}
-.b-carrera-ducati .hero-wordmark{font-family:'Bebas Neue',serif;font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:.04em;color:#fff;text-transform:uppercase;justify-self:end}
-.b-carrera-ducati .hero-claim{position:absolute;top:50%;right:clamp(1rem,4vw,3rem);transform:translateY(-50%) rotate(90deg);transform-origin:right center;font-family:'Bebas Neue',sans-serif;letter-spacing:.55em;font-size:.7rem;color:var(--ba);white-space:nowrap;opacity:.55;z-index:1;text-transform:uppercase}
-@media(max-width:900px){.b-carrera-ducati .hero-claim{display:none}}
+.b-carrera-ducati .bh-lede{font-family:'Outfit',sans-serif;font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.65;max-width:560px;color:rgba(255,255,255,.92);margin:0 0 1.8rem}
+.b-carrera-ducati .bh-ctas{display:flex;flex-wrap:wrap;gap:.6rem}
+.b-carrera-ducati .bh-logo{max-height:64px;width:auto;height:auto;filter:brightness(0) invert(1);opacity:.96;justify-self:end}
+.b-carrera-ducati .bh-wordmark{font-family:'Bebas Neue',serif;font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:.04em;color:#fff;text-transform:uppercase;justify-self:end}
+.b-carrera-ducati .bh-claim{position:absolute;top:50%;right:clamp(1rem,4vw,3rem);transform:translateY(-50%) rotate(90deg);transform-origin:right center;font-family:'Bebas Neue',sans-serif;letter-spacing:.55em;font-size:.7rem;color:var(--ba);white-space:nowrap;opacity:.55;z-index:1;text-transform:uppercase}
+@media(max-width:900px){.b-carrera-ducati .bh-claim{display:none}}
 
 /* Fact strip */
 .b-carrera-ducati .fact-strip{background:var(--bd);color:#fff;padding:1.4rem clamp(1rem,5vw,4rem);display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;border-top:3px solid var(--bp)}
@@ -137,6 +137,27 @@
 
 /* Safe-area & sticky footer */
 .b-carrera-ducati {padding-bottom:env(safe-area-inset-bottom)}
+
+/* Section bgs and override main.css .hl underline */
+.b-carrera-ducati .about, .b-carrera-ducati .gallery { background: #fff; }
+.b-carrera-ducati .section-head h2 .hl { background-image: none; padding-bottom: 0; color: var(--bp); }
+.b-carrera-ducati .iconic .brand-model figcaption { font-family: 'Outfit', sans-serif; font-weight: 600; }
+.b-carrera-ducati .brand-model { background: #ece8e0; }
+.b-carrera-ducati .brand-model figcaption small { color: rgba(255,255,255,.85); }
+
+
+/* Mobile overflow safety */
+@media(max-width:600px){
+  .b-carrera-ducati .quote-block blockquote{letter-spacing:0.01em;word-break:break-word;hyphens:auto}
+  .b-carrera-ducati .fact-strip{font-size:.78rem}
+  .b-carrera-ducati .fact span{font-size:.65rem;letter-spacing:.12em}
+  .b-carrera-ducati .bh-inner{padding-left:1.2rem;padding-right:1.2rem}
+  .b-carrera-ducati .bh h1{font-size:clamp(2rem,9vw,3rem)}
+  .b-carrera-ducati .bh-logo,.b-carrera-ducati .bh-wordmark{justify-self:start;max-height:48px}
+}
+.b-carrera-ducati body, .b-carrera-ducati main{overflow-x:hidden}
+.b-carrera-ducati .bh-bg img{display:block}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.anakaoptica.com/"}, {"@type": "ListItem", "position": 2, "name": "Colecciones", "item": "https://www.anakaoptica.com/colecciones/"}, {"@type": "ListItem", "position": 3, "name": "Carrera Ducati", "item": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProductGroup", "name": "Gafas Carrera Ducati", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "description": "Velocidad italiana, precisión racing", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-04-2601-carrera-ducati-still-sun-02-911-c.webp", "offeredBy": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica", "name": "Óptica Anaka", "url": "https://www.anakaoptica.com/", "address": {"@type": "PostalAddress", "streetAddress": "C. de Fuenterrabía, 14", "addressLocality": "Irún", "postalCode": "20301", "addressRegion": "Gipuzkoa", "addressCountry": "ES"}}, "hasVariant": [{"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-01-2601-carrera-ducati-still-optical-01-936-b.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}, {"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-02-2601-carrera-ducati-still-optical-02-960-b.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}, {"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-03-2601-carrera-ducati-still-sun-01-898-b.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}, {"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-04-2601-carrera-ducati-still-sun-02-911-c.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}, {"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-05-2601-carrera-ducati-still-sun-03-984-b.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}, {"@type": "Product", "name": "Carrera Ducati 2601", "image": "https://www.anakaoptica.com/colecciones/carrera-ducati/carrera-ducati-06-2601-carrera-ducati-still-sun-05-1018-c.webp", "brand": {"@type": "Brand", "name": "Carrera Ducati"}, "offers": {"@type": "Offer", "seller": {"@type": "Optician", "@id": "https://www.anakaoptica.com/#optica"}, "availability": "https://schema.org/InStoreOnly", "itemCondition": "https://schema.org/NewCondition", "url": "https://www.anakaoptica.com/colecciones/carrera-ducati/"}}]}</script>
@@ -147,7 +168,7 @@
 
 <header class="site-header" role="banner">
   <nav class="nav-inner" aria-label="Inicio">
-    <a class="nav-logo" href="../../index.html" aria-label="Óptica Anaka — Inicio"><img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="120" height="44"/></a>
+    <a class="nav-logo" href="../../index.html" aria-label="Óptica Anaka — Inicio"><img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="44" height="44"/></a>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks" role="list">
       <li><a href="../../index.html">Inicio</a></li>
@@ -181,20 +202,20 @@
   <span>Carrera Ducati</span>
 </nav>
 
-<section class="hero" aria-labelledby="b-h1">
-  <div class="hero-bg"><img src="carrera-ducati-04-2601-carrera-ducati-still-sun-02-911-c.webp" alt="" aria-hidden="true" width="1230" height="1230" fetchpriority="high" decoding="async"/></div>
-  <span class="hero-claim">BUILT FOR SPEED · 2022</span>
-  <div class="hero-inner">
+<section class="bh" aria-labelledby="b-h1">
+  <div class="bh-bg"><img src="carrera-ducati-04-2601-carrera-ducati-still-sun-02-911-c.webp" alt="" aria-hidden="true" width="1230" height="1230" fetchpriority="high" decoding="async"/></div>
+  <span class="bh-claim">BUILT FOR SPEED · 2022</span>
+  <div class="bh-inner">
     <div>
-      <span class="hero-eyebrow">EYEWEAR · CARRERA DUCATI</span>
+      <span class="bh-eyebrow">EYEWEAR · CARRERA DUCATI</span>
       <h1 id="b-h1">Gafas <span class="accent">Carrera Ducati</span><br/>en Irún</h1>
-      <p class="hero-lede">Velocidad italiana, precisión racing.</p>
-      <div class="hero-ctas">
+      <p class="bh-lede">Velocidad italiana, precisión racing.</p>
+      <div class="bh-ctas">
         <a class="btn btn-primary" href="../../cita-previa/index.html">Pedir cita para probarlas</a>
         <a class="btn btn-outline-white" href="#b-modelos">Modelos icónicos</a>
       </div>
     </div>
-    <img class="hero-logo" src="logo.webp" alt="Logo Carrera Ducati" width="518" height="64" loading="eager" decoding="async"/>
+    <img class="bh-logo" src="logo.webp" alt="Logo Carrera Ducati" width="519" height="64" loading="eager" decoding="async"/>
   </div>
 </section>
 
@@ -256,9 +277,9 @@
     <h2 id="b-otras"><span class="hl">Otras colecciones disponibles</span></h2>
   </div>
   <div class="others-grid" data-stagger>
-      <a class="oc-card" href="../carolina-herrera/index.html" aria-label="Carolina Herrera"><div class="oc-img-wrap"><img class="oc-img" src="carolina-herrera/01-essential-square-graduada.webp" alt="Carolina Herrera" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="carolina-herrera/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Carolina Herrera</span></a>
-  <a class="oc-card" href="../carrera/index.html" aria-label="Carrera"><div class="oc-img-wrap"><img class="oc-img" src="carrera/hero-3089s-drive.webp" alt="Carrera" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="carrera/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Carrera</span></a>
-  <a class="oc-card" href="../hugo/index.html" aria-label="Hugo"><div class="oc-img-wrap"><img class="oc-img" src="hugo/hugo-square-negra-pedestal.webp" alt="Hugo" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="hugo/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Hugo</span></a>
+      <a class="oc-card" href="../carolina-herrera/index.html" aria-label="Carolina Herrera"><div class="oc-img-wrap"><img class="oc-img" src="../carolina-herrera/01-essential-square-graduada.webp" alt="Carolina Herrera" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="../carolina-herrera/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Carolina Herrera</span></a>
+  <a class="oc-card" href="../carrera/index.html" aria-label="Carrera"><div class="oc-img-wrap"><img class="oc-img" src="../carrera/hero-3089s-drive.webp" alt="Carrera" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="../carrera/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Carrera</span></a>
+  <a class="oc-card" href="../hugo/index.html" aria-label="Hugo"><div class="oc-img-wrap"><img class="oc-img" src="../hugo/hugo-square-negra-pedestal.webp" alt="Hugo" loading="lazy" width="800" height="600"/></div><div class="oc-overlay"></div><div class="oc-info"><img src="../hugo/logo.webp" alt="" aria-hidden="true" class="oc-logo" loading="lazy"/><span class="oc-pill">Colecciones →</span></div><span class="oc-name">Hugo</span></a>
 </div>
   <div class="text-center" style="margin-top:2.5rem;text-align:center">
     <a class="btn btn-ghost" href="../../colecciones/index.html">Ver todas las marcas</a>
@@ -271,25 +292,25 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="120" height="46"/>
+        <img src="../../logos/OPTICA-ANACA-LOGO-1.webp" alt="Logo Óptica Anaka" width="46" height="46"/>
         <p>Tu óptica de referencia<br/>en Irún desde 2007.</p>
       </div>
       <div class="footer-col">
-        <h4>Navegación</h4>
+        <p class="footer-col-title">Navegación</p>
         <a href="../../index.html">Inicio</a>
         <a href="../../servicios/index.html">Servicios</a>
         <a href="../../colecciones/index.html">Colecciones</a>
         <a href="../../contacto/index.html">Contacto</a>
       </div>
       <div class="footer-col">
-        <h4>Colecciones</h4>
+        <p class="footer-col-title">Colecciones</p>
         <a href="../carolina-herrera/index.html">Carolina Herrera</a>
         <a href="../carrera/index.html">Carrera</a>
         <a href="../hugo/index.html">Hugo</a>
         <a href="../hugo-boss/index.html">Hugo Boss</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
+        <p class="footer-col-title">Legal</p>
         <a href="../../aviso-legal/index.html">Aviso Legal</a>
         <a href="../../politica-cookies/index.html">Política de Cookies</a>
         <a href="../../personalizar-cookies/index.html">Personalizar Cookies</a>
@@ -317,8 +338,8 @@
   <div class="cookie-btns"><button class="cookie-btn cookie-accept">Aceptar</button><a href="../../personalizar-cookies/index.html" class="cookie-btn cookie-config" style="text-align:center">Configurar</a><button class="cookie-btn cookie-decline">Rechazar</button></div>
 </div>
 
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 <script defer src="../../assets/js/main.js"></script>
 <script>(function(){var b=document.getElementById('themeToggle');if(!b)return;var tc=document.querySelector('meta[name="theme-color"]');function sync(){var t=document.documentElement.getAttribute('data-theme')||'light';b.setAttribute('aria-pressed', t==='dark'?'true':'false');if(tc)tc.setAttribute('content', t==='dark'?'#14100B':'#C8102E');}sync();b.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('theme',next);}catch(e){}sync();});var mq=window.matchMedia('(prefers-color-scheme: dark)');try{mq.addEventListener('change',function(e){if(localStorage.getItem('theme'))return;var t=e.matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);sync();});}catch(_){}})();</script>
 </body>

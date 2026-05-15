@@ -383,11 +383,14 @@ function initLightbox() {
   const box = document.getElementById('lightbox');
   if (!box) return;
 
-  // Collect from gallery items
-  const items = document.querySelectorAll('.gallery-item[data-src]');
+  // Collect from gallery items: support .gallery-item, .g-item, .boss-ss26-item
+  const items = document.querySelectorAll('.gallery-item[data-src], .g-item[data-src], .g-item[href], .boss-ss26-item[href]');
   if (items.length) {
-    _lbImgs = [...items].map(i => i.dataset.src);
-    items.forEach((item, i) => item.addEventListener('click', () => openLB(i)));
+    _lbImgs = [...items].map(i => i.dataset.src || i.getAttribute('href'));
+    items.forEach((item, i) => item.addEventListener('click', e => {
+      e.preventDefault();
+      openLB(i);
+    }));
   }
 
   box.querySelector('.lb-close')?.addEventListener('click', closeLB);
