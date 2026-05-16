@@ -637,6 +637,57 @@ function initCompromisoParallax() {
 ══════════════════════════════════════════════════ */
 const _pageCache = new Map();
 let _isNavigating = false;
+const SPA_STYLE_ATTR = 'data-spa-style';
+
+function extractPageStyles(doc) {
+  // Captura <style> y <link rel="stylesheet"> del <head> de la página fetched,
+  // EXCLUYENDO el main.css global (ya cargado siempre) y excluyendo los nodos
+  // que ya marcamos como inyectados por el SPA en navegaciones anteriores.
+  const styles = [];
+  const head = doc.head || doc.getElementsByTagName('head')[0];
+  if (!head) return styles;
+  head.querySelectorAll('style').forEach(el => {
+    if (el.hasAttribute(SPA_STYLE_ATTR)) return;
+    styles.push({ type: 'style', content: el.textContent });
+  });
+  head.querySelectorAll('link[rel="stylesheet"]').forEach(el => {
+    const href = el.getAttribute('href') || '';
+    if (!href) return;
+    // Salta hojas ya presentes en el <head> vivo (main.css, Google Fonts, etc.)
+    // para no duplicar peticiones ni reglas.
+    const already = document.head.querySelector('link[rel="stylesheet"][href="' + CSS.escape(href) + '"]');
+    if (already) return;
+    styles.push({
+      type: 'link',
+      href,
+      media: el.getAttribute('media') || '',
+    });
+  });
+  return styles;
+}
+
+function applyPageStyles(styles) {
+  // Quita los <style>/<link> que inyectamos en la navegación anterior
+  document.head.querySelectorAll('[' + SPA_STYLE_ATTR + ']').forEach(n => n.remove());
+  if (!styles || !styles.length) return;
+  const frag = document.createDocumentFragment();
+  styles.forEach(s => {
+    if (s.type === 'style') {
+      const el = document.createElement('style');
+      el.setAttribute(SPA_STYLE_ATTR, '');
+      el.textContent = s.content;
+      frag.appendChild(el);
+    } else {
+      const el = document.createElement('link');
+      el.setAttribute(SPA_STYLE_ATTR, '');
+      el.rel = 'stylesheet';
+      if (s.href) el.href = s.href;
+      if (s.media) el.media = s.media;
+      frag.appendChild(el);
+    }
+  });
+  document.head.appendChild(frag);
+}
 
 function initSpaRouter() {
   // Create the transition overlay element
@@ -646,11 +697,12 @@ function initSpaRouter() {
     document.body.appendChild(overlay);
   }
 
-  // Cache the current page
+  // Cache the current page (incluye styles inline del <head> actual)
   _pageCache.set(normalizeUrl(location.href), {
     main: document.getElementById('main').innerHTML,
     title: document.title,
     bodyClass: document.body.className,
+    styles: extractPageStyles(document),
   });
 
   // Prefetch internal pages when idle so they don't compete with LCP
@@ -764,6 +816,7 @@ async function fetchAndCache(url) {
       main: main.innerHTML,
       title: doc.title,
       bodyClass: doc.body.className,
+      styles: extractPageStyles(doc),
     });
   } catch { /* silently ignore — page will load normally */ }
 }
@@ -809,6 +862,7 @@ async function navigateTo(href, pushState) {
         main: main.innerHTML,
         title: doc.title,
         bodyClass: doc.body.className,
+        styles: extractPageStyles(doc),
       });
     } catch {
       _isNavigating = false;
@@ -835,6 +889,12 @@ async function navigateTo(href, pushState) {
   ScrollTrigger.getAll().forEach(st => st.kill());
   cleanupPageTickers();
   gsap.globalTimeline.clear();
+
+  // ── Apply page-scoped styles BEFORE swapping content ──
+  // Cada página de marca (hugo-boss, marc-jacobs, ...) tiene <style> propios
+  // en su <head>. Sin esto, el HTML del <main> aparece sin sus estilos
+  // (FOUC) hasta que el usuario recarga manualmente.
+  applyPageStyles(cached.styles);
 
   // ── Swap content ──
   const main = document.getElementById('main');

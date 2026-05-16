@@ -55,6 +55,16 @@
     .boss-cta-block h2{font-family:'Outfit',sans-serif;font-weight:200;font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:1rem;letter-spacing:-.01em}
     .boss-cta-block h2 strong{font-weight:700}
     .boss-cta-block p{max-width:560px;margin:0 auto 2rem;color:rgba(255,255,255,.8);line-height:1.7}
+    .boss-ss26-grid{display:grid;gap:.8rem;grid-template-columns:1fr}
+    @media(min-width:560px){.boss-ss26-grid{grid-template-columns:repeat(2,1fr);gap:1rem}}
+    @media(min-width:1024px){.boss-ss26-grid{grid-template-columns:repeat(4,1fr);grid-auto-flow:dense}}
+    .boss-ss26-item{position:relative;display:block;border-radius:6px;overflow:hidden;background:#1a1a1a}
+    .boss-ss26-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+    @media(prefers-reduced-motion: reduce){.boss-ss26-item img{transition:none}}
+    .boss-ss26-item:hover img{transform:scale(1.04)}
+    .boss-ss26-item.p{aspect-ratio:4/5}
+    .boss-ss26-item.l{aspect-ratio:16/10}
+    @media(min-width:1024px){.boss-ss26-item.l{grid-column:span 2}.boss-ss26-item.p{grid-row:span 2}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.anakaoptica.com/"},{"@type":"ListItem","position":2,"name":"Colecciones","item":"https://www.anakaoptica.com/colecciones/"},{"@type":"ListItem","position":3,"name":"Hugo Boss","item":"https://www.anakaoptica.com/colecciones/hugo-boss/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProductGroup","name":"Gafas Hugo Boss","brand":{"@type":"Brand","name":"Hugo Boss"},"description":"Monturas y gafas Hugo Boss disponibles en Óptica Anaka, Irún. Minimalismo refinado, materiales premium y estética business.","url":"https://www.anakaoptica.com/colecciones/hugo-boss/","image":"https://www.anakaoptica.com/colecciones/hugo-boss/logo.webp","offeredBy":{"@type":"Optician","@id":"https://www.anakaoptica.com/#optica","name":"Óptica Anaka","url":"https://www.anakaoptica.com/","address":{"@type":"PostalAddress","streetAddress":"C. de Fuenterrabía, 14","addressLocality":"Irún","postalCode":"20301","addressRegion":"Gipuzkoa","addressCountry":"ES"}}}</script>
@@ -136,18 +146,7 @@
       <h2 id="bo-ss26" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin:0 0 1rem;line-height:1.1">La nueva temporada <strong style="color:#c9a06a">BOSS</strong></h2>
       <p style="color:rgba(255,255,255,.78);line-height:1.7;font-family:'Outfit',sans-serif;font-size:clamp(.95rem,1.3vw,1.05rem)">Los últimos modelos de Hugo Boss Eyewear: arquitectura limpia, acetatos profundos y monturas que combinan sastrería italiana con minimalismo alemán.</p>
     </div>
-    <div class="boss-ss26-grid" style="display:grid;gap:.8rem;grid-template-columns:1fr">
-      <style>
-        @media(min-width:560px){.boss-ss26-grid{grid-template-columns:repeat(2,1fr);gap:1rem}}
-        @media(min-width:1024px){.boss-ss26-grid{grid-template-columns:repeat(4,1fr);grid-auto-flow:dense}}
-        .boss-ss26-item{position:relative;display:block;border-radius:6px;overflow:hidden;background:#1a1a1a}
-        .boss-ss26-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
-        @media(prefers-reduced-motion: reduce){.boss-ss26-item img{transition:none}}
-        .boss-ss26-item:hover img{transform:scale(1.04)}
-        .boss-ss26-item.p{aspect-ratio:4/5}
-        .boss-ss26-item.l{aspect-ratio:16/10}
-        @media(min-width:1024px){.boss-ss26-item.l{grid-column:span 2}.boss-ss26-item.p{grid-row:span 2}}
-      </style>
+    <div class="boss-ss26-grid">
       <a class="boss-ss26-item p" href="hugo-boss-01-su26-boss-eyewear-still-life-social-1080x1920px-no.webp"><img src="hugo-boss-01-su26-boss-eyewear-still-life-social-1080x1920px-no.webp" alt="Hugo Boss SS26 modelo 01" loading="lazy" width="787" height="1400" decoding="async"/></a>
       <a class="boss-ss26-item l" href="hugo-boss-06-su26-boss-eyewear-still-life-social-1920x1080px-no.webp"><img src="hugo-boss-06-su26-boss-eyewear-still-life-social-1920x1080px-no.webp" alt="Hugo Boss SS26 modelo 06" loading="lazy" width="1400" height="787" decoding="async"/></a>
       <a class="boss-ss26-item p" href="hugo-boss-02-su26-boss-eyewear-still-life-social-1080x1920px-no.webp"><img src="hugo-boss-02-su26-boss-eyewear-still-life-social-1080x1920px-no.webp" alt="Hugo Boss SS26 modelo 02" loading="lazy" width="787" height="1400" decoding="async"/></a>
