@@ -12,8 +12,24 @@
 /index.php     /  301
 
 # ── Legacy WordPress collection slugs (pre-2026) ──
-/nuestra-coleccion-de-gafas-longchamp/  /colecciones/   301
-/nuestra-coleccion-de-gafas-oakley/     /colecciones/   301
+/nuestra-coleccion-de-gafas-longchamp/           /colecciones/   301
+/nuestra-coleccion-de-gafas-oakley/              /colecciones/   301
+/nuestra-coleccion-de-gafas-zeus-dione/          /colecciones/   301
+/nuestra-coleccion-de-gafas-agata-ruiz-de-la-prada/  /colecciones/   301
+
+# ── Legacy WordPress patterns reported in GSC (404) ──
+# Author pages, attachments, wp-admin, wp-*.php → home
+/author/*           /  410
+/wp-admin/*         /  410
+/wp-content/*       /  410
+/wp-includes/*      /  410
+/wp-login.php       /  410
+/wp-cron.php        /  410
+/xmlrpc.php         /  410
+/feed/              /  410
+/feed/*             /  410
+/comments/feed/     /  410
+/?feed=*            /  410
 
 # ════════════════════════════════════════════════════════
 # Brand migration 2026-05-13

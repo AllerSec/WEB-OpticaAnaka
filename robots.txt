@@ -3,4 +3,21 @@ Allow: /
 Disallow: /personalizar-cookies/
 Disallow: /assets/videos/
 
-Sitemap: https://www.anakaoptica.com/sitemap.xml
+# Legacy WordPress paths (pre-2026 migration). They now 410/301, but explicit
+# Disallow accelerates removal from GSC Coverage report.
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /wp-cron.php
+Disallow: /xmlrpc.php
+Disallow: /author/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*?feed=
+Disallow: /*?page_id=
+Disallow: /*?pid=
+Disallow: /*?p=
+Disallow: /*?replytocom=
+
+Sitemap: https://anakaoptica.com/sitemap.xml

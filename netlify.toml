@@ -9,13 +9,15 @@
 # (ya pasó en commit 2e8ff96, revertido entonces — no repetir).
 
 # ── Redirects para query params de WordPress (crawl budget + Error 5xx) ──
-# Netlify _redirects no soporta wildcards en query strings; se usan aquí con conditions
+# Netlify _redirects no soporta wildcards en query strings; se usan aquí con conditions.
+# force=true es necesario porque la home (path "/") existe como 200 y sin force
+# Netlify no aplica el redirect cuando hay un destino que responde 200.
 
 [[redirects]]
   from = "/*"
   to = "/"
   status = 301
-  force = false
+  force = true
   [redirects.conditions]
     Query = {page_id = ":id"}
 
@@ -23,9 +25,33 @@
   from = "/*"
   to = "/"
   status = 301
-  force = false
+  force = true
   [redirects.conditions]
     Query = {pid = ":id"}
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = true
+  [redirects.conditions]
+    Query = {p = ":id"}
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = true
+  [redirects.conditions]
+    Query = {feed = ":type"}
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
+  force = true
+  [redirects.conditions]
+    Query = {replytocom = ":id"}
 
 # ════════════════════════════════════════════════════════
 # Security & SEO headers globales
@@ -41,7 +67,7 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()"
     Cross-Origin-Opener-Policy = "same-origin"
     # CSP en modo report-only para validar antes de hacerlo blocking
-    Content-Security-Policy-Report-Only = "default-src 'self'; img-src 'self' data: https://www.anakaoptica.com; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://script.google.com https://www.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://script.google.com"
+    Content-Security-Policy-Report-Only = "default-src 'self'; img-src 'self' data: https://anakaoptica.com; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://script.google.com https://www.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://script.google.com"
 
 # ── Cache largo para assets estáticos (imágenes, fuentes, CSS, JS) ──
 [[headers]]

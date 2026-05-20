@@ -1,7 +1,7 @@
 /* TEAM */
 Developer: Unax Aller - allerunax@gmail.com
 Site: Optica Anaka - Irun (Gipuzkoa)
-URL: https://www.anakaoptica.com
+URL: https://anakaoptica.com
 
 /* SITE */
 Last update: 2026-04-22
