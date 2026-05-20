@@ -3,13 +3,16 @@
 # Format: <source> <destination> <status>
 # ════════════════════════════════════════════════════════
 
-# ── WordPress legacy URLs ──
-/?page_id=875  /  301
-/?page_id=851  /  301
-/?page_id=899  /  301
-/?page_id=915  /  301
-/?page_id=868  /  301
-/index.php     /  301
+# ── WordPress legacy URLs (specific ?page_id seen in GSC) ──
+# Force-redirect any URL with a WordPress query param to the home, regardless
+# of which path it's attached to. `!` after the status forces the rule to
+# trigger even when the destination path already serves 200.
+/*  /  301!  page_id=:id
+/*  /  301!  pid=:id
+/*  /  301!  p=:id
+/*  /  301!  feed=:type
+/*  /  301!  replytocom=:id
+/index.php  /  301
 
 # ── Legacy WordPress collection slugs (pre-2026) ──
 /nuestra-coleccion-de-gafas-longchamp/           /colecciones/   301

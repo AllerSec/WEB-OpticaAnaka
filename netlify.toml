@@ -8,50 +8,8 @@
 # Intentarlo manualmente causa ERR_TOO_MANY_REDIRECTS
 # (ya pasó en commit 2e8ff96, revertido entonces — no repetir).
 
-# ── Redirects para query params de WordPress (crawl budget + Error 5xx) ──
-# Netlify _redirects no soporta wildcards en query strings; se usan aquí con conditions.
-# force=true es necesario porque la home (path "/") existe como 200 y sin force
-# Netlify no aplica el redirect cuando hay un destino que responde 200.
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
-  [redirects.conditions]
-    Query = {page_id = ":id"}
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
-  [redirects.conditions]
-    Query = {pid = ":id"}
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
-  [redirects.conditions]
-    Query = {p = ":id"}
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
-  [redirects.conditions]
-    Query = {feed = ":type"}
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 301
-  force = true
-  [redirects.conditions]
-    Query = {replytocom = ":id"}
+# Los redirects de query-params WordPress están en _redirects (sintaxis con `!`
+# para forzar incluso cuando el destino devuelve 200).
 
 # ════════════════════════════════════════════════════════
 # Security & SEO headers globales
