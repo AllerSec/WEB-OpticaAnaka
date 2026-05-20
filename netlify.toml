@@ -49,6 +49,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# ── Vídeos decorativos: noindex para Google (no son contenido buscable) ──
+# Evita el reporte "El vídeo no está en una página de visualización" en GSC.
+[[headers]]
+  for = "/assets/videos/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # ── Sitemap y robots: cache de 1 día ──
 [[headers]]
   for = "/sitemap.xml"
