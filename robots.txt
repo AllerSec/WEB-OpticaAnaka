@@ -19,5 +19,6 @@ Disallow: /*?page_id=
 Disallow: /*?pid=
 Disallow: /*?p=
 Disallow: /*?replytocom=
+Disallow: /*#!
 
 Sitemap: https://anakaoptica.com/sitemap.xml

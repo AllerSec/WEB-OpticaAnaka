@@ -11,7 +11,8 @@
 /*  p=:id           /  301!
 /*  feed=:type      /  301!
 /*  replytocom=:id  /  301!
-/index.php          /  301!
+/index.php  pid=:id  /  301!
+/index.php           /  301!
 
 # ── Legacy WordPress collection slugs (pre-2026) ──
 /nuestra-coleccion-de-gafas-longchamp/           /colecciones/   301
