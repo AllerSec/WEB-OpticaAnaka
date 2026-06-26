@@ -14,7 +14,7 @@
   --primary-bg:    #FEF8F3;
   --primary-bg2:   #FCF0E6;
   --primary-soft:  #F9E7D6;   /* superficie cálida un punto más saturada que bg2 */
-  --gold:          #C8912F;   /* acento dorado secundario para detalles de lujo */
+  --gold:          #B5821F;   /* acento dorado secundario (≥3:1 sobre claro, WCAG gráficos) */
   --gold-soft:     #F3E4C4;
   --text:          #1A0E05;
   --text-muted:    #5A3E25;
