@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Idioma detectado para strings del formulario
   window.__lang = (document.documentElement.lang || 'es').slice(0,2);
 
+  initSmoothScroll();   // antes de las animaciones: comparte el ticker de GSAP
   initNav();
   initScrollProgress();
   initPageAnimations();
@@ -36,6 +37,8 @@ function initPageAnimations() {
   initLightbox();
   initMicroInteractions();
   initCompromisoParallax();
+  initNewSections();
+  initCardTilt();
   init404();
   initCitaForm();
   // Re-apply nav scrolled state for inner pages without hero
@@ -547,7 +550,136 @@ function initCompromisoParallax() {
   );
 }
 
-/* ── Navegación nativa ── 
+/* ── Smooth scroll (Lenis) — progressive enhancement ──
+   Decisión de diseño: el scroll suave aporta sensación premium pero es el
+   cambio de mayor riesgo (jank, conflictos con ScrollTrigger). Por eso se
+   aplica de forma MUY defensiva:
+     · solo desktop con puntero fino (en móvil el scroll nativo es mejor y
+       más fiable; Lenis puede pelearse con el momentum táctil),
+     · nunca con prefers-reduced-motion,
+     · se carga la librería de forma diferida desde CDN con SRI; si falla,
+       el scroll nativo sigue funcionando sin errores,
+     · se conduce desde el ticker de GSAP ya existente (una sola fuente de
+       rAF) y se sincroniza con ScrollTrigger.update. */
+function initSmoothScroll() {
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!fine || reduce) return;
+  if (typeof gsap === 'undefined') return;
+
+  const start = (Lenis) => {
+    if (typeof Lenis !== 'function') return;
+    let lenis;
+    try {
+      lenis = new Lenis({
+        duration: 1.05,
+        easing: (t) => 1 - Math.pow(1 - t, 3), // ease-out-cubic, sin rebote
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5,
+      });
+    } catch (e) { return; }
+    window.__lenis = lenis;
+
+    // Sincronizar con ScrollTrigger
+    if (typeof ScrollTrigger !== 'undefined') {
+      lenis.on('scroll', ScrollTrigger.update);
+    }
+    // Conducir Lenis desde el ticker de GSAP (gsap usa segundos → *1000)
+    const raf = (time) => lenis.raf(time * 1000);
+    gsap.ticker.add(raf);
+    gsap.ticker.lagSmoothing(0);
+
+    // Cerrar el menú móvil / anclas: dejar que Lenis gestione saltos a #hash
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        lenis.scrollTo(target, { offset: -(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72) - 8 });
+      });
+    });
+  };
+
+  // Si Lenis ya está presente (precargado), úsalo; si no, cárgalo diferido.
+  if (typeof window.Lenis === 'function') { start(window.Lenis); return; }
+  const s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/lenis@1.3.25/dist/lenis.min.js';
+  s.integrity = 'sha384-ClD7pCgIUz5M81HT8aZmMxCsWmfsycmBiwL5gy1pUbdWHvICIbea22N9sTtAFotA';
+  s.crossOrigin = 'anonymous';
+  s.defer = true;
+  s.onload = () => start(window.Lenis);
+  s.onerror = () => { /* scroll nativo: no-op */ };
+  document.head.appendChild(s);
+}
+
+/* ── Animaciones de las secciones nuevas (2026) ──
+   .fx-up con stagger por grupo, números de proceso, estrellas de testimonios.
+   Mismo patrón robusto que initReveal: si ya está en viewport al cargar,
+   anima directo; si no, con ScrollTrigger. */
+function initNewSections() {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const vh = window.innerHeight;
+
+  // Grupos con [data-fx] animan sus hijos .fx-up en cascada
+  document.querySelectorAll('[data-fx]').forEach(group => {
+    const items = group.querySelectorAll('.fx-up');
+    if (!items.length) return;
+    if (reduce) { gsap.set(items, { autoAlpha: 1, y: 0 }); return; }
+    const top = group.getBoundingClientRect().top;
+    const fromVars = { autoAlpha: 0, y: 28 };
+    const toVars = { autoAlpha: 1, y: 0, duration: 0.7, stagger: 0.09, ease: 'power3.out' };
+    if (top < vh * 0.95) {
+      gsap.fromTo(items, fromVars, { ...toVars, delay: 0.1 });
+    } else {
+      gsap.fromTo(items, fromVars, { ...toVars,
+        scrollTrigger: { trigger: group, start: 'top 85%', toggleActions: 'play none none none' } });
+    }
+  });
+
+  // Números de proceso: pequeño "pop" al entrar (escala sin rebote)
+  if (!reduce) {
+    document.querySelectorAll('.process-num').forEach((num, i) => {
+      ScrollTrigger.create({
+        trigger: num, start: 'top 90%', once: true,
+        onEnter: () => gsap.fromTo(num,
+          { scale: 0.6, autoAlpha: 0 },
+          { scale: 1, autoAlpha: 1, duration: 0.5, ease: 'power3.out', delay: i * 0.06 })
+      });
+    });
+  }
+}
+
+/* ── Tilt sutil en tarjetas (solo puntero fino) ──
+   Aplica una inclinación 3D muy ligera siguiendo el cursor a elementos
+   .tilt. Compositor-only (transform), se resetea al salir. */
+function initCardTilt() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const MAX = 5; // grados máximos
+  document.querySelectorAll('.tilt').forEach(card => {
+    let raf = null;
+    const onMove = (e) => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        card.style.transform = `perspective(800px) rotateX(${(-py * MAX).toFixed(2)}deg) rotateY(${(px * MAX).toFixed(2)}deg) translateY(-3px)`;
+      });
+    };
+    const reset = () => {
+      if (raf) cancelAnimationFrame(raf);
+      card.style.transform = '';
+    };
+    card.addEventListener('mousemove', onMove);
+    card.addEventListener('mouseleave', reset);
+  });
+}
+
+/* ── Navegación nativa ──
    El SPA router casero se eliminó (2026-06): cacheaba páginas, reinyectaba
    estilos por página y mataba/recreaba ScrollTriggers, lo que provocaba
    navegación intermitente, rutas que no cargaban y el navbar atascado en
