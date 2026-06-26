@@ -859,14 +859,6 @@ h2{text-wrap:balance}
   pointer-events:none;z-index:100;font-family:var(--ff-body)
 }
 
-/* ── SPA Page Transition ── */
-.spa-transition-overlay{
-  position:fixed;inset:0;z-index:9999;
-  background:var(--primary-bg);
-  pointer-events:none;
-  opacity:0;
-}
-
 /* ── Reduced Motion ── */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
