@@ -91,20 +91,6 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 .hero .btn:focus-visible,.hero-btns .btn:focus-visible,.btn-outline-white:focus-visible,.nav-links li a:focus-visible{outline-color:var(--primary-light);outline-offset:4px}
 .cookie-btn:focus-visible,.lb-close:focus-visible,.lb-nav:focus-visible{outline-color:var(--primary-light);outline-offset:2px}
 
-/* ── Custom Cursor (desktop) ── */
-.cursor{
-  width:9px;height:9px;border-radius:50%;background:var(--primary);
-  position:fixed;pointer-events:none;z-index:9999;
-  transform:translate(-50%,-50%);mix-blend-mode:multiply
-}
-.cursor-ring{
-  width:34px;height:34px;border-radius:50%;
-  border:1.5px solid var(--primary);position:fixed;
-  pointer-events:none;z-index:9998;
-  transform:translate(-50%,-50%);opacity:.55;
-  transition:opacity .3s
-}
-
 /* ── Header / Nav ── */
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:1000;
@@ -250,17 +236,6 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   background:linear-gradient(135deg,rgba(13,11,7,.78) 0%,rgba(28,20,8,.72) 55%,rgba(8,6,3,.85) 100%);
   z-index:1;
   pointer-events:none;
-}
-.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:2}
-.hero-orb-1{
-  width:min(700px,70vw);height:min(700px,70vw);
-  top:-20%;right:-10%;
-  background:radial-gradient(circle,rgba(212,98,14,.13) 0%,transparent 68%)
-}
-.hero-orb-2{
-  width:min(400px,40vw);height:min(400px,40vw);
-  bottom:-15%;left:-5%;
-  background:radial-gradient(circle,rgba(212,98,14,.07) 0%,transparent 68%)
 }
 /* ── Gold keyword highlight — animado por GSAP al cargar ── */
 .hl{

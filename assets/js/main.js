@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initNav();
   initScrollProgress();
-  initCursor();
   initPageAnimations();
   initCookieBanner();
   initFloatingCitaCTA();
@@ -146,40 +145,6 @@ function initScrollProgress() {
   });
 }
 
-/* ── Custom Cursor ── */
-function initCursor() {
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  // Reuse existing elements on SPA re-init so we don't leak nodes
-  let dot  = document.querySelector('.cursor');
-  let ring = document.querySelector('.cursor-ring');
-  if (!dot)  { dot  = Object.assign(document.createElement('div'), { className: 'cursor' });      document.body.appendChild(dot); }
-  if (!ring) { ring = Object.assign(document.createElement('div'), { className: 'cursor-ring' }); document.body.appendChild(ring); }
-  if (initCursor.__tickerBound) {
-    // On SPA re-init, skip re-adding the ticker handler — it's already running
-    return rebindCursorTargets();
-  }
-  initCursor.__tickerBound = true;
-
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  const setDotX  = gsap.quickSetter(dot,  'x', 'px');
-  const setDotY  = gsap.quickSetter(dot,  'y', 'px');
-  const setRingX = gsap.quickSetter(ring, 'x', 'px');
-  const setRingY = gsap.quickSetter(ring, 'y', 'px');
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  gsap.ticker.add(() => {
-    setDotX(mx); setDotY(my);
-    rx += (mx - rx) * 0.13; ry += (my - ry) * 0.13;
-    setRingX(rx); setRingY(ry);
-  });
-
-  document.querySelectorAll('a, button, .gallery-item, .collection-card, .btn, .service-card').forEach(el => {
-    if (el.__cursorBound) return;
-    el.__cursorBound = true;
-    el.addEventListener('mouseenter', () => { gsap.to(ring, { scale: 2.2, duration: 0.3 }); gsap.to(dot, { scale: 0.3, duration: 0.3 }); });
-    el.addEventListener('mouseleave', () => { gsap.to(ring, { scale: 1, duration: 0.3 }); gsap.to(dot, { scale: 1, duration: 0.3 }); });
-  });
-}
-
 /* ── Scroll Reveal ── */
 function initReveal() {
   const vh = window.innerHeight;
@@ -246,22 +211,6 @@ function initHero() {
     { autoAlpha: 0, y: 16 },
     { autoAlpha: 1, y: 0, stagger: 0.12, duration: 0.6, delay: 1.1, ease: 'power2.out' }
   );
-
-  // Mouse parallax (throttled via ticker)
-  if (!window.matchMedia('(pointer: coarse)').matches) {
-    const orbs = hero.querySelectorAll('.hero-orb');
-    let hx = 0, hy = 0;
-    let heroRect = hero.getBoundingClientRect();
-    window.addEventListener('resize', () => { heroRect = hero.getBoundingClientRect(); }, { passive: true });
-    hero.addEventListener('mousemove', e => {
-      hx = (e.clientX - heroRect.left) / heroRect.width  - 0.5;
-      hy = (e.clientY - heroRect.top)  / heroRect.height - 0.5;
-    }, { passive: true });
-    addPageTicker(() => {
-      if (orbs[0]) gsap.to(orbs[0], { x: hx * 45, y: hy * 28, duration: 1.4, ease: 'power1.out', overwrite: 'auto' });
-      if (orbs[1]) gsap.to(orbs[1], { x: hx * -28, y: hy * -18, duration: 1.6, ease: 'power1.out', overwrite: 'auto' });
-    });
-  }
 
   // Hero content parallax
   gsap.to('.hero-content', {
@@ -507,29 +456,6 @@ function initCookieBanner() {
 
 /* ── Microinteractions ── */
 function initMicroInteractions() {
-  // Ripple on buttons
-  document.querySelectorAll('.btn, .btn-submit, .btn-ghost').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const r = this.getBoundingClientRect();
-      const rip = document.createElement('span');
-      Object.assign(rip.style, {
-        position: 'absolute', width: '4px', height: '4px', borderRadius: '50%',
-        background: 'rgba(255,255,255,0.45)', pointerEvents: 'none',
-        left: (e.clientX - r.left) + 'px', top: (e.clientY - r.top) + 'px',
-        transform: 'translate(-50%,-50%)',
-      });
-      this.style.position = 'relative'; this.style.overflow = 'hidden';
-      this.appendChild(rip);
-      gsap.to(rip, { scale: 130, autoAlpha: 0, duration: 0.65, ease: 'power2.out', onComplete: () => rip.remove() });
-    });
-  });
-
-  // Form focus micro-animation
-  document.querySelectorAll('.form-group input, .form-group textarea').forEach(el => {
-    el.addEventListener('focus', () => gsap.to(el, { scale: 1.004, duration: 0.2 }));
-    el.addEventListener('blur',  () => gsap.to(el, { scale: 1, duration: 0.2 }));
-  });
-
   // Contact form
   const form = document.getElementById('contactForm');
   if (form) form.addEventListener('submit', handleForm);
@@ -941,9 +867,6 @@ async function navigateTo(href, pushState) {
   const _idle = window.requestIdleCallback || (cb => setTimeout(cb, 1500));
   _idle(() => prefetchAllPages(), { timeout: 3000 });
 
-  // Re-bind cursor hover targets
-  rebindCursorTargets();
-
   // ── Transition: fade in ──
   await gsap.to(overlay, { opacity: 0, duration: 0.25, ease: 'power2.out' });
 
@@ -960,21 +883,6 @@ function updateNavActive(href) {
       a.classList.remove('active');
       a.removeAttribute('aria-current');
     }
-  });
-}
-
-function rebindCursorTargets() {
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  const ring = document.querySelector('.cursor-ring');
-  const dot = document.querySelector('.cursor');
-  if (!ring || !dot) return;
-  const enter = () => { gsap.to(ring, { scale: 2.2, duration: 0.3 }); gsap.to(dot, { scale: 0.3, duration: 0.3 }); };
-  const leave = () => { gsap.to(ring, { scale: 1, duration: 0.3 }); gsap.to(dot, { scale: 1, duration: 0.3 }); };
-  document.querySelectorAll('a, button, .gallery-item, .collection-card, .btn, .service-card').forEach(el => {
-    if (el.__cursorBound) return;
-    el.__cursorBound = true;
-    el.addEventListener('mouseenter', enter);
-    el.addEventListener('mouseleave', leave);
   });
 }
 
