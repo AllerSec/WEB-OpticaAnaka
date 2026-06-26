@@ -799,4 +799,61 @@
     <priority>0.3</priority>
   </url>
 
+
+  <!-- EN (English) -->
+  <url>
+    <loc>https://anakaoptica.com/en/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://anakaoptica.com/eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://anakaoptica.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anakaoptica.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anakaoptica.com/"/>
+  </url>
+  <url>
+    <loc>https://anakaoptica.com/en/services/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://anakaoptica.com/eu/zerbitzuak/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://anakaoptica.com/fr/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anakaoptica.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anakaoptica.com/servicios/"/>
+  </url>
+  <url>
+    <loc>https://anakaoptica.com/en/collections/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://anakaoptica.com/eu/bildumak/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://anakaoptica.com/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anakaoptica.com/en/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anakaoptica.com/colecciones/"/>
+  </url>
+  <url>
+    <loc>https://anakaoptica.com/en/contact/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://anakaoptica.com/eu/kontaktua/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://anakaoptica.com/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anakaoptica.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anakaoptica.com/contacto/"/>
+  </url>
+  <url>
+    <loc>https://anakaoptica.com/en/appointment/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/cita-previa/"/>
+    <xhtml:link rel="alternate" hreflang="eu" href="https://anakaoptica.com/eu/hitzordua/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://anakaoptica.com/fr/rendez-vous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anakaoptica.com/en/appointment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anakaoptica.com/cita-previa/"/>
+  </url>
 </urlset>
