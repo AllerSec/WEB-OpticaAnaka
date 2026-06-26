@@ -12,6 +12,8 @@
 - **Coordenadas:** 43.339, -1.7895
 - **Idiomas de atención:** español, euskera, francés
 - **Zona de servicio:** Irún, Hondarribia, Hendaya, San Sebastián / Donostia, Comarca del Bidasoa, Gipuzkoa, País Vasco francés
+- **Categoría principal:** Óptica
+- **Categorías:** óptica, optometrista, centro de oftalmología (salud visual), tienda de gafas de sol, servicio de reparación de gafas, proveedor de lentes de contacto
 
 ## Servicios
 
