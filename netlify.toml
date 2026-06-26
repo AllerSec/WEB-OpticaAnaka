@@ -25,7 +25,7 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()"
     Cross-Origin-Opener-Policy = "same-origin"
     # CSP en modo report-only para validar antes de hacerlo blocking
-    Content-Security-Policy-Report-Only = "default-src 'self'; img-src 'self' data: https://anakaoptica.com; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://script.google.com https://www.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://script.google.com"
+    Content-Security-Policy-Report-Only = "default-src 'self'; img-src 'self' data: https://anakaoptica.com https://www.google-analytics.com; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://script.google.com https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://script.google.com"
 
 # ── Cache largo para assets estáticos (imágenes, fuentes, CSS, JS) ──
 [[headers]]
@@ -66,4 +66,17 @@
 [[headers]]
   for = "/robots.txt"
   [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ── llms.txt / llms-full.txt: índices para IA, servidos como texto plano ──
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
     Cache-Control = "public, max-age=86400"

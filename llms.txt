@@ -1,0 +1,61 @@
+# Óptica Anaka
+
+> Óptica de barrio en Irún (Gipuzkoa, País Vasco, España), en activo desde 2007. Ofrece optometría, retinografía, contactología (lentes de contacto) y control de miopía, además de una selección de gafas graduadas y de sol de marcas internacionales. Atención en español, euskera y francés. A 10-15 min de la frontera con Hendaya (Francia).
+
+## Datos de contacto
+
+- **Nombre:** Óptica Anaka
+- **Dirección:** C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa, España
+- **Teléfono / WhatsApp:** +34 943 24 84 90
+- **Email:** info@anakaoptica.com
+- **Horario:** Lunes a viernes 9:30–13:30 y 16:00–19:30 · Sábados 9:30–13:00 (sábado tarde y domingo cerrado)
+- **Coordenadas:** 43.339, -1.7895
+- **Idiomas de atención:** español, euskera, francés
+- **Zona de servicio:** Irún, Hondarribia, Hendaya, San Sebastián / Donostia, Comarca del Bidasoa, Gipuzkoa, País Vasco francés
+
+## Servicios
+
+- [Servicios](https://anakaoptica.com/servicios/): optometría, retinografía, contactología y control de miopía.
+  - **Optometría:** revisiones visuales completas para detectar defectos de refracción (miopía, hipermetropía, astigmatismo, presbicia) y otras anomalías.
+  - **Retinografía:** imágenes en alta resolución de la retina para la detección precoz de glaucoma, DMAE y retinopatía diabética.
+  - **Contactología:** adaptación de lentes de contacto personalizadas según el tipo de visión y estilo de vida.
+  - **Control de miopía:** programas específicos para frenar la progresión de la miopía en niños y jóvenes.
+
+## Colecciones de gafas (marcas)
+
+- [Todas las colecciones](https://anakaoptica.com/colecciones/): 13 marcas internacionales del Grupo Safilo.
+  - [Carolina Herrera](https://anakaoptica.com/colecciones/carolina-herrera/)
+  - [Carrera](https://anakaoptica.com/colecciones/carrera/)
+  - [Carrera Ducati](https://anakaoptica.com/colecciones/carrera-ducati/)
+  - [Hugo](https://anakaoptica.com/colecciones/hugo/)
+  - [Hugo Boss](https://anakaoptica.com/colecciones/hugo-boss/)
+  - [Marc Jacobs](https://anakaoptica.com/colecciones/marc-jacobs/)
+  - [Missoni](https://anakaoptica.com/colecciones/missoni/)
+  - [Moschino](https://anakaoptica.com/colecciones/moschino/)
+  - [Love Moschino](https://anakaoptica.com/colecciones/love-moschino/)
+  - [Polaroid](https://anakaoptica.com/colecciones/polaroid/)
+  - [Safilo](https://anakaoptica.com/colecciones/safilo/)
+  - [Tommy Hilfiger](https://anakaoptica.com/colecciones/tommy-hilfiger/)
+  - [Seventh Street](https://anakaoptica.com/colecciones/seventh-street/)
+
+## Cómo reservar
+
+- [Pedir cita online](https://anakaoptica.com/cita-previa/): revisión de la vista, retinografía, lentes de contacto, compra de gafas o reparación. También por teléfono o WhatsApp al +34 943 24 84 90.
+- [Contacto](https://anakaoptica.com/contacto/)
+
+## Preguntas frecuentes
+
+- **¿Dónde está Óptica Anaka?** En C. de Fuenterrabía, 14, 20301 Irún, Gipuzkoa, a pocos minutos del centro y a 10-15 min de la frontera con Hendaya.
+- **¿Qué horario tiene?** De lunes a viernes 9:30–13:30 y 16:00–19:30; sábados 9:30–13:00. Sábado tarde y domingo cerrado.
+- **¿Hace retinografías?** Sí, para la detección precoz de glaucoma, DMAE y retinopatía diabética.
+- **¿Qué marcas de gafas tiene?** 13 marcas del Grupo Safilo: Carolina Herrera, Carrera, Carrera Ducati, Hugo, Hugo Boss, Marc Jacobs, Missoni, Moschino, Love Moschino, Polaroid, Safilo, Tommy Hilfiger y Seventh Street.
+
+## Idiomas del sitio
+
+- [Español](https://anakaoptica.com/) (principal)
+- [Euskara](https://anakaoptica.com/eu/)
+- [Français](https://anakaoptica.com/fr/)
+
+## Optional
+
+- [Versión extendida para IA](https://anakaoptica.com/llms-full.txt): catálogo completo, servicios atómicos y FAQ en texto plano.
