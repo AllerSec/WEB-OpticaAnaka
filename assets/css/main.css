@@ -9,6 +9,7 @@
   --primary:            #D4620E;
   --primary-accessible: #B05210;
   --primary-dark:  #A04A0A;
+  --primary-ink:   #A04A0A;   /* texto pequeño sobre fondo claro — 6.0:1 (WCAG AA) */
   --primary-light: #F08432;
   --primary-bg:    #FEF8F3;
   --primary-bg2:   #FCF0E6;
@@ -59,7 +60,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 
 .label-tag{
   display:inline-block;font-family:var(--ff-body);font-size:.72rem;font-weight:700;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--primary);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--primary-ink);
   border:1px solid var(--primary);border-radius:50px;padding:.22rem .85rem;margin-bottom:.9rem
 }
 .section-title{font-size:clamp(1.7rem,3vw,2.5rem);margin-bottom:.65rem}
@@ -101,7 +102,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   border:1.5px solid var(--primary);position:fixed;
   pointer-events:none;z-index:9998;
   transform:translate(-50%,-50%);opacity:.55;
-  transition:width .3s,height .3s,opacity .3s
+  transition:opacity .3s
 }
 
 /* ── Header / Nav ── */
@@ -163,7 +164,10 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
 .site-header.scrolled .nav-wa{border-color:rgba(0,0,0,.06)}
 .nav-wa svg{flex-shrink:0}
 .nav-lang{display:flex;align-items:center;gap:.25rem;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.55);flex-shrink:0}
-.nav-lang a{padding:.22rem .35rem;border-radius:4px;transition:color var(--t)}
+.nav-lang a{
+  display:inline-flex;align-items:center;min-height:44px;
+  padding:.22rem .5rem;border-radius:4px;transition:color var(--t)
+}
 .nav-lang a:hover,.nav-lang a.active{color:rgba(255,255,255,.95)}
 .nav-lang span{color:rgba(255,255,255,.25)}
 .site-header.scrolled .nav-lang{color:var(--text-muted)}
@@ -209,7 +213,7 @@ html.no-js .reveal,html:not(.js-loaded) .reveal{opacity:1;transform:none}
   max-width:var(--max-w);margin:0 auto;
   font-size:.8rem;color:var(--text-muted)
 }
-.breadcrumb a{color:var(--primary);transition:opacity var(--t)}
+.breadcrumb a{color:var(--primary-ink);transition:opacity var(--t)}
 .breadcrumb a:hover{opacity:.75}
 .breadcrumb svg{flex-shrink:0}
 
@@ -400,6 +404,46 @@ h2{text-wrap:balance}
 .commitment-item h3{font-size:1rem;margin-bottom:.3rem}
 .commitment-item p{font-size:.88rem;color:var(--text-muted);max-width:none}
 
+/* ── Contact bar — horizontal info row (NOT cards).
+   Closes the page on a different rhythm than the icon-card grids above. ── */
+.visit-section{padding-bottom:6rem}
+.contact-bar{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin-top:3rem;text-align:left;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border)
+}
+.contact-col{
+  padding:2rem clamp(1rem,3vw,2.25rem);
+  display:flex;flex-direction:column;gap:.3rem
+}
+.contact-col + .contact-col{border-left:1px solid var(--border)}
+.contact-col-eyebrow{
+  font-family:var(--ff-body);font-size:.7rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--primary-ink);
+  margin-bottom:.55rem
+}
+.contact-col-lead{
+  font-family:var(--ff-display);font-size:1.3rem;font-weight:600;
+  line-height:1.25;color:var(--text);max-width:none
+}
+.contact-col-lead a{
+  color:var(--primary-ink);transition:color var(--t);
+  display:inline-flex;align-items:center;min-height:44px
+}
+.contact-col-lead a:hover{color:var(--primary-dark)}
+.contact-col-meta{font-size:.88rem;color:var(--text-muted);max-width:none}
+.contact-col-meta a{
+  color:var(--primary-ink);transition:color var(--t);
+  display:inline-flex;align-items:center;min-height:44px
+}
+.contact-col-meta a:hover{color:var(--primary-dark)}
+.contact-col .wa-link{margin-top:.85rem;align-self:flex-start}
+@media(max-width:760px){
+  .contact-bar{grid-template-columns:1fr;border-bottom:none}
+  .contact-col{padding:1.6rem 0;border-bottom:1px solid var(--border)}
+  .contact-col + .contact-col{border-left:none}
+}
+
 /* ── Compromiso — photo parallax scene ── */
 .compromiso-scene{
   position:relative;overflow:hidden;
@@ -541,6 +585,14 @@ h2{text-wrap:balance}
   display:flex;align-items:center;justify-content:center
 }
 .cc-logo-frame img{height:42px;max-width:128px;object-fit:contain;display:block}
+/* Unified wordmark fallback for brands without a logo asset.
+   One consistent treatment instead of per-brand inline font hacks. */
+.cc-wordmark{
+  font-family:var(--ff-body);font-weight:800;
+  font-size:1.05rem;letter-spacing:.06em;
+  color:#1a1a1a;white-space:nowrap;line-height:1
+}
+.cc-wordmark--sm{font-size:.82rem;letter-spacing:.1em}
 .cc-pill{
   background:var(--primary);color:var(--white);font-size:.78rem;
   font-weight:700;letter-spacing:.08em;text-transform:uppercase;
@@ -638,7 +690,7 @@ h2{text-wrap:balance}
 /* ── Info Block ── */
 .info-block{
   background:var(--primary-bg);border:1px solid var(--border);
-  border-left:4px solid var(--primary);border-radius:var(--radius-lg);
+  border-radius:var(--radius-lg);
   padding:1.6rem 1.85rem
 }
 .info-block h3{font-size:1.05rem;margin-bottom:.4rem;color:var(--primary-dark)}
@@ -672,7 +724,7 @@ h2{text-wrap:balance}
   display:flex;align-items:center;justify-content:center;color:var(--white);flex-shrink:0
 }
 .contact-detail strong{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:.12rem}
-.contact-detail a{color:var(--primary);font-weight:600}
+.contact-detail a{color:var(--primary-ink);font-weight:600}
 .horario-table{width:100%;border-collapse:collapse;font-size:.88rem}
 .horario-table tr{border-bottom:1px solid var(--border)}
 .horario-table td{padding:.45rem 0}
@@ -699,7 +751,7 @@ h2{text-wrap:balance}
 .form-check{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:1.1rem}
 .form-check input[type=checkbox]{margin-top:3px;accent-color:var(--primary);cursor:pointer}
 .form-check label{font-size:.82rem;color:var(--text-muted);cursor:pointer}
-.form-check a{color:var(--primary);text-decoration:underline}
+.form-check a{color:var(--primary-ink);text-decoration:underline}
 .btn-submit{
   width:100%;padding:.95rem;background:var(--primary);color:var(--white);
   border:none;border-radius:var(--radius);font-size:.97rem;font-weight:600;
@@ -1231,8 +1283,9 @@ body.cookie-open .wa-fab{bottom:calc(max(1rem, env(safe-area-inset-bottom)) + 80
 /* Accent inline link variant — used inside contact panels next to the phone. */
 .wa-link{
   display:inline-flex;align-items:center;gap:.5rem;
+  min-height:44px;
   background:#25D366;color:#fff;
-  padding:.55rem 1rem;border-radius:50px;
+  padding:.6rem 1rem;border-radius:50px;
   font-weight:600;font-size:.9rem;text-decoration:none;
   box-shadow:0 2px 10px rgba(37,211,102,.3);
   transition:background var(--t),transform var(--t),box-shadow var(--t)
@@ -1317,6 +1370,7 @@ html[data-theme="dark"]{
   --primary:            #F08432;
   --primary-accessible: #F8A65E;
   --primary-dark:       #C76B22;
+  --primary-ink:        #F08432;   /* texto pequeño en oscuro — 7.26:1 */
   --primary-light:      #FFB173;
   --primary-bg:         #1F1610;   /* surface 1 */
   --primary-bg2:        #2A1E14;   /* surface 2 */
