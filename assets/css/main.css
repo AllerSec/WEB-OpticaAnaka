@@ -511,20 +511,21 @@ h2{text-wrap:balance}
 .brand-tile{
   margin-right:1.5rem;
   display:flex;align-items:center;justify-content:center;
-  padding:1.1rem 1.8rem;min-width:150px;
+  /* Caja de tamaño fijo: todos los logos ocupan el mismo recuadro,
+     así ninguno se ve más grande que otro independientemente del ratio. */
+  width:170px;height:84px;flex:0 0 170px;padding:1rem 1.6rem;
   background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
   transition:box-shadow var(--t),border-color var(--t);cursor:default
 }
 .brand-tile:hover{box-shadow:var(--shadow-gold);border-color:var(--primary)}
 .brand-tile img{
-  height:36px;width:auto;object-fit:contain;
-  filter:grayscale(1) opacity(.55);transition:filter var(--t),opacity var(--t)
+  /* Logos en su color real (sin grayscale). Se contienen dentro de la caja
+     limitando alto Y ancho, para que un logo apaisado no se vea gigante. */
+  max-height:34px;max-width:100%;width:auto;height:auto;object-fit:contain
 }
-.brand-tile:hover img{filter:grayscale(0) opacity(1)}
-.brand-tile--text{min-width:120px}
-.brand-tile--text span{font-family:Outfit,sans-serif;font-weight:800;font-size:1rem;letter-spacing:.04em;color:var(--text);opacity:.55;transition:opacity var(--t);white-space:nowrap}
+.brand-tile--text{width:170px;flex:0 0 170px}
+.brand-tile--text span{font-family:Outfit,sans-serif;font-weight:800;font-size:1rem;letter-spacing:.04em;color:var(--text);white-space:nowrap}
 .brand-tile--small span{font-size:.78rem;letter-spacing:.06em}
-.brand-tile--text:hover span{opacity:1}
 
 /* Pause CSS-driven carousel on hover/focus (WCAG 2.1 AA 2.2.2) */
 .brands-carousel:hover .brands-track,
@@ -555,11 +556,17 @@ h2{text-wrap:balance}
   background:#fff;
   border:1px solid rgba(255,255,255,.6);
   border-radius:var(--radius);
-  padding:14px 22px;max-width:170px;
+  /* Marco de tamaño fijo: todas las marcas tienen el mismo recuadro,
+     así el logo no parece más grande en unas que en otras. */
+  width:160px;height:64px;padding:12px 18px;
   box-shadow:0 8px 24px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.18);
   display:flex;align-items:center;justify-content:center
 }
-.cc-logo-frame img{height:42px;max-width:128px;object-fit:contain;display:block}
+/* El logo se contiene dentro del marco por alto Y ancho. Los logos
+   apaisados (Marc Jacobs, Carrera) se limitan por ancho; los más
+   cuadrados (Carolina Herrera) por alto. object-fit:contain conserva
+   el color real del logo. */
+.cc-logo-frame img{max-width:100%;max-height:40px;width:auto;height:auto;object-fit:contain;display:block}
 /* Unified wordmark fallback for brands without a logo asset.
    One consistent treatment instead of per-brand inline font hacks. */
 .cc-wordmark{
