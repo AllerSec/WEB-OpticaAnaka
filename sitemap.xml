@@ -5,7 +5,7 @@
   <!-- HOME -->
   <url>
     <loc>https://anakaoptica.com/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/"/>
@@ -37,7 +37,7 @@
   <!-- SERVICIOS -->
   <url>
     <loc>https://anakaoptica.com/servicios/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/servicios/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/zerbitzuak/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/servicios/"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/services/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/servicios/"/>
@@ -69,7 +69,7 @@
   <!-- CONTACTO -->
   <url>
     <loc>https://anakaoptica.com/contacto/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/contacto/"/>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/kontaktua/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/contacto/"/>
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/contact/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/contacto/"/>
@@ -101,7 +101,7 @@
   <!-- CITA PREVIA -->
   <url>
     <loc>https://anakaoptica.com/cita-previa/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/cita-previa/"/>
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/hitzordua/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/cita-previa/"/>
@@ -121,7 +121,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/rendez-vous/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/cita-previa/"/>
@@ -133,7 +133,7 @@
   <!-- COLECCIONES INDEX -->
   <url>
     <loc>https://anakaoptica.com/colecciones/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/"/>
@@ -143,7 +143,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/"/>
@@ -165,7 +165,7 @@
   <!-- MARCAS — Carolina Herrera -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carolina-herrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -175,7 +175,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carolina-herrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -185,7 +185,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carolina-herrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carolina-herrera/"/>
@@ -197,7 +197,7 @@
   <!-- MARCAS — Carrera -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/"/>
@@ -207,7 +207,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/"/>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/"/>
@@ -229,7 +229,7 @@
   <!-- MARCAS — Hugo -->
   <url>
     <loc>https://anakaoptica.com/colecciones/hugo/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo/"/>
@@ -239,7 +239,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/hugo/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo/"/>
@@ -249,7 +249,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/hugo/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo/"/>
@@ -261,7 +261,7 @@
   <!-- MARCAS — Hugo Boss -->
   <url>
     <loc>https://anakaoptica.com/colecciones/hugo-boss/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo-boss/"/>
@@ -271,7 +271,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/hugo-boss/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo-boss/"/>
@@ -281,7 +281,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/hugo-boss/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/hugo-boss/"/>
@@ -293,7 +293,7 @@
   <!-- MARCAS — Carrera Ducati -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera-ducati/"/>
@@ -303,7 +303,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera-ducati/"/>
@@ -313,7 +313,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera-ducati/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera-ducati/"/>
@@ -325,7 +325,7 @@
   <!-- MARCAS — Marc Jacobs -->
   <url>
     <loc>https://anakaoptica.com/colecciones/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/marc-jacobs/"/>
@@ -335,7 +335,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/marc-jacobs/"/>
@@ -345,7 +345,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/marc-jacobs/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/marc-jacobs/"/>
@@ -357,7 +357,7 @@
   <!-- MARCAS — Missoni -->
   <url>
     <loc>https://anakaoptica.com/colecciones/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/missoni/"/>
@@ -367,7 +367,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/missoni/"/>
@@ -377,7 +377,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/missoni/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/missoni/"/>
@@ -389,7 +389,7 @@
   <!-- MARCAS — Moschino -->
   <url>
     <loc>https://anakaoptica.com/colecciones/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/moschino/"/>
@@ -399,7 +399,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/moschino/"/>
@@ -409,7 +409,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/moschino/"/>
@@ -421,7 +421,7 @@
   <!-- MARCAS — Love Moschino -->
   <url>
     <loc>https://anakaoptica.com/colecciones/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/love-moschino/"/>
@@ -431,7 +431,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/love-moschino/"/>
@@ -441,7 +441,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/love-moschino/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/love-moschino/"/>
@@ -453,7 +453,7 @@
   <!-- MARCAS — Polaroid -->
   <url>
     <loc>https://anakaoptica.com/colecciones/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/polaroid/"/>
@@ -463,7 +463,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/polaroid/"/>
@@ -473,7 +473,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/polaroid/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/polaroid/"/>
@@ -485,7 +485,7 @@
   <!-- MARCAS — Safilo (NUEVA, con i18n completo) -->
   <url>
     <loc>https://anakaoptica.com/colecciones/safilo/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/safilo/"/>
@@ -495,7 +495,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/safilo/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/safilo/"/>
@@ -505,7 +505,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/safilo/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/safilo/"/>
@@ -517,7 +517,7 @@
   <!-- MARCAS — Tommy Hilfiger (NUEVA, con i18n completo) -->
   <url>
     <loc>https://anakaoptica.com/colecciones/tommy-hilfiger/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/tommy-hilfiger/"/>
@@ -527,7 +527,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/tommy-hilfiger/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/tommy-hilfiger/"/>
@@ -537,7 +537,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/tommy-hilfiger/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/tommy-hilfiger/"/>
@@ -549,7 +549,7 @@
   <!-- MARCAS — Seventh Street (NUEVA, con i18n completo) -->
   <url>
     <loc>https://anakaoptica.com/colecciones/seventh-street/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/seventh-street/"/>
@@ -559,7 +559,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/seventh-street/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/seventh-street/"/>
@@ -569,7 +569,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/seventh-street/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/seventh-street/"/>
@@ -581,7 +581,7 @@
   <!-- SUBMODELOS Carrera — 1146 -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/1146/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/1146/"/>
@@ -591,7 +591,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/1146/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/1146/"/>
@@ -601,7 +601,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/1146/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/1146/"/>
@@ -613,7 +613,7 @@
   <!-- SUBMODELOS Carrera — 3089s -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/3089s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3089s/"/>
@@ -623,7 +623,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/3089s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3089s/"/>
@@ -633,7 +633,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/3089s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3089s/"/>
@@ -645,7 +645,7 @@
   <!-- SUBMODELOS Carrera — 3101 -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/3101/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3101/"/>
@@ -655,7 +655,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/3101/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3101/"/>
@@ -665,7 +665,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/3101/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/3101/"/>
@@ -677,7 +677,7 @@
   <!-- SUBMODELOS Carrera — Victory C18/S -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/victory-c18s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c18s/"/>
@@ -687,7 +687,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/victory-c18s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c18s/"/>
@@ -697,7 +697,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/victory-c18s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c18s/"/>
@@ -709,7 +709,7 @@
   <!-- SUBMODELOS Carrera — Victory C20/S -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/victory-c20s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c20s/"/>
@@ -719,7 +719,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/victory-c20s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c20s/"/>
@@ -729,7 +729,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/victory-c20s/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c20s/"/>
@@ -741,7 +741,7 @@
   <!-- SUBMODELOS Carrera — Victory C23 -->
   <url>
     <loc>https://anakaoptica.com/colecciones/carrera/victory-c23/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c23/"/>
@@ -751,7 +751,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/eu/bildumak/carrera/victory-c23/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c23/"/>
@@ -761,7 +761,7 @@
   </url>
   <url>
     <loc>https://anakaoptica.com/fr/collections/carrera/victory-c23/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://anakaoptica.com/colecciones/carrera/victory-c23/"/>
@@ -773,13 +773,13 @@
   <!-- LEGAL (solo ES, sin hreflang i18n) -->
   <url>
     <loc>https://anakaoptica.com/aviso-legal/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://anakaoptica.com/politica-cookies/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
