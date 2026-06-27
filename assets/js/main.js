@@ -690,23 +690,25 @@ function initCardTilt() {
 function initFloatingCitaCTA() {
   // Suppress on the cita pages themselves
   const path = window.location.pathname;
-  if (/\/cita-previa\//.test(path) || /\/eu\/hitzordua\//.test(path) || /\/fr\/rendez-vous\//.test(path)) return;
+  if (/\/cita-previa\//.test(path) || /\/eu\/hitzordua\//.test(path) || /\/fr\/rendez-vous\//.test(path) || /\/en\/appointment\//.test(path)) return;
   if (document.querySelector('.cita-fab')) return; // idempotent
 
   const lang = (document.documentElement.lang || 'es').slice(0, 2);
-  const labels = { es: 'Pedir cita', eu: 'Hitzordua', fr: 'Réserver' };
+  const labels = { es: 'Pedir cita', eu: 'Hitzordua', fr: 'Réserver', en: 'Book' };
   const aria = {
     es: 'Pedir cita en Óptica Anaka',
     eu: 'Hitzordua eskatu Optika Anakan',
-    fr: 'Réserver un rendez-vous à l’Optique Anaka'
+    fr: 'Réserver un rendez-vous à l’Optique Anaka',
+    en: 'Book an appointment at Anaka Óptica'
   };
-  const hrefBase = { es: '/cita-previa/', eu: '/eu/hitzordua/', fr: '/fr/rendez-vous/' };
+  const hrefBase = { es: '/cita-previa/', eu: '/eu/hitzordua/', fr: '/fr/rendez-vous/', en: '/en/appointment/' };
 
   // Resolve a relative href so the FAB works on file:// during local preview too.
   // Detect language by URL prefix.
   let prefix;
   if (/^\/eu(\/|$)/.test(path)) prefix = 'eu';
   else if (/^\/fr(\/|$)/.test(path)) prefix = 'fr';
+  else if (/^\/en(\/|$)/.test(path)) prefix = 'en';
   else prefix = 'es';
 
   // Compute relative depth from current path back to site root
@@ -714,7 +716,7 @@ function initFloatingCitaCTA() {
   const segments = path.split('/').filter(Boolean).filter(s => !s.endsWith('.html'));
   const depth = segments.length;
   const up = depth > 0 ? '../'.repeat(depth) : './';
-  const targetMap = { es: 'cita-previa/', eu: 'eu/hitzordua/', fr: 'fr/rendez-vous/' };
+  const targetMap = { es: 'cita-previa/', eu: 'eu/hitzordua/', fr: 'fr/rendez-vous/', en: 'en/appointment/' };
   const href = up + targetMap[prefix];
 
   const a = document.createElement('a');
@@ -743,16 +745,18 @@ function initWhatsAppFab() {
   if (document.querySelector('.wa-fab')) return; // idempotent (SPA-safe)
 
   const lang = (document.documentElement.lang || 'es').slice(0, 2);
-  const labels = { es: 'WhatsApp', eu: 'WhatsApp', fr: 'WhatsApp' };
+  const labels = { es: 'WhatsApp', eu: 'WhatsApp', fr: 'WhatsApp', en: 'WhatsApp' };
   const aria = {
     es: 'Escribir por WhatsApp al 943 24 84 90',
     eu: 'WhatsApp bidez idatzi 943 24 84 90 zenbakira',
-    fr: 'Écrire par WhatsApp au 943 24 84 90'
+    fr: 'Écrire par WhatsApp au 943 24 84 90',
+    en: 'Message us on WhatsApp at 943 24 84 90'
   };
   const prefilled = {
     es: 'Hola, me gustaría más información sobre Óptica Anaka.',
     eu: 'Kaixo, Optika Anakari buruzko informazio gehiago nahi nuke.',
-    fr: 'Bonjour, je souhaiterais plus d’informations sur Optique Anaka.'
+    fr: 'Bonjour, je souhaiterais plus d’informations sur Optique Anaka.',
+    en: 'Hello, I would like more information about Anaka Óptica.'
   };
 
   const phone = '34943248490';
@@ -899,6 +903,41 @@ function initCitaForm() {
       weekdays: ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'],
       months: ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],
       formatDate: (wd, d, mo, y) => `${wd} ${d} ${mo} ${y}`
+    },
+    en: {
+      requiredMotivo: 'Please select a reason.',
+      requiredDate: 'Please choose a date.',
+      requiredTime: 'Please choose a time.',
+      requiredField: 'This field is required.',
+      invalidEmail: 'Please enter a valid email.',
+      invalidPhone: 'Please enter a valid phone number.',
+      invalidDatePast: 'The date cannot be in the past.',
+      invalidDateSunday: 'We are closed on Sundays.',
+      invalidDateFar: 'We only take appointments up to 60 days ahead.',
+      noAfternoonSat: 'We are closed on Saturday afternoons.',
+      mustAcceptRgpd: 'You must accept the privacy policy.',
+      rateLimited: 'You have just sent a request. Please wait a minute before sending another.',
+      success: 'Request sent. We will contact you soon to confirm your appointment.',
+      errorNetwork: 'We could not send your request. Please call us on +34 943 24 84 90.',
+      modalTitle: 'Your appointment has been requested!',
+      modalSubtitle: 'We will send you a confirmation by email and call you to confirm your appointment.',
+      modalMotivo: 'Reason',
+      modalFecha: 'Date',
+      modalHora: 'Time',
+      modalCliente: 'Customer',
+      modalFoot: 'You will receive an email shortly.',
+      modalClose: 'Close',
+      motivoLabels: {
+        revision: 'Eye exam',
+        comprar: 'Buy glasses',
+        lentillas: 'Contact lenses',
+        retinografia: 'Retinography',
+        reparacion: 'Repair or adjustment',
+        otro: 'Other'
+      },
+      weekdays: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      formatDate: (wd, d, mo, y) => `${wd}, ${mo} ${d}, ${y}`
     }
   };
 
