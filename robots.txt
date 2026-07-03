@@ -1,86 +1,11 @@
-# ════════════════════════════════════════════════════════
-# robots.txt — Óptica Anaka · Irún (Gipuzkoa)
+# robots.txt - Optica Anaka
 # https://anakaoptica.com
-# ════════════════════════════════════════════════════════
 
-# ── Buscadores tradicionales y resto de bots ──
 User-agent: *
 Allow: /
-Disallow: /personalizar-cookies/
+
+# Non-indexable media. HTML pages and legacy URLs stay crawlable so Google can
+# see their canonical, noindex, 301 or 410 responses.
 Disallow: /assets/videos/
-
-# Legacy WordPress paths (pre-2026 migration). They now 410/301, but explicit
-# Disallow accelerates removal from GSC Coverage report.
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /wp-login.php
-Disallow: /wp-cron.php
-Disallow: /xmlrpc.php
-Disallow: /author/
-Disallow: /feed/
-Disallow: /comments/feed/
-Disallow: /*?feed=
-Disallow: /*?page_id=
-Disallow: /*?pid=
-Disallow: /*?p=
-Disallow: /*?replytocom=
-Disallow: /*#!
-
-# ── Crawlers de IA / motores de respuesta (GEO/AEO) ──
-# Se permiten explícitamente para que Óptica Anaka pueda aparecer y ser citada
-# en ChatGPT, Perplexity, Gemini, Claude, Copilot, Apple Intelligence, etc.
-
-# OpenAI (ChatGPT, búsqueda de OpenAI)
-User-agent: GPTBot
-Allow: /
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
-
-# Google (entrenamiento de Gemini / AI Overviews)
-User-agent: Google-Extended
-Allow: /
-
-# Anthropic (Claude)
-User-agent: ClaudeBot
-Allow: /
-User-agent: Claude-Web
-Allow: /
-User-agent: anthropic-ai
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-User-agent: Perplexity-User
-Allow: /
-
-# Microsoft / Bing (Copilot)
-User-agent: Bingbot
-Allow: /
-
-# Apple (Siri, Apple Intelligence, Spotlight)
-User-agent: Applebot
-Allow: /
-User-agent: Applebot-Extended
-Allow: /
-
-# Otros buscadores de IA
-User-agent: Amazonbot
-Allow: /
-User-agent: cohere-ai
-Allow: /
-User-agent: YouBot
-Allow: /
-User-agent: DuckAssistBot
-Allow: /
-User-agent: meta-externalagent
-Allow: /
-
-# ── Índices para IA (convención llmstxt.org) ──
-# https://anakaoptica.com/llms.txt
-# https://anakaoptica.com/llms-full.txt
 
 Sitemap: https://anakaoptica.com/sitemap.xml

@@ -75,3 +75,33 @@
 /fr/collections/oakley       /fr/collections/  301
 /fr/collections/silhouette/  /fr/collections/  301
 /fr/collections/silhouette   /fr/collections/  301
+
+# EN collection detail pages are not published yet. Prevent internal EN links
+# and discovered URLs from returning a 404.
+/en/collections/:brand/index.html  /colecciones/:brand/           301
+/en/collections/carolina-herrera/  /colecciones/carolina-herrera/  301
+/en/collections/carolina-herrera   /colecciones/carolina-herrera/  301
+/en/collections/carrera/           /colecciones/carrera/           301
+/en/collections/carrera            /colecciones/carrera/           301
+/en/collections/hugo/              /colecciones/hugo/              301
+/en/collections/hugo               /colecciones/hugo/              301
+/en/collections/hugo-boss/         /colecciones/hugo-boss/         301
+/en/collections/hugo-boss          /colecciones/hugo-boss/         301
+/en/collections/carrera-ducati/    /colecciones/carrera-ducati/    301
+/en/collections/carrera-ducati     /colecciones/carrera-ducati/    301
+/en/collections/marc-jacobs/       /colecciones/marc-jacobs/       301
+/en/collections/marc-jacobs        /colecciones/marc-jacobs/       301
+/en/collections/missoni/           /colecciones/missoni/           301
+/en/collections/missoni            /colecciones/missoni/           301
+/en/collections/moschino/          /colecciones/moschino/          301
+/en/collections/moschino           /colecciones/moschino/          301
+/en/collections/love-moschino/     /colecciones/love-moschino/     301
+/en/collections/love-moschino      /colecciones/love-moschino/     301
+/en/collections/polaroid/          /colecciones/polaroid/          301
+/en/collections/polaroid           /colecciones/polaroid/          301
+/en/collections/safilo/            /colecciones/safilo/            301
+/en/collections/safilo             /colecciones/safilo/            301
+/en/collections/tommy-hilfiger/    /colecciones/tommy-hilfiger/    301
+/en/collections/tommy-hilfiger     /colecciones/tommy-hilfiger/    301
+/en/collections/seventh-street/    /colecciones/seventh-street/    301
+/en/collections/seventh-street     /colecciones/seventh-street/    301
